@@ -1,9 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f94c0379-4bf4-4de9-b908-b00f8365b5ee" name="Default" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
+    <list default="true" id="f94c0379-4bf4-4de9-b908-b00f8365b5ee" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/deploy.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/entrypoint.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/nginx.conf.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/._bootstrap" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/._bootstrap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/._coming.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/._coming.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/Images/._logo_weiß.png" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/Images/._logo_weiß.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/Images/logo_weiß.png" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/Images/logo_weiß.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/Style Sheets/._normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/Style Sheets/._normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/Style Sheets/master.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/Style Sheets/master.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/Style Sheets/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/Style Sheets/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/._config.json" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/._config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/._css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/._css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/._js" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/._js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/css/._bootstrap-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/css/._bootstrap-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/css/._bootstrap-theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/css/._bootstrap-theme.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/css/._bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/css/._bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/css/bootstrap-min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/css/bootstrap-min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/css/bootstrap-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/css/bootstrap-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/js/._bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/js/._bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/js/._bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/js/._bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Coming Soon/coming.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Coming Soon/coming.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/.idea/Templates.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/.idea/Templates.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Formular I/Images/._title.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Formular I/Images/._title.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Formular I/Images/title.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Formular I/Images/title.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Formular I/Style Sheets/master.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Formular I/Style Sheets/master.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Formular I/Style Sheets/master.sass" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Formular I/Style Sheets/master.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Formular I/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Formular I/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Formular II/Style Sheets/master.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Formular II/Style Sheets/master.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Formular II/Style Sheets/master.sass" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Formular II/Style Sheets/master.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Formular II/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Formular II/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Material/.idea/Material.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Material/.idea/Material.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Material/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Material/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Material/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Material/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Material/Images/._logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Material/Images/._logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Material/Images/._rec.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Material/Images/._rec.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Material/Images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Material/Images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Material/Images/rec.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Material/Images/rec.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Material/Style Sheets/master.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Material/Style Sheets/master.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Material/Style Sheets/master.sass" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Material/Style Sheets/master.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Material/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Material/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Semantik/Style Sheets/master.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Semantik/Style Sheets/master.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/Semantik/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/Semantik/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website Creative Puzzle Templates/config.codekit3" beforeDir="false" afterPath="$PROJECT_DIR$/dev/Website Creative Puzzle Templates/config.codekit3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/._bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/._main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/en/._index.php" beforeDir="false" afterPath="$PROJECT_DIR$/website/en/._index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/en/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/website/en/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/en/kontakt.php" beforeDir="false" afterPath="$PROJECT_DIR$/website/en/kontakt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/._glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/website/fonts/._glyphicons-halflings-regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/._glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/website/fonts/._glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/._glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/website/fonts/._glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/._glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/website/fonts/._glyphicons-halflings-regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/website/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/website/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/website/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/website/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/._dinhof.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/._dinhof.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/._facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/._facebook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/._hagn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/._hagn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/._instagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/._instagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/._kutis.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/._kutis.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/._lenz.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/._lenz.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/._logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/._logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/._pcss_titelbild.svg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/._pcss_titelbild.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/._pcss_titelbild_hochformat.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/._pcss_titelbild_hochformat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/._pcss_titelbild_hochformat.svg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/._pcss_titelbild_hochformat.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/._puzzle.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/._puzzle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/._schwingenschloegl.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/._schwingenschloegl.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/._twitter.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/._twitter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/dinhof.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/dinhof.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/facebook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/hagn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/hagn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/instagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/instagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/kutis.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/kutis.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/lenz.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/lenz.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pcss_titelbild.svg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/pcss_titelbild.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pcss_titelbild_hochformat.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/pcss_titelbild_hochformat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pcss_titelbild_hochformat.svg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/pcss_titelbild_hochformat.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/puzzle.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/puzzle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/schwingenschloegl.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/schwingenschloegl.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/twitter.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/img/twitter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/website/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/._bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/js/._bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/._validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/js/._validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/js/validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kontakt.php" beforeDir="false" afterPath="$PROJECT_DIR$/website/kontakt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/._antrag" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/._antrag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/._konzepte" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/._konzepte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/._presentation" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/._presentation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/._summary" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/._summary" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/antrag/._ansuchen.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/antrag/._ansuchen.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/antrag/._da_antrag_hagn.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/antrag/._da_antrag_hagn.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/antrag/ansuchen.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/antrag/ansuchen.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/antrag/da_antrag_hagn.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/antrag/da_antrag_hagn.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/konzepte/._didaktisches_konzept.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/konzepte/._didaktisches_konzept.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/konzepte/didaktisches_konzept.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/konzepte/didaktisches_konzept.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/summary/._05.08.2017.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/summary/._05.08.2017.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/summary/._19.07.2017.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/summary/._19.07.2017.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/summary/._27.09.2017.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/summary/._27.09.2017.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/summary/05.08.2017.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/summary/05.08.2017.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/summary/19.07.2017.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/summary/19.07.2017.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/summary/27.09.2017.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/website/pdf/summary/27.09.2017.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redirect.php" beforeDir="false" afterPath="$PROJECT_DIR$/website/redirect.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,6 +219,9 @@
       <replace>Download</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -129,14 +254,22 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="PhpServers">
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1.1" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
+  <component name="ProjectId" id="2YIpgeaOjFRWZ5TIPduIt5DSfPa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -184,212 +317,40 @@
       <pane id="AndroidView" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="a&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/php/infopage/css/bootstrap.css&#10;social&#9;null&#9;null&#10;main&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/php/infopage/css/main.css&#10;main.&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/php/infopage/js/main.js&#10;in&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/php/infopage/index.php&#10;b&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/php/infopage/css/bootstrap.css&#10;m&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/php/infopage/css/main.css&#10;ma&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/php/infopage/css/main.css&#10;mai&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/php/infopage/css/main.css&#10;i&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/php/infopage/en/index.php&#10;mainc&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/php/infopage/css/main.css&#10;boo&#9;FILE&#9;file:///Users/jakobdinhof/Desktop/infopage/css/bootstrap.css&#10;va&#9;FILE&#9;file:///Users/jakobdinhof/Desktop/infopage/js/validator.js" />
-    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="js.eslint.eslintPackage" value="" />
-    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/maximilian/projects/DiplomaProjectInfoPage",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/en" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dev" />
+      <recent name="$PROJECT_DIR$/website" />
       <recent name="$PROJECT_DIR$/en" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/img" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/../Flash Player Debugger.app" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/../Flash Player Debugger.app" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -416,6 +377,13 @@
         <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
     </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -479,95 +447,60 @@
     <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/../Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
     </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/../Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
     </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SCRATCH_FILE_ID" value="0" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="infopage" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <envs />
-      <method />
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
     </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
@@ -576,29 +509,65 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -646,6 +615,7 @@
       <workItem from="1511197454526" duration="9000" />
       <workItem from="1512156326201" duration="2059000" />
       <workItem from="1512239445481" duration="51000" />
+      <workItem from="1700223062137" duration="701000" />
     </task>
     <servers />
   </component>
@@ -690,14 +660,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
+    <option name="version" value="3" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

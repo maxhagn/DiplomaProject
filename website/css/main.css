@@ -45,7 +45,7 @@ p {
 }
 
 .bg{
-    background-image: url("/web/20180824035956im_/http://creative-puzzle.com/img/pcss_titelbild_hochformat.png");
+    background-image: url("../img/pcss_titelbild_hochformat.png");
     background-repeat: no-repeat;
     background-size: contain;
     height: 400px;
@@ -406,7 +406,7 @@ i {
     }
 
     .bg{
-        background-image: url("/web/20180824035956im_/http://creative-puzzle.com/img/pcss_titelbild.png");
+        background-image: url("../img/pcss_titelbild.svg");
         background-repeat: no-repeat;
         background-size: contain;
         height: 500px;
