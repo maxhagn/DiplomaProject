@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>creative-puzzle.com/info</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+
+  <base href='/'>
+
+  <!-- Polyfill(s) for older browsers -->
+  <script src='../node_modules/core-js/client/shim.min.js'></script>
+  <script src='../node_modules/zone.js/dist/zone.js'></script>
+  <script src='../node_modules/systemjs/dist/system.src.js'></script>
+
+  <script src='systemjs.config.js'></script>
+  <script>
+    System.import('main.js').catch(function (err) {
+      console.error(err);
+    });
+  </script>
+
+  <style>
+    /*---------- Predefined Colors to change all colors at once ----------*/
+    /*---------- General Styles for the HTML, Body, Lists and Headings ----------*/
+    html {
+      font-family: "Source Sans Pro";
+      font-style: normal;
+      font-weight: lighter;
+      font-variant: normal;
+      font-size: 18px;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      min-height: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      line-height: 1.1rem; }
+
+    body {
+      margin: 0; }
+
+    ul {
+      list-style: none; }
+
+    a {
+      text-decoration: none;
+      line-height: 1rem;
+      color: black; }
+
+    .lineHeight {
+      line-height: .6rem; }
+
+    h1 {
+      font-size: 34px;
+      color: #8F0500;
+      line-height: 2rem; }
+
+    h1 small {
+      font-size: 32px;
+      color: #8F0500;
+      line-height: 2rem; }
+
+    h2 {
+      font-size: 30px;
+      color: #8F0500;
+      line-height: 2rem; }
+
+    h2 small {
+      font-size: 28px;
+      color: rgba(67, 2, 0, 0.2);
+      line-height: 2rem; }
+
+    h3 {
+      font-size: 26px;
+      color: black;
+      line-height: 2rem; }
+
+    h3 small {
+      font-size: 24px;
+      color: rgba(51, 2, 0, 0.2);
+      line-height: 2rem; }
+
+    h4 {
+      font-size: 22px;
+      color: rgba(0, 0, 0, 0.5); }
+
+    h4 small {
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.5); }
+
+    ul {
+      margin-left: -40px; }
+
+    li {
+      list-style: none; }
+
+    li:before {
+      content: "- ";
+      padding-left: 1rem;
+    }
+
+    a label {
+      font-size: 20px;
+      line-height: 24px;
+      color: white; }
+
+    a:hover {
+      font-size: 30px;
+      line-height: 24px; }
+
+    label {
+      color: black;
+      font-size: 15px;
+      line-height: .6rem; }
+
+    .spinner {
+      width: 100px;
+      height: 100px;
+      background: #eee;
+      border-radius: 50%;
+      position: relative;
+      margin: 30% 50%;
+      display: inline-block;
+    }
+    .spinner:after, .spinner:before {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .spinner-1:after {
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      border: 4px solid transparent;
+      border-top-color: orangered;
+      border-bottom-color: orangered;
+      -webkit-animation: spinny 1s linear infinite;
+      animation: spinny 1s linear infinite;
+    }
+
+    @-webkit-keyframes spinny {
+      0% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        -webkit-transform: rotate(45deg) scale(1.2);
+        transform: rotate(45deg) scale(1.2);
+      }
+      100% {
+        -webkit-transform: rotate(360deg) scale(1);
+        transform: rotate(360deg) scale(1);
+      }
+    }
+
+    @keyframes spinny {
+      0% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        -webkit-transform: rotate(45deg) scale(1.2);
+        transform: rotate(45deg) scale(1.2);
+      }
+      100% {
+        -webkit-transform: rotate(360deg) scale(1);
+        transform: rotate(360deg) scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+<app>
+  <div style="padding-left: 2rem">
+  <div class="loader"><div class="spinner spinner-1"> </div> </div>
+  </div>
+</app>
+</body>
+
+<script type="text/javascript" src="Skripts/jQuery.js"></script>
+
+
+</html>

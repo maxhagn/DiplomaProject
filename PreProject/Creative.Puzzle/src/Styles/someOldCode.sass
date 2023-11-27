@@ -1,0 +1,219 @@
+/*---------- Horizontal Navigation Start ----------*/
+.container, .container-sm
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  max-height: 4rem
+
+
+.item, .item-sm
+  display: none
+  background-color: $colorNavigation
+  line-height: 4rem
+  flex-grow: 1
+  flex-basis: 100%
+  text-align: center
+  color: $textColorNav
+
+.item:nth-child(7):hover, .item:first-child:hover
+  background-color: $colorNavigation
+
+.item:nth-child(7), .item:first-child
+  flex-basis: 200%
+
+.item-sm:nth-child(2)
+  flex-basis: 300%
+
+.container-sm
+  display: flex
+  margin-bottom: .5rem
+  box-shadow: .1rem .12rem .3rem $boxShadow
+
+.item-sm
+  display: inline-block
+
+.item:hover
+  background-color: transparentize($colorNavigation, .2)
+
+.show-container, .hide-container
+  flex-wrap: wrap
+  max-height: 50rem
+
+  animation:
+    name: animationNav
+    duration: 1500ms
+    fill-mode: forwards
+    timing-function: ease-in-out
+
+.show-item, .hide-item
+  display: inline-block
+  max-height: 4rem
+  color: $colorNavigation
+  transform: translateX(-100%)
+
+  animation:
+    name: animationItem
+    duration: 1200ms
+    fill-mode: forwards
+    timing-function: ease-in-out
+
+.hide-container
+  animation:
+    name: animationHideNav
+    delay: 1000ms
+
+.hide-item
+  margin-left: 0
+  color: black
+  transform: translateX(0%)
+
+  animation:
+    name: animationHideItem
+
+@for $i from 1 through 10
+  .show-item:nth-child(#{$i})
+    animation-delay: .1s * $i
+
+@for $i from 1 through 10
+  .hide-item:nth-child(#{$i})
+    animation-delay: 1000 - (100ms * $i)
+
+@keyframes animationItem
+  0%
+    transform: translateX(-100%)
+  0%, 95%
+    color: transparentize($colorNavigation, .7)
+  100%
+    transform: translateX(0%)
+    color: $textColorNav
+
+@keyframes animationHideItem
+  0%
+    transform: translateX(0%)
+    color: $textColorNav
+  100%
+    transform: translateX(-100%)
+    color: transparentize($colorNavigation, .7)
+
+@keyframes animationNav
+  0%
+    max-height: 0
+
+  100%
+    max-height: 50rem
+
+@keyframes animationHideNav
+  0%
+    max-height: 50rem
+
+  100%
+    max-height: 0
+
+/*---------- Hide Navigation on Small or Large Start ----------*/
+@media screen and (min-width: 75rem)
+  .container-sm
+    display: none
+
+  .item-sm
+    display: none
+
+  .container
+    display: flex
+    flex-wrap: nowrap
+    flex-basis: 16.66666666%
+    box-shadow: .1rem .12rem .3rem $boxShadow
+
+  .item
+    display: inline-block
+    max-height: 4rem
+
+@media screen and (min-width: 64rem) and (max-width: 75rem)
+  .container-sm
+    display: none
+    flex-basis: 16.66666666%
+
+  .item-sm
+    display: none
+
+  .container
+    display: flex
+    box-shadow: .1rem .12rem .3rem $boxShadow
+    flex-wrap: nowrap
+    max-height: 4rem
+
+  .item
+    display: inline-block
+    max-height: 4rem
+
+@media screen and (min-width: 31rem) and (max-width: 64rem)
+  .container-sm
+    display: flex
+
+  .item-sm
+    display: inline-block
+/*---------- Hide Navigation on Small or Large End ----------*/
+/*---------- Horizontal Navigation End ----------*/
+
+    if (($(this).scrollTop()) > ($('.parallax').offset().top) + 30) {
+        $('.headingText').addClass('headerScroll').removeClass('headerScrollUp');
+        isDown = 2;
+    }   else if ((($(this).scrollTop()) < ($('.parallax').offset().top) + 30) && isDown !== 1) {
+            $('.headingText').removeClass('headerScroll').addClass('headerScrollUp');
+            isDown = 1;
+        }
+
+    if (($(this).scrollTop()) > ($('.back').offset().top)) {
+        $('.back').addClass('backFixed');
+        $('.headingText-2').addClass('headingTextShow');
+        $('.headingText').addClass('headingTextHide');
+        $('.parallax').addClass('margin');
+    } else if (($(this).scrollTop()) < ($('.back').offset().top)) {
+        $('.back').removeClass('backFixed');
+        $('.headingText-2').removeClass('headingTextShow');
+        $('.headingText').removeClass('headingTextHide');
+        $('.parallax').removeClass('margin');
+    }
+
+
+      Parallax Text animieren
+    if (($(this).scrollTop()) > ($('.parallax').offset().top) + 30) {
+        $('.title').addClass('headerScroll').removeClass('headerScrollUp');
+        $('.placeholder').addClass('growText').removeClass('shrinkText');
+
+        setTimeout(function(){
+            $('.title').addClass('hide');
+        }, 5000);
+
+        isDown = 2;
+    } else if ((($(this).scrollTop()) + 30 < ($('.parallax').offset().top) + 30) && isDown !== 1) {
+        console.log("Hier wir das Objekt sichtbar ScrollTop:" + $(this).scrollTop() + "ScrollTop:" + $('.parallax').offset().top + 500);
+        $('.title').removeClass('hide');
+    } else if ((($(this).scrollTop()) < ($('.parallax').offset().top) + 30) && isDown !== 1) {
+        isDown = 1;
+        $('.title').removeClass('headerScroll').addClass('headerScrollUp');
+        $('.placeholder').removeClass('growText').addClass('shrinkText');
+    }
+
+
+/*---------- On Click on container-sm do -> Start ----------*/
+  $('.container-sm').on('click', function () {
+  if ($('.item').hasClass('show-item') && $('.container').hasClass('show-container') && $('.logo-1').hasClass('hiding-img')) {
+  $('.container').toggleClass('hide-container').toggleClass('show-container');
+  $('.item').toggleClass('hide-item').toggleClass('show-item');
+  setTimeout(function () {
+  $('.logo-1').toggleClass('hiding-img').toggleClass('showing-img');
+  }, 1500);
+  }
+  else if ($('.item').hasClass('hide-item') && $('.container').hasClass('hide-container') && $('.logo-1').hasClass('showing-img')) {
+  $('.container').toggleClass('hide-container').toggleClass('show-container');
+  $('.item').toggleClass('hide-item').toggleClass('show-item');
+
+  setTimeout(function () {
+  $('.logo-1').toggleClass('hiding-img').toggleClass('showing-img');
+  }, 1500);
+  } else {
+  $('.container').toggleClass('show-container');
+  $('.item').toggleClass('show-item');
+  $('.logo-1').toggleClass('hiding-img');
+  }
+  });

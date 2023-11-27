@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../Style%20Sheets/master.css" type="text/css">
+    <link rel="stylesheet" href="../Style%20Sheets/Initialization/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../jquery-ui-1.12.1.custom/jquery-ui.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <title>Creative Puzzle | Profileinstellungen</title>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.11';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="modal fade" id="Impressum" tabindex="-1" role="dialog" aria-labelledby="ImpressumLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                        <h2 class="modal-title" id="ImpressumLabel">Impressum</h2>
+                        <h3>Inhaber</h3>
+                        <p>Name: Maximilian Hagn</p>
+                        <h3>Adresse</h3>
+                        <p>
+                            Straße: Rudolf-Waisenhorn-Gasse 138/4
+                        </p>
+                        <p>
+                            PLZ: 1230
+                        </p>
+                        <p>
+                            Ort: Wien
+                        </p>
+                        <p>
+                            Land: Österreich
+                        </p>
+
+                        <h3>Kontakt</h3>
+
+                        Telefon:
+                        <ul>
+                            <li><a href="tel:+436769579022">+43 676 9579022</a>
+                            </li>
+                        </ul>
+
+                        E-Mail:
+                        <ul>
+                            <li><a href="mailto:maximilian.hagn@htl.rennweg.at">maximilian.hagn@htl.rennweg.at</a>
+                            </li>
+                            <li><a href="mailto:web.creativePuzzle@gmail.com">web.creativePuzzle@gmail.com</a></li>
+                            <li><a href="mailto:team.creativePuzzle@gmail.com">team.creativePuzzle@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                        <h2>Sponsoring & Sources</h2>
+
+                        <h3>Bilder & Icons</h3>
+                        <p>Die Bilder uns Icons sind Eigentum unseres Teams!</p>
+
+                        <h3>Modal Skripte</h3>
+                        <p>Das Model entstammt der Quelle Bootstap.com</p>
+
+                        <h3>JQuery, Angular II & Animate.css</h3>
+                        <p>Das Model entstammt der Quelle Bootstap.com</p>
+                        <!--  <a class="weblink" href="http://www.creative-puzzle.com">www.creative-puzzle.com</a>-->
+                    </div>
+
+                </div>
+                <div class="row center">
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <button type="button" class="button-play" data-dismiss="modal"><img
+                                alt="button, schließen, cancle, back" class="icon-btn"
+                                src="../Images/Icon_Cancle.svg">
+                            Schließen
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="nav-mobile">
+    <div class="toggle-nav">
+        <img alt="open, navigation, öffnen, navigation" class="icon-img tglw" src="../Images/Icon_hide.svg">
+        <img alt="close, navigation, schließen, navigation" class="icon-img tglb display-none"
+             src="../Images/Icon_hide_dark.svg">
+    </div>
+    <div>
+        <button data-toggle="modal" data-target="#Impressum">Impressum</button>
+    </div>
+
+    <div class="nav-container display-none">
+        <div class="nav-item">
+            <div><a href="dashboard.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="modes.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="profile.html"></a></div>
+
+        </div>
+        <div class="nav-item">
+            <div><a href="stats.html"></a></div>
+
+        </div>
+        <div class="nav-item">
+            <div><a href="templateLibrary.html"></a></div>
+
+        </div>
+        <div class="nav-item">
+            <div><a href="sources.html"></a></div>
+
+        </div>
+
+        <div class="nav-item">
+            <div><a href="landing.html"></a></div>
+
+        </div>
+    </div>
+
+</nav>
+
+
+<nav class="nav-desktop">
+    <div class="nav-container">
+        <div class="nav-item">
+            <div><a href="dashboard.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="modes.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="profile.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="stats.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="templateLibrary.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="sources.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div>
+                <button data-toggle="modal" data-target="#Impressum"></button>
+            </div>
+        </div>
+        <div class="nav-item">
+            <div><a href="landing.html"></a></div>
+        </div>
+    </div>
+</nav>
+
+<main class="dash-wrapper">
+    <section class="profile">
+        <h1>Einstellungen</h1>
+
+        <div class="row">
+            <div class="dash-level-item column-xsd-12 column-sd-12 column-md-12 column-ld-6">
+                <h2>Informationen</h2>
+                <p>
+                    Während unserer Diplomarbeit haben wir jede Webseite von denen wir Informationen bezogen haben in
+                    eine Liste abgespeichert. Diese Liste wird euch nun bereitgestellt. Zusätzlich werden zu den
+                    Webseiten Links relevante Informationen und Tipps von uns für euch bereitgestellt.
+                </p>
+                <h4>
+                    <small>Posted by Michael Kutis on 25.September.2017</small>
+                </h4>
+            </div>
+            <div class="dash-level-item column-xsd-12 column-sd-12 column-md-12 column-ld-6">
+                <h2>Team Funktionen</h2>
+                <p>
+                    Während unserer Diplomarbeit haben wir jede Webseite von denen wir Informationen bezogen haben in
+                    eine Liste abgespeichert. Diese Liste wird euch nun bereitgestellt. Zusätzlich werden zu den
+                    Webseiten Links relevante Informationen und Tipps von uns für euch bereitgestellt.
+                </p>
+                <h4>
+                    <small>Posted by Michael Kutis on 25.September.2017</small>
+                </h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                <h2>Generell</h2>
+                <form class="focus-contr">
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <div class="input-group">
+                            <input type="text" id="username"><label for="username">MaxHagn</label>
+                        </div>
+                    </div>
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <div class="input-group">
+                            <input type="text" id="name"><label for="name">Maximilian</label>
+                        </div>
+                    </div>
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <div class="input-group">
+                            <input type="text" id="lastname"><label for="lastname">Hagn</label>
+                        </div>
+                    </div>
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <div class="input-group">
+                            <input type="text" id="mail"><label for="mail">maximilian.hagn@gmail.com</label>
+                        </div>
+                    </div>
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <div class="input-group">
+                            <input type="text" id="passwd"><label for="passwd">********</label>
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                            <button type="button" class="button-play">
+                                <img alt="speichern, sichern, akzeptieren, accept" class="icon-btn"
+                                     src="../Images/Icon_Save.svg"> Speichern
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                <h2>Persönliche Einstellungen</h2>
+                <div class="row-center">
+                    <div class="column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+
+                    </div>
+
+                    <div class="column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                        <div class="input-group">
+                            <form class="focus-contr">
+                                <input class="upload" name="datei" type="file" size="50" id="file"
+                                       accept="image/jpeg,image/png"><label for="file">Dein Foto!</label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <div class="input-group">
+                            <input type="text" class="datepicker" id="#date" size="8">
+                        </div>
+                    </div>
+                </div>
+                <div class="row center">
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <button type="button" class="button-play">
+                            <img alt="senden, send, mail, contact, email, e-mail" class="icon-btn"
+                                 src="../Images/Icon_Save.svg"> Speichern
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                <h2>Klasse anlegen</h2>
+                <form class="focus-contr">
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <div class="input-group">
+                            <input type="text" id="classname2"><label for="classname2">Klassenname</label>
+                        </div>
+                    </div>
+
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+
+                        <div class="input-group">
+                            <input type="text" id="desc2"><label for="desc2">Klassenbeschreibung</label>
+                        </div>
+                    </div>
+
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+
+                        <div class="input-group">
+                            <input type="text" id="motiv2"><label for="motiv2">Motivation</label>
+                        </div>
+                    </div>
+
+
+                    <div class="row center">
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                            <h4>
+                                <small>Mitarbeiter</small>
+                            </h4>
+                            <button class="button-more"></button>
+                        </div>
+                    </div>
+
+
+                    <div class="row center">
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>Mitarbeitername</th>
+                                    <th>Mail</th>
+                                    <th>Funktion</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Jakob Dinhof</td>
+                                    <td>Admin</td>
+                                    <td>jdinhof@gmx.net</td>
+                                    <td><img alt="edit, editieren, bearbeiten, ändern" class="icon-img"
+                                             src="../Images/Icon_Edit.svg"></td>
+                                    <td><img alt="löschen, del, delete, wegwerfen" class="icon-img"
+                                             src="../Images/Icon_Delete.svg"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Maximilian Hagn</td>
+                                    <td>Lesen</td>
+                                    <td>maximilian.hagn@gmail.com</td>
+                                    <td><img alt="edit, editieren, bearbeiten, ändern" class="icon-img"
+                                             src="../Images/Icon_Edit.svg"></td>
+                                    <td><img alt="löschen, del, delete, wegwerfen" class="icon-img"
+                                             src="../Images/Icon_Delete.svg"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row center">
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                            <button type="button" class="button-play">
+                                <img alt="speichern, save, sichern, akzeptieren, accept" class="icon-btn"
+                                     src="../Images/Icon_Save.svg"> Speichern
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                <h2>Klassenname</h2>
+                <form class="focus-contr">
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <div class="input-group">
+                            <input type="text" id="classname"><label for="classname">Klassenname</label>
+                        </div>
+                    </div>
+
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+
+                        <div class="input-group">
+                            <input type="text" id="desc"><label for="desc">Klassenbeschreibung</label>
+                        </div>
+                    </div>
+
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+
+                        <div class="input-group">
+                            <input type="text" id="motiv"><label for="motiv">Motivation</label>
+                        </div>
+                    </div>
+
+                    <div class="row-center">
+                        <div class="column-xsd-12 column-sd-12 column-md-8 column-ld-8">
+                            <p>Füge Weitere Mitglieder hinzu, finden wir Ihren Benutzernamen oder Ihre Emailadresse
+                                nicht,
+                                senden wir automatisch eine Einladungsmail!</p>
+                        </div>
+                    </div>
+
+                    <div class="row center">
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                            <h4>
+                                <small>Mitarbeiter</small>
+                            </h4>
+                            <button class="button-more"></button>
+                        </div>
+                    </div>
+
+                    <div class="row-center center">
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-8">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>Mitarbeitername</th>
+                                    <th>Funktion</th>
+                                    <th>Mail</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Jakob Dinhof</td>
+                                    <td>Admin</td>
+                                    <td>jdinhof@gmx.net</td>
+                                    <td><img alt="edit, editieren, bearbeiten, ändern" class="icon-img"
+                                             src="../Images/Icon_Edit.svg"></td>
+                                    <td><img alt="löschen, del, delete, wegwerfen" class="icon-img"
+                                             src="../Images/Icon_Delete.svg"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Maximilian Hagn</td>
+                                    <td>Lesen</td>
+                                    <td>maximilian.hagn@gmail.com</td>
+                                    <td><img alt="edit, editieren, bearbeiten, ändern" class="icon-img"
+                                             src="../Images/Icon_Edit.svg"></td>
+                                    <td><img alt="löschen, del, delete, wegwerfen" class="icon-img"
+                                             src="../Images/Icon_Delete.svg"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row center">
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                            <button type="button" class="button-play">
+                                <img alt="speichern, sichern, akzeptieren, accept" class="icon-btn"
+                                     src="../Images/Icon_Save.svg"> Speichern
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                <h2>Kontaktiere Uns!</h2>
+                <form class="focus-contr">
+                    <div class="input-group">
+                        <input type="text" id="desc3"><label for="desc3">Betreff</label>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="mailcont"></textarea><label for="mailcont">Deine
+                        Nachricht</label>
+                    </div>
+                </form>
+
+                <div class="row center">
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <button type="button" class="button-play">
+                            <img alt="send, senden, abschicken, mailen, lossenden" class="icon-btn"
+                                 src="../Images/Icon_senden.svg"> Senden
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6 center">
+                <h2>Unterstütze Uns!</h2>
+
+                <div class="row-center">
+                    <div class="column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                        <h3 style="margin: 0 !important; padding: 0 !important;">
+                            <small style="margin: 0 !important; padding: 0 !important;">Facebook</small>
+                        </h3>
+                        <div class="row">
+                            <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                                <img class="icon-socialmedia" alt="facebook, follow, like, creative, puzzle"
+                                     src="../Images/facebook_rot.svg">
+
+                            </div>
+                            <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+
+                                <div class="fb-like" data-href="https://www.facebook.com/CreativePuzzleDevelop/"
+                                     data-layout="button_count" data-action="like" data-size="small"
+                                     data-show-faces="true"
+                                     data-share="false"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-center">
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <h3 style="margin: 0 !important; padding: 0 !important;">
+                            <small>Twitter</small>
+                        </h3>
+                        <div class="row">
+                            <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                                <img alt="twitter, follow, like, creative, puzzle" class="icon-socialmedia"
+                                     src="../Images/twitter_rot.svg">
+
+                            </div>
+                            <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                                <a href="https://twitter.com/creative_puzzle?ref_src=twsrc%5Etfw"
+                                   class="twitter-follow-button"
+                                   data-show-count="false" data-size="small"></a>
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-center">
+                    <div class="column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                        <h3 style="margin: 0 !important; padding: 0 !important;">
+                            <small style="margin: 0 !important; padding: 0 !important;">Instagram</small>
+                        </h3>
+                        <div class="row-center">
+                            <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                                <img alt="instagram, follow, like, creative, puzzle" class="icon-socialmedia"
+                                     src="../Images/instagram_rot.svg">
+                            </div>
+                            <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                                <blockquote class="instagram-media" data-instgrm-version="7"
+                                            style=" background:#FFF; border:0; border-radius:3px; box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2); margin: 1px; max-width:100%; padding:0; width:100%;">
+                                    <div style="padding:8px;">
+                                        <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:100%;"></div>
+                                    </div>
+                                    <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                                        <a href="https://www.instagram.com/p/BZnzx8Og51t/"
+                                           style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                                           target="_blank">Ein Beitrag geteilt von Creative Puzzle
+                                            (@creative.puzzle)</a> am
+                                        <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;"
+                                              datetime="2017-09-29T10:43:57+00:00">29. Sep 2017 um 3:43 Uhr
+                                        </time>
+                                    </p>
+                                </blockquote>
+                                <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<script src="../jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="../Scripts/master-min.js"></script>
+</body>
+</html>
+

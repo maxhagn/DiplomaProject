@@ -1,0 +1,87 @@
+$white: #FFF
+$black: #000
+$orange: #E8861A
+$red: #FF0000
+$purple: #890CE8
+$blue: #0D6DFF
+$beige: #FFF7A7
+$dark-grey: #686070
+$light-grey: #666
+$dark-blue: #373B61
+$dark-blue-2: #242740
+$lighten-blue: #919CFF
+$dark-blue-3: #474C7F
+$dark-red: #450803
+$redDarker: #8F0500
+
+/*---------- Predefined Colors to change all colors at once ----------*/
+$textColorBack: $black
+$boxShadow: $dark-grey
+$colorBack: white
+
+/*---------- Parallax Title Picture ----------*/
+.parallax
+  display: block
+  position: relative
+  z-index: 80
+  width: 100%
+  height: 100vh
+  background-color: transparentize($light-grey, .92)
+  background:
+    image: url(../pic/PCSS_Titelbild_v3_quer.svg)
+    repeat: no-repeat
+    position: center
+    attachment: fixed
+
+/*---------- Media Queries to change the size of the Image ----------*/
+@media screen and (min-width: 950px)
+  .parallax
+    background:
+      size: 80% 100%
+      position: left center
+
+@media screen and (max-width: 400px)
+  .parallax
+    background:
+      image: url(../pic/PCSS_Titelbild_v3_hoch.svg)
+      position: 0 50px
+/*---------- Hide and Show Elements ----------*/
+.show
+  display: block
+
+.hide
+  display: none
+
+/*---------- Classes to grow and shrink the Placeholder in Side Navigation ----------*/
+.growText
+  animation:
+    name: growText
+    duration: 300ms
+    fill-mode: forwards
+    timing-function: cubic-bezier(-1.9, 0.3, -0.2, 2.1)
+
+.shrinkText
+  animation:
+    name: shrinkText
+    duration: 300ms
+    fill-mode: forwards
+    timing-function: cubic-bezier(-1.9, 0.3, -0.2, 2.1)
+
+/*---------- Keyframes to grow and shrink the Placeholder in Side Navigation ----------*/
+@keyframes growText
+  0%
+    max-height: 0
+    color: white
+  100%
+    max-height: 4rem
+    color: $colorSchema
+
+@keyframes shrinkText
+  0%
+    max-height: 4rem
+    color: $colorSchema
+  30%,90%
+    color: $colorSchema
+  100%
+    max-height: 0
+    color: white

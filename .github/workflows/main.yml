@@ -1,4 +1,4 @@
-name: Push Docker Image
+name: Build and Push UI
 
 on:
   push:
@@ -24,8 +24,8 @@ jobs:
     - name: Push Docker Image
       uses: docker/build-push-action@v3
       with:
-        context: .
-        file: docker/Dockerfile
+        context: ./InfoPage
+        file: ./InfoPage/docker/Dockerfile
         platforms: linux/amd64
         push: true
         tags: registry.hagn.network/diploma-info-ui:latest

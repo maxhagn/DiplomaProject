@@ -1,0 +1,17 @@
+.campagne .dash-level-container .dash-level-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-align: center !important;
+  width: 90%;
+  max-height: 6.7vh !important;
+  padding-left: 2vh;
+  padding-right: 2vh; }
+  .campagne .dash-level-container .dash-level-item span {
+    display: inline-block;
+    height: 100%;
+    width: 33.333333%;
+    font-size: 16px;
+    padding-top: 1.5%;
+    margin-right: 2%;
+    margin-left: 2%; }

@@ -1,0 +1,228 @@
+$white: #FFF
+$black: #000
+$orange: #E8861A
+$red: #FF0000
+$purple: #890CE8
+$blue: #0D6DFF
+$beige: #FFF7A7
+$dark-grey: #686070
+$light-grey: #666
+$dark-blue: #373B61
+$dark-blue-2: #242740
+$lighten-blue: #919CFF
+$dark-blue-3: #474C7F
+$redDarker: #8F0500
+
+/*---------- Predefined Colors to change all colors at once ----------*/
+$boxShadow: $dark-grey
+$colorSideNav: white
+$colorNavigation: transparentize($light-grey, .9)
+$textColorNav: $black
+
+/*---------- Side Navigation Bar----------*/
+/*---------- Placeholder only on Screens with more than 1150 px ----------*/
+.placeholder
+  max-height: 0
+  line-height: 4rem
+  text-align: center
+
+.navOpen
+  display: none
+
+/*---------- Side Navigation Layout and Over Container ----------*/
+.side-nav
+  display: block
+  height: 100%
+  width: 20%
+  margin-left: 80%
+  position: fixed
+  box-shadow: .2rem 0 .5rem $boxShadow
+  z-index: 98
+  overflow-y: scroll
+  overflow-x: hidden
+  cursor: pointer
+  background-color: white
+
+/*---------- Side Navigation Items and Sub items  ----------*/
+.side-item
+  display: flex
+  flex-direction: column
+  background-color: white
+  border-bottom: .002rem solid #666
+  flex-wrap: nowrap
+  font:
+    weight: lighter
+  text-align: center
+  width: 100%
+  flex-grow: 1
+  color: black
+  z-index: 98
+
+.side-subItem
+  background-color: white
+  text-align: center
+  padding-left: 0
+  z-index: 99
+  max-height: 0
+  cursor: pointer
+  line-height: 4rem
+  flex-grow: 1
+  flex-basis: 100%
+  &:first-child
+    padding-left: 0
+    background-color: white
+    min-height: 3.5rem
+    line-height: 3.5rem
+    display: inline-block
+    &:hover
+      background-color: white
+
+.hideBorder
+ border-bottom: 0
+
+.contact
+  vertical-align: middle
+  padding-right: 1rem
+  margin-top: -.25rem
+  width: 10%
+  height: 100%
+
+
+/*---------- Side Navigation Show and Hide the Sub Items on Click  ----------*/
+.show-side
+  animation:
+    name: animationItem
+    fill-mode: forwards
+    timing-function: cubic-bezier(-1.9, 0.3, -0.2, 2.1)
+
+@for $i from 1 through 5
+  .show-side:nth-child(#{$i})
+    animation-delay: 10ms * $i
+    animation-duration: 250ms * $i
+
+.hide-side
+  animation:
+    name: animationItem2
+    duration: 250ms
+    fill-mode: forwards
+    timing-function: cubic-bezier(-1.9, 0.3, -0.2, 2.1)
+
+/*---------- Keyframes to Show and Hide the Sub Items on Click  ----------*/
+@keyframes animationItem
+  0%
+    max-height: 0
+    transform: scale(.2) translateY(-1)
+    font-size: 0
+  50%, 70%
+    transform: scale(.5)
+    font-size: 0
+    color: black
+  100%
+    max-height: 4rem
+    transform: scale(1) translateY(0)
+
+@keyframes animationItem2
+  0%
+    max-height: 4rem
+    transform: scale(1) translateY(0)
+  50%, 70%
+    transform: scale(.5) translateY(-1)
+    font-size: 0
+    color: black
+  100%
+    max-height: 0
+    transform: scale(.2) translateY(0)
+    font-size: 0
+
+/*---------- Searchbar with focus in and out  ----------*/
+.search
+  box-sizing: border-box
+  height: 5%
+  width: 70%
+  margin: 0 auto
+  line-height: 100%
+  text-decoration: none
+  box-shadow: .2rem .2rem .5rem $boxShadow
+  border: .5rem solid white
+  border-radius: .02rem
+
+  &:focus,
+  &:active
+    outline: none
+    box-shadow: -0.2rem .2rem .5rem $boxShadow
+    width: 100%
+    animation:
+      name: grow
+      duration: 400ms
+      fill-mode: forwards
+
+.focusOut
+  animation:
+    name: shrink
+    duration: 400ms
+    fill-mode: forwards
+
+/*---------- Keyframes for focus ----------*/
+@keyframes grow
+  0%
+    width: 70%
+    box-shadow: .2rem .2rem .5rem $boxShadow
+  100%
+    width: 100%
+    box-shadow: -0.2rem .2rem .5rem $boxShadow
+
+@keyframes shrink
+  0%
+    width: 100%
+    box-shadow: -0.2rem .2rem .5rem $boxShadow
+  100%
+    width: 70%
+    box-shadow: .2rem .2rem .5rem $boxShadow
+
+
+
+/*---------- Things shown or hidden on smaller screens ----------*/
+@media only screen and (max-width: 950px)
+  .navOpen
+    display: inline-block
+    width: 2rem
+    height: 2rem
+    background:
+      color: transparent
+      image: url(../pic/navOpen.png)
+      size: 100% 100%
+    margin: 1rem 0 0 90%
+    border: 0
+
+  .moveMenu
+    margin: 1rem 0 0 50%
+
+  .side-nav
+    display: none
+    box-shadow: .05rem 0 .5rem $boxShadow
+    margin-left: 60%
+    z-index: 99
+    width: 40%
+
+  .showSide
+    display: block
+
+  .side-sub--first
+    padding-top: 1rem
+
+@media only screen and (max-width: 31rem)
+  .navOpen
+    margin: 1rem 0 0 85%
+
+  .moveMenu
+    margin: 1rem 0 0 5%
+
+  .side-nav
+    margin-left: 20%
+    box-shadow: .05rem 0 .5rem $boxShadow
+    width: 80%
+    z-index: 98
+
+  .side-item
+    padding-top: -1rem
+

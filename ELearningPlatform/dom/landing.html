@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../Style%20Sheets/master.css" type="text/css">
+    <link rel="stylesheet" href="../Style%20Sheets/Initialization/normalize.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" type="text/css">
+    <title>Creative Puzzle - Webdevelopment</title>
+</head>
+<body>
+<div class="modal fade" id="Impressum" tabindex="-1" role="dialog" aria-labelledby="ImpressumLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                        <h2 class="modal-title" id="ImpressumLabel">Impressum</h2>
+                        <h3>Inhaber</h3>
+                        <p>Name: Maximilian Hagn</p>
+                        <h3>Adresse</h3>
+                        <p>
+                            Straße: Rudolf-Waisenhorn-Gasse 138/4
+                        </p>
+                        <p>
+                            PLZ: 1230
+                        </p>
+                        <p>
+                            Ort: Wien
+                        </p>
+                        <p>
+                            Land: Österreich
+                        </p>
+
+                        <h3>Kontakt</h3>
+
+                        Telefon:
+                        <ul>
+                            <li><a href="tel:+436769579022">+43 676 9579022</a>
+                        </li> </ul>
+
+                        E-Mail:
+                        <ul>
+                            <li><a href="mailto:maximilian.hagn@htl.rennweg.at">maximilian.hagn@htl.rennweg.at</a>
+                            </li>
+                            <li><a href="mailto:web.creativePuzzle@gmail.com">web.creativePuzzle@gmail.com</a></li>
+                            <li><a href="mailto:team.creativePuzzle@gmail.com">team.creativePuzzle@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                        <h2>Sponsoring & Sources</h2>
+
+                        <h3>Bilder & Icons</h3>
+                        <p>Die Bilder uns Icons sind Eigentum unseres Teams!</p>
+
+                        <h3>Modal Skripte</h3>
+                        <p>Das Model entstammt der Quelle Bootstap.com</p>
+
+                        <h3>JQuery, Angular II & Animate.css</h3>
+                        <p>Das Model entstammt der Quelle Bootstap.com</p>
+                        <!--  <a class="weblink" href="http://www.creative-puzzle.com">www.creative-puzzle.com</a>-->
+                    </div>
+
+                </div>
+                <div class="row center">
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <button type="button" class="button-play" data-dismiss="modal"><img class="icon-btn"
+                                                                                            src="../Images/Icon_Cancle.svg">
+                            Schließen
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <section>
+        <!--<section class="info-landing">
+            <div class="row-center">
+                <div class="dash-level-item column-xsd-12 column-sd-12 column-md-11 column-ld-11">
+            <h2>Spielerische Übungen</h2>
+                    <p>Das Hauptaugenmerk unserer Arbeit. Es wird primär 3 Spielmodi geben - Kampagne, Szenarien, Erneut Spielen. Im kampagnen Bereich führen wir den Anwender vom Erlernen der Grundbegriffe bis zum Launch der ersten eigenen Webseite. </p>   </div></div>
+        </section>-->
+        <section class="colored-side">
+
+            <button class="button-landing animated hover-btn log">
+                Anmelden
+            </button>
+
+            <form class="form-log animated focus-contr">
+                <h1>Anmelden</h1>
+
+                <div class="row">
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <div class="input-group">
+                            <input type="email" id="email">
+                            <label for="email"> Deine Email Addresse </label>
+                        </div>
+                    </div>
+
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <div class="input-group">
+                            <input type="password" id="password">
+                            <label for="password"> Dein Passwort </label>
+                        </div>
+                    </div>
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <div class="check-group">
+                            <input type="checkbox" value="None" id="remember-log" name="check"/>
+                            <label for="remember-log">Angemeldet bleiben!</label>
+                        </div>
+                    </div>
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <button onclick="location.href='dashboard.html'" class="button-play" type="button"><img
+                                class="icon-btn" src="../Images/Icon_senden.svg">Absenden
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+
+        </section>
+
+        <section class="second-side">
+
+            <button class="button-landing animated hover-btn reg">
+                Registrieren
+            </button>
+
+
+            <form class="form-reg animated focus-contr">
+                <h1>Registrieren</h1>
+                <div class="row">
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-6">
+                        <div class="input-group">
+                            <input type="text" id="username">
+                            <label for="username"> Username </label>
+                        </div>
+                    </div>
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-6">
+                        <div class="input-group">
+                            <input type="text" id="vorname">
+                            <label for="vorname"> Vorname </label>
+                        </div>
+                    </div>
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-6">
+                        <div class="input-group">
+                            <input type="text" id="nachname">
+                            <label for="username"> Nachname </label>
+                        </div>
+                    </div>
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-6">
+                        <div class="input-group">
+                            <input type="text" id="geburtsdatum">
+                            <label for="geburtsdatum"> Geburtsdatum </label>
+                        </div>
+                    </div>
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+
+                        <div class="input-group">
+                            <input type="email" id="email-reg">
+                            <label for="email-reg"> E-Mail Addresse </label>
+                        </div>
+                    </div>
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-6">
+
+                        <div class="input-group">
+                            <input type="password" id="password-reg">
+                            <label for="password-reg"> Passwort </label>
+                        </div>
+                    </div>
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-6">
+                        <div class="input-group">
+                            <input type="password" id="password-wh-reg">
+                            <label for="password-wh-reg"> Passwort wiederholen </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-6">
+
+                            <div class="check-group">
+                                <input type="checkbox" value="None" id="coach" name="check"/>
+                                <label for="coach">Coach Funktionen</label>
+                            </div>
+                        </div>
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-6">
+
+                            <div class="check-group">
+                                <input type="checkbox" value="None" id="remember-reg" name="check"/>
+                                <label for="remember-reg">Angemeldet bleiben!</label>
+                            </div>
+                        </div>
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                            <button onclick="location.href='dashboard.html'" class="button-play" type="button"><img
+                                    class="icon-btn" src="../Images/Icon_senden.svg">Absenden
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+        </section>
+
+
+        <footer>
+            <div>
+                <a href="http://www.creative-puzzle.com">www.creative-puzzle.com </a>
+            </div>
+            <div class="toggleImprint" data-toggle="modal" data-target="#Impressum">Impressum</div>
+        </footer>
+
+    </section>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="../Scripts/master-min.js"></script>
+</body>
+</html>
+

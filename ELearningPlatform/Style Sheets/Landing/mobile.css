@@ -1,0 +1,78 @@
+@media (max-width: 600px), (max-height: 600px) {
+  .colored-side, .second-side {
+    line-height: 50vh !important;
+    width: 100vw !important;
+    height: 50vh !important;
+    text-align: center !important; }
+    .colored-side button, .second-side button {
+      width: 80% !important;
+      height: 30vh !important;
+      font-size: 1.7rem !important; }
+  footer {
+    font-size: .9rem !important; }
+    footer div {
+      color: black !important; }
+      footer div a {
+        color: black !important; }
+  .form-log, .form-reg {
+    width: 100vw !important;
+    height: 100vh !important; }
+    .form-log h1, .form-reg h1 {
+      margin-top: 5vh; }
+      .form-log h1:after, .form-reg h1:after {
+        content: "\f112" !important;
+        cursor: pointer !important;
+        margin-left: 40px;
+        margin-top: 15px;
+        font-family: "FontAwesome";
+        speak: none;
+        font-style: normal;
+        font-weight: lighter;
+        font-variant: normal;
+        text-transform: none; }
+    .form-log input, .form-reg input {
+      width: 65vw !important; }
+  .form-log {
+    background-color: #992F2E !important; }
+    .form-log h1 {
+      margin-bottom: 15vh !important; }
+      .form-log h1:after {
+        color: white !important; }
+    .form-log input[type="password"] {
+      width: 40vw !important; }
+  .white-helper {
+    color: white !important; }
+  .form-reg {
+    background-color: white; }
+    .form-reg .extend-btnSec {
+      color: black !important;
+      background-color: #992F2E !important; }
+    .form-reg h1 {
+      margin-bottom: 5vh !important; }
+    .form-reg input[type="text"], .form-reg input[type="password"] {
+      width: 40vw !important; }
+    .form-reg input[type="email"] {
+      width: 82vw !important; } }
+
+@media (min-width: 600px) and (max-width: 625px) {
+  line-height: 100vh;
+  button {
+    width: 70%;
+    font-size: 1.5rem !important;
+    height: 20vh; }
+  .form-reg input[type="password"], .form-reg input[type="email"] {
+    width: 47vw !important; }
+  .form-reg input[type="text"] {
+    width: 22.5vw !important; } }
+
+@media (min-width: 625px) and (max-width: 1024px) {
+  .colored-side, .second-side {
+    line-height: 100vh; }
+    .colored-side button, .second-side button {
+      width: 70%;
+      font-size: 1.5rem !important;
+      height: 20vh; }
+  .form-reg input[type="text"], .form-reg input[type="password"] {
+    width: 22.5vw !important; }
+  .form-reg input[type="email"] {
+    width: 47vw !important; } }

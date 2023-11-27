@@ -1,0 +1,146 @@
+@import "headings.sass"
+@import "gridSystem.sass"
+@import "sideBar.sass"
+@import "Parallax.sass"
+
+$white: #FFF
+$black: #000
+$orange: #E8861A
+$red: #FF0000
+$purple: #890CE8
+$blue: #0D6DFF
+$beige: #FFF7A7
+$dark-grey: #686070
+$light-grey: #666
+$dark-blue: #373B61
+$dark-blue-2: #242740
+$lighten-blue: #919CFF
+$dark-blue-3: #474C7F
+$dark-red: #450803
+
+/*---------- Predefined Colors to change all colors at once ----------*/
+$boxShadow: $dark-grey
+$colorLine: $dark-grey
+
+/*---------- Essentials like boxes, example Code boxes, responsive Images and Lines to separate Content ----------*/
+.box
+  padding: 1.5rem
+  border: .00001rem solid transparentize($dark-blue-3, .9)
+  text-align: center
+
+.code-box
+  background-color: transparentize($black, .95)
+  border: 0.05rem solid $dark-grey
+  box-shadow: .05rem .05rem .5rem $boxShadow
+  padding-top: .5rem
+
+.light--coloured
+  padding-bottom: 3.9rem
+.dark--coloured
+  background-color: darken($redDarker, 8%)
+  padding-bottom: 3.9rem
+  top: 0
+  left: 0
+  margin-top: -1rem
+  border: .01rem
+
+.img-res
+  max-width: 100%
+  height: auto
+  margin-top: 1.5rem
+  padding-bottom: .3rem
+
+.line
+  width: 80%
+  margin: 0 auto
+  border: .000001rem solid $colorLine
+  box-shadow: .05rem .05rem .15rem $boxShadow
+
+/*---------- Revealed Footer ----------*/
+.footer
+  height: 300px
+  color: black
+  background-color: transparentize(black, .5)
+  position: fixed
+  bottom: 0
+  left: 0
+  text-align: center
+  z-index: 80
+
+.verticalCenter
+  line-height: 30px
+
+@media screen and (max-width: 1152px)
+  .verticalCenter
+    line-height: 20px
+
+.footer-hidden
+  visibility: hidden
+
+
+/*---------- Stay Tuned Email Box in Footer Section to get user the possibility to sign in their mail ----------*/
+.stayTuned
+  -webkit-font-smoothing: antialiased
+
+  input
+    background: none
+    border: solid .1rem darken($redDarker, 8%)
+    border-radius: 0
+    color: black
+    padding: 15px 40px
+    font-size: 18px
+    display: inline-block
+
+    &:focus,
+    &:active
+      outline: none
+
+    &[type="text"],
+    &[type="email"]
+      border: none
+      border-bottom: solid .1rem darken($redDarker, 8%)
+
+    &[type="submit"]
+      &:active
+        color: black
+        background: darken($colorSchema, 8%)
+
+
+  .input-group
+    display: inline-block
+    margin-right: 20px
+    position: relative
+    &:last-child
+      margin-top: 1rem
+
+    input
+      padding: 15px 0
+
+    label
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      color: black
+      pointer-events: none
+      transition: all 0.15s ease-out 0s
+
+    input:focus + label,
+    input.has-value + label
+      top: -10px
+      font-size: 12px
+      color: black
+
+
+/*---------- Media Queries to change the Width of the Footer by fade out of the side navigation ----------*/
+@media screen and (min-width: 950px)
+  .footer
+    width: 80%
+
+@media screen and (max-width: 950px)
+  .footer
+    width: 100%
+
+@media screen and (max-width: 600px)
+  .footer
+    height: 600px

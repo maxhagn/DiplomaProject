@@ -1,0 +1,109 @@
+$white: #FFF
+$black: #000
+$orange: #E8861A
+$red: #FF0000
+$purple: #890CE8
+$blue: #0D6DFF
+$beige: #FFF7A7
+$dark-grey: #686070
+$light-grey: #666
+$dark-blue: #373B61
+$dark-blue-2: #242740
+$lighten-blue: #919CFF
+$dark-blue-3: #474C7F
+$redAdobe: #dd2c00
+$redLight: #ff6434
+$redDark: #a30000
+$redDarker: #8F0500
+
+
+/*---------- Predefined Colors to change all colors at once ----------*/
+$colorSchema: $redDarker
+
+/*---------- General Styles for the HTML, Body, Lists and Headings ----------*/
+html
+  font:
+    family: "Dosis"
+    style: normal
+    weight: lighter
+    variant: normal
+    size: 18px
+  text-size-adjust: 100%
+  min-height: 100%
+  overflow-x: hidden
+  overflow-y: scroll
+  display: flex
+  flex-direction: column
+  line-height: 1.1rem
+
+body 
+  margin: 0
+
+ul
+  list-style: none
+
+a
+  text-decoration: none
+  line-height: 1rem
+  color: black
+
+.lineHeight
+  line-height: .6rem
+
+h1 
+  font-size: 34px
+  color: $colorSchema
+  line-height: 2rem
+
+h1 small 
+  font-size: 32px
+  color: $colorSchema
+  line-height: 2rem
+
+h2
+  font-size: 30px
+  color: $colorSchema
+  line-height: 2rem
+
+h2 small
+  font-size: 28px
+  color: transparentize(darken($colorSchema, 15%), .8)
+  line-height: 2rem
+
+h3
+  font-size: 26px
+  color: black
+  line-height: 2rem
+
+h3 small
+  font-size: 24px
+  color: transparentize(darken($colorSchema, 18%), .8)
+  line-height: 2rem
+
+h4
+  font-size: 22px
+  color: transparentize(darken($colorSchema, 30%), .5)
+
+h4 small
+  font-size: 16px
+  color: transparentize(darken($colorSchema, 30%), .5)
+
+ul
+  margin-left: -40px
+
+li
+  list-style: none
+
+a
+  label
+    font-size: 20px
+    line-height: 24px
+    color: white
+  &:hover
+    font-size: 30px
+    line-height: 24px
+
+label
+  color: black
+  font-size: 15px
+  line-height: .6rem

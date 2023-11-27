@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../Style%20Sheets/master.css" type="text/css">
+    <link rel="stylesheet" href="../Style%20Sheets/Initialization/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <title>Creative Puzzle | Templates & Code Library</title>
+</head>
+<body>
+<div class="modal fade" id="Impressum" tabindex="-1" role="dialog" aria-labelledby="ImpressumLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                        <h2 class="modal-title" id="ImpressumLabel">Impressum</h2>
+                        <h3>Inhaber</h3>
+                        <p>Name: Maximilian Hagn</p>
+                        <h3>Adresse</h3>
+                        <p>
+                            Straße: Rudolf-Waisenhorn-Gasse 138/4
+                        </p>
+                        <p>
+                            PLZ: 1230
+                        </p>
+                        <p>
+                            Ort: Wien
+                        </p>
+                        <p>
+                            Land: Österreich
+                        </p>
+
+                        <h3>Kontakt</h3>
+
+                        Telefon:
+                        <ul>
+                            <li><a href="tel:+436769579022">+43 676 9579022</a>
+                            </li>
+                        </ul>
+
+                        E-Mail:
+                        <ul>
+                            <li><a href="mailto:maximilian.hagn@htl.rennweg.at">maximilian.hagn@htl.rennweg.at</a>
+                            </li>
+                            <li><a href="mailto:web.creativePuzzle@gmail.com">web.creativePuzzle@gmail.com</a></li>
+                            <li><a href="mailto:team.creativePuzzle@gmail.com">team.creativePuzzle@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                        <h2>Sponsoring & Sources</h2>
+
+                        <h3>Bilder & Icons</h3>
+                        <p>Die Bilder uns Icons sind Eigentum unseres Teams!</p>
+
+                        <h3>Modal Skripte</h3>
+                        <p>Das Model entstammt der Quelle Bootstap.com</p>
+
+                        <h3>JQuery, Angular II & Animate.css</h3>
+                        <p>Das Model entstammt der Quelle Bootstap.com</p>
+                        <!--  <a class="weblink" href="http://www.creative-puzzle.com">www.creative-puzzle.com</a>-->
+                    </div>
+
+                </div>
+                <div class="row center">
+                    <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                        <button type="button" class="button-play" data-dismiss="modal"><img class="icon-btn"
+                                                                                            src="../Images/Icon_Cancle.svg">
+                            Schließen
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="nav-mobile">
+    <div class="toggle-nav"><img class="icon-img tglw" src="../Images/Icon_hide.svg"><img
+            class="icon-img tglb display-none" src="../Images/Icon_hide_dark.svg"></div>
+    <div>
+        <button data-toggle="modal" data-target="#Impressum">Impressum</button>
+    </div>
+
+    <div class="nav-container display-none">
+        <div class="nav-item">
+            <div><a href="dashboard.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="modes.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="profile.html"></a></div>
+
+        </div>
+        <div class="nav-item">
+            <div><a href="stats.html"></a></div>
+
+        </div>
+        <div class="nav-item">
+            <div><a href="templateLibrary.html"></a></div>
+
+        </div>
+        <div class="nav-item">
+            <div><a href="sources.html"></a></div>
+
+        </div>
+
+        <div class="nav-item">
+            <div><a href="landing.html"></a></div>
+
+        </div>
+    </div>
+
+</nav>
+
+
+<nav class="nav-desktop">
+    <div class="nav-container">
+        <div class="nav-item">
+            <div><a href="dashboard.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="modes.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="profile.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="stats.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="templateLibrary.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="sources.html"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a data-toggle="modal" data-target="#Impressum"></a></div>
+        </div>
+        <div class="nav-item">
+            <div><a href="landing.html"></a></div>
+        </div>
+    </div>
+</nav>
+
+<nav class="sec-nav">
+    <div class="sec-nav-container">
+        <div class="row">
+            <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                <form class="form-search">
+
+                    <div class="row">
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                            <input type="text" value="" class="range" id="tags"/><label></label></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12"><input type="search" value=""
+                                                                                                 id="search"/><label></label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                            <input type="range" class="range" id="range" min="0" max="100"/><label></label></div>
+                    </div>
+
+                    <div class="row center">
+                        <div class="column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+
+                            <button onclick="location.href='modes.html'" id="back" type="button" class="button-play">
+                                <img
+                                        class="column-xsd-12 column-sd-12 column-md-6 column-ld-6"
+                                        src="../Images/Icon_Dashboard.svg">
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="dash-wrapper">
+    <div class="container-large">
+        <section class="templates">
+            <h1>Templates</h1>
+            <div class="row">
+                <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                    <h3>Semantik </h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamm ipsum dolor sit amet,
+                        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores.</p>
+
+                    <div class="row-center">
+                        <div class="column-xsd-9 column-sd-9 column-md-9 column-ld-8">
+
+                            <h4>
+                                <small>Posted by Michael Kutis on 25.September.2017</small>
+                            </h4>
+                        </div>
+                        <div class="column-xsd-3 column-sd-3 column-md-3 column-ld-2">
+                            <img alt="download, template, training, coaching, css, html, webdev" class="icon-img-sm"
+                                 src="../Images/Icon_Download.svg">
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                    <h3>Formulare </h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                        amet.</p>
+                    <div class="row-center">
+                        <div class="column-xsd-9 column-sd-9 column-md-9 column-ld-8">
+
+                            <h4>
+                                <small>Posted by Michael Kutis on 29.Dezember.2017</small>
+                            </h4>
+                        </div>
+                        <div class="column-xsd-3 column-sd-3 column-md-3 column-ld-2">
+                            <img alt="download, template, training, coaching, css, html, webdev" class="icon-img-sm"
+                                 src="../Images/Icon_Download.svg">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                    <h3>Blog </h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                        amet.</p>
+                    <div class="row-center">
+                        <div class="column-xsd-9 column-sd-9 column-md-9 column-ld-8">
+
+                            <h4>
+                                <small>Posted by Michael Kutis on 13.November.2017</small>
+                            </h4>
+                        </div>
+                        <div class="column-xsd-3 column-sd-3 column-md-3 column-ld-2">
+                            <img alt="download, template, training, coaching, css, html, webdev" class="icon-img-sm"
+                                 src="../Images/Icon_Download.svg">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                    <h3>Nachrichten </h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                        amet.</p>
+                    <div class="row-center">
+                        <div class="column-xsd-9 column-sd-9 column-md-9 column-ld-8">
+
+                            <h4>
+                                <small>Posted by Florian Schwingenschlögl on 17.September.2017</small>
+                            </h4>
+                        </div>
+                        <div class="column-xsd-3 column-sd-3 column-md-3 column-ld-2">
+                            <img alt="download, template, training, coaching, css, html, webdev" class="icon-img-sm"
+                                 src="../Images/Icon_Download.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                    <h3>Semantik II </h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                        amet.</p>
+                    <div class="row-center">
+                        <div class="column-xsd-9 column-sd-9 column-md-9 column-ld-8">
+
+                            <h4>
+                                <small>Posted by Florian Schwingenschlögl on 17.September.2017</small>
+                            </h4>
+                        </div>
+                        <div class="column-xsd-3 column-sd-3 column-md-3 column-ld-2">
+                            <img alt="download, template, training, coaching, css, html, webdev" class="icon-img-sm"
+                                 src="../Images/Icon_Download.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-level-item column-xsd-12 column-sd-12 column-md-6 column-ld-6">
+                    <h3>Navigation </h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                        amet.</p>
+                    <div class="row-center">
+                        <div class="column-xsd-9 column-sd-9 column-md-9 column-ld-8">
+
+                            <h4>
+                                <small>Posted by Florian Schwingenschlögl on 17.September.2017</small>
+                            </h4>
+                        </div>
+                        <div class="column-xsd-3 column-sd-3 column-md-3 column-ld-2">
+                            <img alt="download, template, training, coaching, css, html, webdev" class="icon-img-sm"
+                                 src="../Images/Icon_Download.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="library">
+            <h2>Code Library</h2>
+            <div class="row">
+                <div class="dash-level-item column-xsd-12 column-sd-12 column-md-12 column-ld-3">
+
+                    <ul>
+                        <li>CSS</li>
+                        <li class="sub">Farben</li>
+                        <li class="sub">Grid</li>
+                        <li class="sub">Container</li>
+                        <li class="sub">Typografie</li>
+                        <li class="sub">Cards</li>
+                        <li>Java Script</li>
+                        <li class="sub">Search Bar</li>
+                        <li class="sub">Collapsile</li>
+                        <li>Puzzleteile</li>
+                        <li class="sub">Header</li>
+                        <li class="sub">Navigation</li>
+                        <li class="sub">Footer</li>
+                        <li>Thema 4</li>
+                    </ul>
+
+
+                </div>
+
+
+                <div class="dash-level-item column-xsd-12 column-sd-12 column-md-12 column-ld-9">
+                    <h1> Buttons</h1>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                        duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit
+                        amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                        duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit
+                        amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                        duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit
+                        amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut
+                        labore et doloreet.</p>
+                    <div class="codebox">
+                        <p>&lt;html&gt;</p>
+                        <p>&lt;head&gt;</p>
+                        <p>&lt;title&gt; &lt;/title&gt;</p>
+                        <p> &lt;/head&gt;</p>
+                        <p> &lt;body&gt;</p>
+                        <p>&lt;section&gt;</p>
+                        <p> &lt;h1&gt; Beispiel 1</p>
+                        <p> &lt;hr&gt;</p>
+                        <p> &lt;small&gt; Das ist ein Beispiel &lt;/small&gt; &lt;/h1&gt;</p>
+                        <p>&lt;/section&gt;</p>
+                        <p>&lt;/body&gt;</p>
+                        <p>&lt;/html&gt;</p>
+                    </div>
+                </div>
+                <div class="dash-level-item column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                    <h1> Footer </h1>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                        duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit
+                        amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                        duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit
+                        amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                        duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit
+                        amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut
+                        labore et doloreet.</p>
+                    <div class="codebox">
+                        <p>&lt;html&gt;</p>
+                        <p>&lt;head&gt;</p>
+                        <p>&lt;title&gt; &lt;/title&gt;</p>
+                        <p> &lt;/head&gt;</p>
+                        <p> &lt;body&gt;</p>
+                        <p>&lt;section&gt;</p>
+                        <p> &lt;h1&gt; Beispiel 1</p>
+                        <p> &lt;hr&gt;</p>
+                        <p> &lt;small&gt; Das ist ein Beispiel &lt;/small&gt; &lt;/h1&gt;</p>
+                        <p>&lt;/section&gt;</p>
+                        <p>&lt;/body&gt;</p>
+                        <p>&lt;/html&gt;</p>
+                    </div>
+                </div>
+                <div class="dash-level-item column-xsd-12 column-sd-12 column-md-12 column-ld-12">
+                    <h1> Header </h1>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                        duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit
+                        amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                        duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit
+                        amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                        duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit
+                        amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut
+                        labore et doloreet.</p>
+                    <div class="codebox">
+                        <p>&lt;html&gt;</p>
+                        <p>&lt;head&gt;</p>
+                        <p>&lt;title&gt; &lt;/title&gt;</p>
+                        <p> &lt;/head&gt;</p>
+                        <p> &lt;body&gt;</p>
+                        <p>&lt;section&gt;</p>
+                        <p> &lt;h1&gt; Beispiel 1</p>
+                        <p> &lt;hr&gt;</p>
+                        <p> &lt;small&gt; Das ist ein Beispiel &lt;/small&gt; &lt;/h1&gt;</p>
+                        <p>&lt;/section&gt;</p>
+                        <p>&lt;/body&gt;</p>
+                        <p>&lt;/html&gt;</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="../Scripts/master.js"></script>
+</body>
+</html>
+
