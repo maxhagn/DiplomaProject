@@ -1,0 +1,43 @@
+.transparent_box {
+  height: 300px;
+  width: 100%;
+  background: transparent; }
+
+.image-wrapper {
+  width: 100% !important;
+  height: auto !important; }
+  .image-wrapper img {
+    margin-bottom: 20px; }
+
+.col {
+  margin-left: auto !important;
+  margin-right: auto !important; }
+
+.row {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important; }
+
+.content_box {
+  padding: 5rem 10rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; }
+
+.padding {
+  padding-top: 50px;
+  padding-bottom: 100px; }
+
+.font-roboto {
+  font-weight: 300; }
+
+.intro {
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px; }
+
+.line {
+  margin-top: 50px;
+  margin-bottom: 50px; }

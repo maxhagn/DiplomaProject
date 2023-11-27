@@ -1,0 +1,17 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; }
+
+.article {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background: #F9F9F9;
+  padding: 1rem 3rem;
+  line-height: 1.5rem;
+  border-radius: 3px; }
+
+.container-xs {
+  margin-top: 100px; }
+
+.margin-bottom {
+  margin-bottom: 50px; }

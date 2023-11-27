@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!---------------------------------------- Metadata ---------------------------------------->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!---------------------------------------- Google Analytics ---------------------------------------->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-101506688-1');
+    </script>
+
+    <!---------------------------------------- Title ---------------------------------------->
+    <title>CreativePuzzle Framework</title>
+
+    <!---------------------------------------- CSS Imports ---------------------------------------->
+    <link rel="alternate" hreflang="en" href="../en">
+    <link rel="shortcut icon" href="../lib/img/puzzle.png">
+    <link href="../lib/css/imports.css" rel="stylesheet">
+
+    <!---------------------------------------- Font Imports ---------------------------------------->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<!---------------------------------------- Header ---------------------------------------->
+<header id="top" class="header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header navpadding">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand logopadding logo" href="index.html"><img class="navicon" alt="Brand"
+                                                                                src="../lib/img/logo.png"></a>
+            </div>
+            <div class="navbar-collapse collapse navpadding">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="nav-link" href="./css.html">Get Started</a></li>
+                    <li><a class="nav-link" href="typografie.html">Typografie</a></li>
+                    <li><a class="nav-link active">CSS</a></li>
+                    <li><a class="nav-link" href="components.html">Komponents</a></li>
+                    <li><a class="nav-link" href="templates.html">Templates</a></li>
+                    <li><a target="_self" class="nav-link" href="http://www.creative-puzzle.com">.info</a></li>
+                    <li><a class="nav-link" target="_blank" href="http://creative-puzzle.com/app/">App</a></li>
+                    <li><a class="nav-link" href="../en/get_started.html">en</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!---------------------------------------- Side-Navigation ---------------------------------------->
+<aside class="aside">
+    <ul class="section table-of-contents">
+        <li class="aside-scroll"><a href="#gridsystem">Grid System</a></li>
+        <li class="aside-subnav"><a href="#container">Container</a></li>
+        <li class="aside-subnav"><a href="#column">Spalten</a></li>
+        <li class="aside-subnav"><a href="#nesting">Verschachtelung</a></li>
+        <li class="aside-subnav"><a href="#position">Positionierung</a></li>
+        <li class="aside-subnav"><a href="#extendedposition">Erweiterte Positionierung</a></li>
+        <li class="aside-subnav"><a href="#sassconfig">Sass Konfiguration</a></li>
+        <li class="aside-scroll"><a href="#colorsystem">Farbsystem</a></li>
+        <li class="aside-subnav"><a href="#wheel">Farbrad</a></li>
+        <li class="aside-subnav"><a href="#extracolors">Erweiterte Farben</a></li>
+        <li class="aside-subnav"><a href="#colorthemes">Farb Themen</a></li>
+        <li class="aside-scroll"><a href="#media">Media</a></li>
+        <li class="aside-subnav"><a href="#images">Bilder</a></li>
+        <li class="aside-subnav"><a href="#video">Videos</a></li>
+        <li class="aside-subnav"><a href="#audio">Audio</a></li>
+        <li class="aside-scroll"><a href="#table">Tabellen</a></li>
+        <li class="aside-scroll"><a href="#helper">Werkzeuge</a></li>
+        <li class="aside-scroll"><a href="#shadow">Schatten</a></li>
+        <li class="aside-scroll"><a href="#showhide">Show/Hide</a></li>
+        <li class="aside-scroll"><a href="#parallax">Parallax</a></li>
+    </ul>
+</aside>
+
+<!---------------------------------------- Content ---------------------------------------->
+<main class="content">
+    <!---------------------------------------- Introduction ---------------------------------------->
+    <article>
+        <h1>CSS</h1>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+            amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no
+            sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+    </article>
+
+    <div class="container-line">
+        <hr>
+    </div>
+
+    <!---------------------------------------- Table of Content ---------------------------------------->
+    <div class="row">
+        <div class="subnav-mobile">
+            <h3>Inhaltsverzeichnis</h3>
+            <nav>
+                <ul class="dir_pad" style="list-style: none !important;">
+                    <li>
+                        <a class="directory" href="#gridsystem">Grid System</a>
+                    </li>
+                    <li>
+                        <a class="directory" href="#container">Container</a>
+                    </li>
+                    <li>
+                        <a class="directory" href="#colorsystem">Farben</a>
+                    </li>
+                    <li>
+                        <a class="directory" href="#table">Tabellen</a>
+                    </li>
+                    <li>
+                        <a class="directory" href="#helper">Werkzeuge</a>
+                    </li>
+                    <li>
+                        <a class="directory" href="#shadow">Schatten</a>
+                    </li>
+                    <li>
+                        <a class="directory" href="#showhide">Show/Hide</a>
+                    </li>
+                    <li>
+                        <a class="directory" href="#media">Media</a>
+                    </li>
+                    <li>
+                        <a class="directory" href="#parallax">Parallax</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!---------------------------- Grid System ---------------------------->
+    <article id="gridsystem" class="section scrollspy">
+        <h2>Grid System</h2>
+        <p>
+            Gestalte komplexe Layouts mithilfe eines 12 Spalten Grid Systems. Eine Webseite kann gedanklich in eine
+            Art
+            Tabelle mit mehreren Spalten und Zeilen unterteilt werden. Ist die Tabelle zum Beispiel 12 Spalten breit
+            und 1
+            Zeile hoch so sind über 450.000.000 Möglichkeiten der Positionierung möglich. Durch das Implementieren
+            weiterer
+            Klassen sind noch einmal mehr Optionen offen.
+        </p>
+    </article>
+
+    <!---------------------------- Container | Ein Table mit Infos fehlt (Breakpoint Infos) ---------------------------->
+    <article id="container" class="section scrollspy">
+        <h3>Container</h3>
+        <p>Container umschließen mehrere DOM Elemente und definieren deren maximale Breite. Im Optimalfall sollten
+            die
+            Containerklassen in semantische Elemente eingebunden werden, also zum Beispiel im <i class="classname">&lt;main&gt; &lt;/main&gt;</i>
+            oder <i class="classname"> &lt;section&gt; &lt;/section&gt; </i> Tag.
+        </p>
+
+        <div class="row content_img">
+            <div class="col-lg-12">
+                <img class="img-responsive" draggable="false" src="../lib/img/css/container.png">
+            </div>
+        </div>
+
+        <div class="codeBox">
+            &lt;div class="container-xs" &gt; &lt;/div&gt;<br>
+            &lt;div class="container-s" &gt; &lt;/div&gt;<br>
+            &lt;div class="container-m" &gt; &lt;/div&gt;<br>
+            &lt;div class="container-l" &gt; &lt;/div&gt;<br>
+            &lt;div class="container-xl" &gt; &lt;/div&gt;<br>
+        </div>
+    </article>
+
+    <!----------------------------  Column ---------------------------->
+    <article id="column" class="section scrollspy">
+        <article>
+        <h3>Gleiche Spaltengröße</h3>
+        <p>Nachdem die Größen der Container bestimmt wurden, wird eine <i class="classname">.row</i> Klasse eingerichtet. Jeder <i class="tagname">&lt;div&gt;</i>
+            Tag mit
+            der Klasse <i class="classname">.row</i> repräsentiert eine Zeile in unserer gedanklichen Tabelle. Innerhalb der Row können bis zu
+            12 <i class="classname">.col</i>
+            Klassen eingebunden werden. Diese teilen sich den freien Platz untereinander auf.
+        </p>
+        <div class="row content_img">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="../lib/img/css/column.png">
+            </div>
+        </div>
+
+        <div class="codeBox">
+            &lt;div class="row center"&gt;<br>
+            &lt;div class="col blue-medium"&gt;Erste von zwei Spalten&lt;/div&gt;<br>
+            &lt;div class="col blue-medium"&gt;Zweite von zwei Spalten&lt;/div&gt;<br>
+            &lt;/div&gt;
+        </div>
+
+        </article>
+    <article>
+        <h3 class="title">Spaltengröße setzen</h3>
+        <p>Alternativ können einzelne oder alle Elemente mit einer bestimmten Größe versehen werden. Je nach
+            Vorsilbe werden
+            andere Bildschirmgrößen angesprochen. Sollen Elemente auf jeder Bildschirmgrößen gleich groß sein, so
+            reicht es
+            <i class="classname">.xs</i> zu definieren.
+        </p>
+        <div class="row content_img">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="../lib/img/css/widercolumn.png">
+            </div>
+        </div>
+
+        <div class="codeBox">
+            &lt;div class="row center"&gt;<br>
+            &lt;div class="col blue-medium"&gt;Erste von zwei Spalten&lt;/div&gt;<br>
+            &lt;div class="col blue-medium"&gt;Zweite von zwei Spalten&lt;/div&gt;<br>
+            &lt;/div&gt;
+        </div>
+    </article>
+    </article>
+
+    <!---------------------------- Nesting ---------------------------->
+    <article id="nesting" class="section scrollspy">
+        <h2>Verschachtelung</h2>
+        <p>Ebenfalls möglich ist es, mehrere Tabellen ineinander zu verschachteln - so entstehen noch mehr
+            Möglichkeiten ein
+            Layout zu gestalten. Alle zuvor erwähnten Attribute sind weiterhin anwendbar.
+        </p>
+        <div class="row content_img">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="../lib/img/css/nesting.png">
+            </div>
+        </div>
+
+        <div class="codeBox">
+            &lt;div class="row center"&gt;<br>
+            &lt;div class="col blue-medium"&gt;Erste von zwei Spalten&lt;/div&gt;<br>
+            &lt;div class="col blue-medium"&gt;Zweite von zwei Spalten&lt;/div&gt;<br>
+            &lt;/div&gt;
+        </div>
+    </article>
+    <div class="container-line">
+        <hr>
+    </div>
+
+    <!---------------------------- Horizontal Positioning ---------------------------->
+    <article id="position" class="section scrollspy">
+        <h2 class="title">Horizontale Zentrierung</h2>
+        <p>Füllen die angegebenen Spalten in einer Tabelle nicht die maximale Breite des Bildschirms aus, so können
+            diese
+            nach belieben positioniert werden. Standardmäßig werden Elemente und Texte Rechtsbündig zentriert.
+        </p>
+        <div class="row content_img">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="../lib/img/css/gridpositioning.png">
+            </div>
+        </div>
+
+        <div class="codeBox">
+            &lt;div class="row center"&gt;<br>
+            &lt;div class="col blue-medium"&gt;Erste von zwei Spalten&lt;/div&gt;<br>
+            &lt;div class="col blue-medium"&gt;Zweite von zwei Spalten&lt;/div&gt;<br>
+            &lt;/div&gt;
+        </div>
+
+        <!---------------------------- Vertical Positioning ---------------------------->
+        <h2 class="title">Vertikale Zentrierung</h2>
+        <p>Im Falle, dass ein Container höher als die eingeschlossenen Elemente, können die Kindelemente entweder
+            Oben,
+            Unten oder in der Mitte positioniert werden.
+        </p>
+        <div class="row content_img">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="../lib/img/css/verticalcenter.png">
+            </div>
+        </div>
+
+        <div class="codeBox">
+            &lt;div class="row center"&gt;<br>
+            &lt;div class="col blue-medium"&gt;Erste von zwei Spalten&lt;/div&gt;<br>
+            &lt;div class="col blue-medium"&gt;Zweite von zwei Spalten&lt;/div&gt;<br>
+            &lt;/div&gt;
+        </div>
+    </article>
+
+    <!---------------------------- Extended Positioning ---------------------------->
+    <article id="extendedposition" class="section scrollspy">
+        <h2 class="title">Erweiterte Positionierung</h2>
+        <p>Auch im Nachhinein ist es noch möglich die Position einiger Elemente zu ändern. Zum Beispiel können die
+            Spalten
+            geordnet oder eingerückt werden.
+        </p>
+
+        <!---------------------------- Grid Einrücken ---------------------------->
+        <h2 class="title">Spalten einrücken</h2>
+        <p>Um keine leeren Spalten definieren zu müssen, können einzelne Elemente weiter nach rechts gedrückt
+            werden. Die
+            Logik ist deckend zu der des Grid Systems und somit einfach verknüpfbar.
+        </p>
+        <div class="row content_img">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="../lib/img/css/push.png">
+            </div>
+        </div>
+        <div class="codeBox">
+            &lt;div class="row center"&gt;<br>
+            &lt;div class="col blue-medium"&gt;Erste von zwei Spalten&lt;/div&gt;<br>
+            &lt;div class="col blue-medium"&gt;Zweite von zwei Spalten&lt;/div&gt;<br>
+            &lt;/div&gt;
+        </div>
+
+        <!---------------------------- Ordering ---------------------------->
+        <h2 class="title">Ordnen der Zeilen</h2>
+        <p>Sind nun zum Beispiel 6 Column Elemente definiert und das letzte Element im Sourcecode soll ganz nach
+            vorne
+            gebracht werden, so kann die Klasse first verwendet werden. Um das Gegenteil dazu zu erreichen wird die
+            Klasse
+            last verwendet. Weiteres kann über die Klassen order1 - order12 die komplette Ordnung verändert werden.
+        </p>
+        <div class="row content_img">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="../lib/img/css/ordering.png">
+            </div>
+        </div>
+        <div class="codeBox">
+            &lt;div class="row center"&gt;<br>
+            &lt;div class="col blue-medium"&gt;Erste von zwei Spalten&lt;/div&gt;<br>
+            &lt;div class="col blue-medium"&gt;Zweite von zwei Spalten&lt;/div&gt;<br>
+            &lt;/div&gt;
+        </div>
+    </article>
+    <div class="container-line">
+        <hr>
+    </div>
+
+    <!---------------------------- Initialization Sass ---------------------------->
+    <article id="sassconfig" class="section scrollspy">
+        <h2>Mit Sass personalisieren</h2>
+        <p>Falls Vorkenntnisse über Precompiler und im Speziellen über die Sprachen SASS und SCSS vorhanden ist,
+            können die
+            Werte vordefinierte Variablen geändert und das Stylesheet personalisiert werden. Zum Beispiel kann die
+            Anzahl
+            der Spalten von 12 auf 24 geändert werden.</p>
+    </article>
+
+    !---------------------------- Vars ---------------------------->
+    <article id="variablen" class="section scrollspy">
+        <h3>Variablen</h3>
+        <p>Des Weiteren könnten die Breakpoints oder der Seitenrand verändert werden.</p>
+    </article>
+    <div class="container-line">
+        <hr>
+    </div>
+
+    <!---------------------------- Color System ---------------------------->
+    <article id="colorsystem" class="section scrollspy">
+        <h2>Farb System</h2>
+        <p>Das Framework bietet eine kleine Selektion an vordefinierten Farbräumen. Neben den Grundfarben bieten wir
+            einen Erweiterten Farbraum und vordefinierte Themen, wie zum Beispiel eines für Farben des Herbstes.</p>
+
+        <div class="codeBox">
+            &lt;div class="row center"&gt;<br>
+            &lt;div class="col blue-medium"&gt;Erste von zwei Spalten&lt;/div&gt;<br>
+            &lt;div class="col blue-medium"&gt;Zweite von zwei Spalten&lt;/div&gt;<br>
+            &lt;/div&gt;
+        </div>
+    </article>
+
+    <!---------------------------- Colorwheel ---------------------------->
+    <article id="wheel" class="section scrollspy">
+        <h3>Farbrad</h3>
+        <p>Hier werden alle Farbrad Farben mit 12 verschiedenen Tans als Klassennamen aufbereitet. </p>
+        <div class="row content_img">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="../lib/img/css/farbrad.png">
+            </div>
+        </div>
+    </article>
+
+    <!---------------------------- Extra Spectrum ---------------------------->
+    <article id="extracolors" class="section scrollspy">
+        <h3>Erweitertes Spektrum</h3>
+        <p>Der erweiterte Farbraum fügt weitere wichtige Farben zur Farbauswahl hinzu. </p>
+        <div class="row content_img">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="../lib/img/css/extraspectrum.png">
+            </div>
+        </div>
+    </article>
+    <div class="container-line">
+        <hr>
+    </div>
+
+    <!---------------------------- Colorcreations ---------------------------->
+    <article id="colorthemes" class="section scrollspy">
+        <h2>Farbkreationen</h2>
+        <p>Wollen Sie einen Webshop für Herbstmode eröffnen, jedoch kein Vorwissen im Bereich Farblehre? Auch das
+            sollte
+            mit den vordefinierten Schemata keine Problem für sie werden.</p>
+
+
+    <!---------------------------- Autumntheme ---------------------------->
+    <article>
+        <h3 class="title">Herbst Kollektion</h3>
+        <div class="row content_img">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="../lib/img/css/autumn.png">
+            </div>
+        </div>
+    </article>
+
+    <!---------------------------- Camotheme ---------------------------->
+    <article>
+        <h3 class="title">Camouflage Kollektion</h3>
+        <div class="row content_img">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="../lib/img/css/camo.png">
+            </div>
+        </div>
+    </article>
+
+    <!---------------------------- Supremetheme ---------------------------->
+    <article>
+        <h3 class="title">Supreme Kollektion</h3>
+        <div class="row content_img">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="../lib/img/css/supreme.png">
+            </div>
+        </div>
+    </article>
+    </article>
+
+    <!---------------------------- Media ---------------------------->
+    <article id="media" class="section scrollspy">
+        <h2>Media</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <div class="codeBox">
+            <-body>
+
+            <-/body>
+        </div>
+    </article>
+
+    <!---------------------------- Images ---------------------------->
+    <article id="images" class="section scrollspy">
+        <h3>Bilder</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <div class="codeBox">
+            <-body>
+
+            <-/body>
+        </div>
+    </article>
+
+    <!---------------------------- Video ---------------------------->
+    <article id="video" class="section scrollspy">
+        <h3>Video</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <div class="codeBox">
+            <-body>
+
+            <-/body>
+        </div>
+    </article>
+
+    <!---------------------------- Audio ---------------------------->
+    <article id="audio" class="section scrollspy">
+        <h3>Audio</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <div class="codeBox">
+            <-body>
+
+            <-/body>
+        </div>
+    </article>
+    <div class="container-line">
+        <hr>
+    </div>
+
+    <!---------------------------- Tabels ---------------------------->
+    <article id="table" class="section scrollspy">
+        <h2>Tabellen</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <div class="codeBox">
+            <-body>
+
+            <-/body>
+        </div>
+    </article>
+
+    <!---------------------------- Tools ---------------------------->
+    <article id="helper" class="section scrollspy">
+        <h2>Werkzeuge</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <div class="codeBox">
+            <-body>
+
+            <-/body>
+        </div>
+    </article>
+
+    <!---------------------------- Shadow ---------------------------->
+    <article id="shadow" class="section scrollspy">
+        <h2>Schatten</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <div class="codeBox">
+            <-body>
+
+            <-/body>
+        </div>
+    </article>
+
+    <!---------------------------- Show/Hide ---------------------------->
+    <article id="showhide" class="section scrollspy">
+        <h2>Elemente ausblenden</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <div class="codeBox">
+            <-body>
+
+            <-/body>
+        </div>
+    </article>
+    <div class="container-line">
+        <hr>
+    </div>
+
+    <!---------------------------- Parallax ---------------------------->
+    <article id="parallax" class="section scrollspy">
+        <h2>Parallax</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <div class="codeBox">
+            <-body>
+
+            <-/body>
+        </div>
+    </article>
+</main>
+
+<!---------------------------------------- Footer ---------------------------------------->
+<footer class="footer">
+    <ul class="sociallist">
+        <!---------------------------------------- Social Media Icons ---------------------------------------->
+        <li><a target="_blank" href="https://www.facebook.com/CreativePuzzleDevelop/"><img src="../lib/img/facebook.png"
+                                                                                           alt="facebook logo"
+                                                                                           class="img-responsive socialmedia"></a>
+        </li>
+        <li><a target="_blank" href="https://www.instagram.com/creative.puzzle/"><img src="../lib/img/instagram.png"
+                                                                                      alt="instagram logo"
+                                                                                      class="img-responsive socialmedia"></a>
+        </li>
+        <li><a target="_blank" href="https://twitter.com/creative_puzzle?lang=de"><img src="../lib/img/twitter.png"
+                                                                                       alt="twitter logo"
+                                                                                       class="img-responsive socialmedia"></a>
+        </li>
+    </ul>
+
+    <!---------------------------------------- Imprint Button ---------------------------------------->
+    <div class="col-lg-12 text-center">
+        <button type="button" class="btnimpr btn btn-md" data-toggle="modal" data-target="#Impressum">
+            Impressum
+        </button>
+    </div>
+    <!---------------------------------------- Modal Imprint ---------------------------------------->
+    <div class="modal fade " id="Impressum" tabindex="-1" role="dialog" aria-labelledby="ImpressumLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="ImpressumLabel">Impressum</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>Inhaber</h3>
+                    <p>Name: Maximilian Hagn</p>
+                    <h3>Adresse</h3>
+                    <p>
+                        Straße: Rudolf-Waisenhorn-Gasse 138/4
+                    </p>
+                    <p>
+                        PLZ: 1230
+                    </p>
+                    <p>
+                        Ort: Wien
+                    </p>
+                    <p>
+                        Land: Österreich
+                    </p>
+                    <h3>Kontakt</h3>
+                    <p>
+                        Telefon: <a href="tel:+436769579022">+43 676 9579022</a>
+                    </p>
+                    <p>
+                        E-Mail:
+                    </p>
+                    <ul class="imprmail">
+                        <li><a href="mailto:maximilian.hagn@htl.rennweg.at" target="_blank">maximilian.hagn@htl.rennweg.at</a>
+                        </li>
+                        <li><a href="mailto:web.creativePuzzle@gmail.com"
+                               target="_blank">web.creativePuzzle@gmail.com</a></li>
+                        <li><a href="mailto:team.creativePuzzle@gmail.com"
+                               target="_blank">team.creativePuzzle@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------------------- Footer Description ---------------------------------------->
+    <p class="centered">Created by CreativePuzzle</p>
+</footer>
+
+<!---------------------------------------- Javascript ---------------------------------------->
+<script src="https://code.jquery.com/jquery-3.3.0.js" integrity="sha256-TFWSuDJt6kS+huV+vVlyV1jM3dwGdeNWqezhTxXB/X8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="../lib/js/validator.js"></script>
+<script src="../lib/js/bootstrap.js"></script>
+<script src="../lib/js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.scrollspy').scrollSpy();
+    });
+</script>
+</body>
+</html>

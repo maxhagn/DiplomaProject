@@ -1,0 +1,467 @@
+//Hide and Show
+//------------------------------------------------------------------------------
+
+//Block Element display:block
+.block
+  display: block
+  width: 100%
+
+//Hide display:none
+//------------------------------------
+//Immer
+.hide
+  display: none !important
+
+//Alles unter small
+@media screen and (max-width: 600px)
+  .hide-sl
+    display: none !important
+
+//Nur bei medium
+@media screen and (min-width: 600px) and (max-width: 950px)
+  .hide-md
+    display: none !important
+
+//Alles über medium
+@media screen and (min-width: 600px) and (min-width: 950px)
+  .hide-md-up
+    display: none !important
+
+//Alles unter medium
+@media screen and (max-width: 950px)
+  .hide-md-down
+    display: none !important
+
+//Alles über groß
+@media screen and (min-width: 950px)
+  .hide-lg
+    display: none !important
+//------------------------------------------------
+
+
+//Show display:inline-block
+//------------------------------------------------
+//Immer
+.show
+  display: inline-block !important
+
+//Alles unter small
+@media screen and (max-width: 600px)
+  .show-sl
+    display: inline-block !important
+
+//Nur bei medium
+@media screen and (min-width: 600px) and (max-width: 950px)
+  .show-md
+    display: inline-block !important
+
+//Alles über medium
+@media screen and (min-width: 600px) and (min-width: 950px)
+  .show-md-up
+    display: inline-block !important
+
+//Alles unter medium
+@media screen and (max-width: 950px)
+  .show-md-down
+    display: inline-block !important
+
+//Alles über groß
+@media screen and (min-width: 950px)
+  .show-lg
+    display: inline-block !important
+//------------------------------------------------
+//--------------------------------------------------------------------------------
+
+
+//Box Shadow
+//------------------------------------------
+.shadow-ex-light
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0117647) 0px 4px 5px 0px, rgba(0, 0, 0, 0.0117647) 0px 1px 10px 0px, rgba(0, 0, 0, 0.0117647) 0px 2px 4px -1px, rgba(0, 0, 0, 0.0117647) 0px 4px 5px -2px !important
+
+.shadow-light
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0196078) 0px 4px 5px 0px, rgba(0, 0, 0, 0.0196078) 0px 1px 10px 0px, rgba(0, 0, 0, 0.0196078) 0px 2px 4px -1px, rgba(0, 0, 0, 0.0196078) 0px 4px 5px -2px !important
+
+.shadow-medium
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 5px 0px, rgba(0, 0, 0, 0.0980392) 0px 1px 10px 0px, rgba(0, 0, 0, 0.0980392) 0px 2px 4px -1px, rgba(0, 0, 0, 0.0980392) 0px 4px 5px -2px !important
+
+.shadow-hard
+  box-shadow: rgba(0, 0, 0, 0.152941) 0px 4px 5px 0px, rgba(0, 0, 0, 0.152941) 0px 1px 10px 0px, rgba(0, 0, 0, 0.152941) 0px 2px 4px -1px, rgba(0, 0, 0, 0.152941) 0px 4px 5px -2px !important
+
+.shadow-ex-hard
+  -webkit-box-shadow: rgba(0, 0, 0, 0.167647) 0px 4px 5px 0px, rgba(0, 0, 0, 0.167647) 0px 1px 10px 0px, rgba(0, 0, 0, 0.167647) 0px 2px 4px -1px, rgba(0, 0, 0, 0.167647) 0px 4px 5px -2px !important
+//------------------------------------------------------------------
+
+
+//Float
+//--------------------------------------------------------
+.float-right
+  float: right !important
+
+.float-left
+  float: left !important
+//---------------------------------------------------------
+
+
+//Responsive Videos
+//-------------------------------------------------------------
+.video-wrapper-16
+  position: relative !important
+  padding-bottom: 56.25% !important
+
+  video
+    position: absolute !important
+    width: 100% !important
+    height: 100% !important
+    top: 0 !important
+    left: 0 !important
+
+.video-wrapper-4
+  position: relative !important
+  padding-bottom: 75% !important
+
+  video
+    position: absolute !important
+    width: 100% !important
+    height: 100% !important
+    top: 0 !important
+    left: 0 !important
+//-------------------------------------------------------------------
+
+
+//Responsive Bilder
+//----------------------------------------------------------------------
+.image-wrapper
+  max-width: 100% !important
+  max-height: 100% !important
+
+  img
+    box-sizing: border-box !important
+    max-width: 100% !important
+    max-height: 100% !important
+    top: 0 !important
+    left: 0 !important
+
+//Image Proberties
+.circle-img
+  border-radius: 90% !important
+
+.round-img
+  border-radius: 15% !important
+//-----------------------------------------------------------------------
+
+//Audio
+//-----------------------------------------------------------------
+.auido-wrapper
+  width: 400px
+  height: 300px
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2)
+
+  audio
+    width: 400px
+    height: auto
+//------------------------------------------------------------------
+
+
+//Tabel
+//------------------------------------------------------------------------
+table
+  font-family: "Open Sans", sans-serif
+  font-size: 16px
+  border-collapse: collapse
+  text-align: left
+
+  td
+    padding: 10px
+  th
+    padding: 10px
+    border-bottom: 1px solid #CCCCCC
+//----------------------------------------------
+
+//Tabel Options
+//-------------------------------------------
+.table-border-top
+  td
+    border-top: 1px solid #DDDDDD
+
+.table-border-bottom
+  td
+    border-bottom: 1px solid #DDDDDD
+
+.table-border-right
+  td
+    border-right: 1px solid #DDDDDD
+
+.table-border-left
+  td
+    border-left: 1px solid #DDDDDD
+
+.table-bordered
+  th, td
+    border: 1px solid #DDDDDD
+//--------------------------------------------
+
+//Tabel kinds
+//---------------------------------------------
+.table-stripped
+  tr:nth-child(even)
+    background-color: #EEEEEE
+
+.table-light
+  tr
+    &:hover
+      background-color: #EEEEEE
+
+    &:focus
+      background-color: #EEEEEE
+
+  th
+    background-color: #ffffff
+//-------------------------------------------
+
+//Responsive Tabel
+//-------------------------------------------
+.table-responsive
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+
+  table
+    max-width: 100%
+    max-height: 100%
+//--------------------------------------------
+//------------------------------------------------------------------
+
+//Trennlinie
+//-------------------------------------------------------------------
+.line
+  width: 80%
+  border: 0.5px solid #555555
+  box-shadow: none
+//-------------------------------------------------------------------
+
+
+//Media Card
+//------------------------------------------------------------------
+.media-card
+  width: 500px
+  height: 400px
+  border-radius: 5px
+  box-sizing: border-box
+  font-family: "Open Sans", sans-serif
+  font-size: 1rem
+  background-color: #FFFFFF
+  color: #000000
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.20), 0 10px 10px rgba(0, 0, 0, 0.15), 0 5px 5px rgba(0, 0, 0, 0.12)
+  display: flex
+  flex-direction: column
+
+  .card-header
+    position: relative
+    width: 100%
+    height: 60%
+    flex-grow: 0
+    flex-shrink: 0
+
+    img
+      width: 100%
+      height: 100%
+      border-top-left-radius: 5px
+      border-top-right-radius: 5px
+
+    .card-title
+      position: absolute
+      left: 2rem
+      bottom: 1rem
+      font-size: 1.75rem
+      z-index: 99
+      color: #FFFFFF
+
+  .card-content
+    flex-basis: 30%
+    flex-grow: 1
+    flex-shrink: 1
+    padding: 0.5rem 2rem
+
+  .card-footer
+    flex-basis: 10%
+    flex-grow: 1
+    flex-shrink: 1
+    font-size: 0.75rem
+    border-bottom-right-radius: 5px
+    border-bottom-left-radius: 5px
+    border-top: 1px solid #CCCCCC
+    padding: 0.5rem 2rem
+//--------------------------------------------------
+
+//Simple Card
+//------------------------------------------------
+.simple-card
+  width: 500px
+  height: auto
+  border-radius: 5px
+  box-sizing: border-box
+  font-family: "Open Sans", sans-serif
+  font-size: 1rem
+  background-color: #FFFFFF
+  color: #000000
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.20), 0 10px 10px rgba(0, 0, 0, 0.15), 0 5px 5px rgba(0, 0, 0, 0.12)
+  display: flex
+  flex-direction: column
+
+  .card-header
+    flex-basis: auto
+    flex-grow: 1
+    flex-shrink: 1
+    font-size: 1.5rem
+    color: #000000
+    padding-top: 1rem
+    padding-left: 2rem
+    padding-right: 2rem
+
+    .card-title
+      font-size: 1.75rem
+      z-index: 99
+      color: #000000
+
+
+  .card-content
+    flex-basis: auto
+    flex-grow: 1
+    flex-shrink: 1
+    padding: 1rem 2rem
+    text-align: left
+
+  .card-footer
+    flex-basis: auto
+    flex-grow: 1
+    flex-shrink: 1
+    font-size: 0.75rem
+    padding: 1rem 2rem
+    border-bottom-right-radius: 5px
+    border-bottom-left-radius: 5px
+    border-top: 1px solid #CCCCCC
+    display: flex
+    align-items: center
+    justify-content: space-around
+//------------------------------------------------
+
+//Contact Card
+//------------------------------------------------------------------
+.contact-card
+  width: 500px
+  height: 400px
+  border-radius: 5px
+  box-sizing: border-box
+  font-family: "Open Sans", sans-serif
+  font-size: 1rem
+  background-color: #FFFFFF
+  color: #000000
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.20), 0 10px 10px rgba(0, 0, 0, 0.15), 0 5px 5px rgba(0, 0, 0, 0.12)
+  display: flex
+  flex-direction: column
+
+  .card-header
+    flex-basis: 40%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    padding: 1rem 2rem
+
+    .card-title
+      font-size: 1.75rem
+      z-index: 99
+      color: #000000
+
+    .card-img
+      max-width: 200px
+      max-height: 120px
+      border-radius: 3px
+      float: right
+
+  .card-content
+    flex-basis: 55%
+    flex-grow: 1
+    flex-shrink: 1
+    padding: 0 2rem
+    text-align: left
+
+  .card-footer
+    flex-basis: 5%
+    flex-grow: 1
+    flex-shrink: 1
+    font-size: 0.75rem
+    border-bottom-right-radius: 5px
+    border-bottom-left-radius: 5px
+    border-top: 1px solid #CCCCCC
+    padding: 0.5rem 2rem
+//--------------------------------------------------
+
+//Properties
+//-------------------------------------------------
+.card-link
+  text-decoration: none
+  font-size: 1rem
+  color: #000000
+
+  &:hover
+    color: lighten(#000000, 40)
+
+  &:focus
+    color: darken(#D3D3D3, 20)
+
+  &:active
+    color: darken(#D3D3D3, 20)
+
+//Card
+//------------------------------
+.card.sl
+  width: 400px
+  height: 300px
+
+.card.lg
+  width: 600px
+  height: 500px
+
+.card.horizontal
+  width: 1000px
+  height: 400px
+
+.card.strech
+  width: auto
+  height: auto
+//------------------------------
+
+//Card Simple
+//------------------------------
+.simple-card.sl
+  width: 400px
+  height: 300px
+
+.simple-card.lg
+  width: 600px
+  height: 500px
+
+.simple-card.horizontal
+  width: 1000px
+  height: 400px
+
+.simple-card.strech
+  width: auto
+  height: auto
+//---------------------------------------------------------------------------------------------
+
+//Parallax
+//------------------------------------------------------------
+.parallax
+
+  /* Set a specific height */
+  min-height: 500px
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+//--------------------------------------------------------------

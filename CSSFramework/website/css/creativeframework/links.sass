@@ -1,0 +1,264 @@
+.link-slide
+  width: 0 !important
+  margin: auto !important
+  padding: 0.5rem 1rem !important
+  font-family: sans-serif !important
+  text-decoration: none !important
+  color: #ffffff
+  position: relative !important
+  z-index: 1 !important
+
+.link-slide::before
+  content: "" !important
+  position: absolute !important
+  width: 100% !important
+  height: 1px !important
+  bottom: 0 !important
+  left: 0 !important
+  background: #3D9970 !important
+  visibility: hidden !important
+  transform: scaleX(0) !important
+  transition: .25s linear !important
+
+.link-slide:hover::before
+  visibility: visible !important
+  transform: scaleX(1) !important
+
+
+//Link underline and color change
+.link-change-color
+  margin: auto !important
+  padding: 0.5rem 1rem !important
+  font-family: sans-serif !important
+  text-decoration: none !important
+  color: #ffffff
+  position: relative !important
+  z-index: 1 !important
+
+.link-change-color::before
+  content: "" !important
+  border-bottom: solid 1px #5CAAEF !important
+  position: absolute !important
+  bottom: 0 !important
+  left: 0 !important
+  width: 100% !important
+  opacity: 0 !important
+
+.link-change-color:hover
+  color: #5CAAEF !important
+
+  &:before
+    opacity: 1.0 !important
+
+.link-change-color::before
+  -webkit-transition: all 0.2s ease !important
+  transition: all 0.2s ease !important
+
+//Link font-size scale big
+.link-scale-big
+  margin: auto !important
+  padding: 0.5rem 1rem !important
+  font-family: sans-serif !important
+  text-decoration: none !important
+  color: #ffffff
+  position: relative !important
+  z-index: 1 !important
+  -webkit-transition: all 0.2s linear !important
+  transition: all 0.2s linear !important
+
+.link-scale-big:hover
+  font-size: 180% !important
+
+//Link font-size scale small
+.link-scale-small
+  margin: auto !important
+  padding: 0.5rem 1rem !important
+  font-family: sans-serif !important
+  text-decoration: none !important
+  color: #ffffff
+  position: relative !important
+  z-index: 1 !important
+  -webkit-transition: all 0.2s linear !important
+  transition: all 0.2s linear !important
+
+.link-scale-small:hover
+  font-size: 90% !important
+
+
+//Link underline color change
+.link-heartbeat
+  margin: auto !important
+  padding: 0.5rem 1rem !important
+  font-family: sans-serif !important
+  text-decoration: none !important
+  color: #ffffff
+  position: relative !important
+  z-index: 1 !important
+  transition: all 0.2s linear !important
+
+.link-heartbeat::before
+  content: "" !important
+  border-bottom: solid 1px #d9534f !important
+  position: absolute !important
+  bottom: 0 !important
+  left: 30% !important
+  width: 0 !important
+  -webkit-transform: scale(0) !important
+  -moz-transform: scale(0) !important
+  -ms-transform: scale(0) !important
+  -o-transform: scale(0) !important
+  transform: scale(0) !important
+
+.link-heartbeat:hover
+  -webkit-animation: heartbeat 1.7s infinite ease-in !important
+  animation: heartbeat 1.7s infinite ease-in !important
+
+.link-heartbeat:hover::before
+  border-bottom: solid thin #d9534f !important
+  width: 40% !important
+  -webkit-animation: heartbeat-x 1.7s infinite ease-in !important
+  animation: heartbeat-x 1.7s infinite ease-in !important
+
+
+//Link underline green
+.link-underline-green
+  margin: auto !important
+  padding: 0.5rem 1rem !important
+  font-family: sans-serif !important
+  text-decoration: none !important
+  color: #ffffff
+  position: relative !important
+  z-index: 1 !important
+  border-bottom: 1px solid transparent !important
+  transition: all 0.5s !important
+
+  &:hover
+    border-color: #3D9970 !important
+
+  &:focus
+    border-color: #3D9970 !important
+
+//Link underline white
+.link-underline-white
+  margin: auto !important
+  padding: 0.5rem 1rem !important
+  font-family: sans-serif !important
+  text-decoration: none !important
+  color: #ffffff
+  position: relative !important
+  z-index: 1 !important
+  border-bottom: 1px solid transparent !important
+  transition: all 0.5s !important
+
+  &:hover
+    border-color: #FFFFFF !important
+
+  &:focus
+    border-color: #FFFFFF !important
+
+//Link underline blue
+.link-underline-blue
+  margin: auto !important
+  padding: 0.5rem 1rem !important
+  font-family: sans-serif !important
+  text-decoration: none !important
+  color: #ffffff
+  position: relative !important
+  z-index: 1 !important
+  border-bottom: 1px solid transparent !important
+  transition: all 0.5s !important
+
+  &:hover
+    border-color: #82B1FF !important
+
+  &:focus
+    border-color: #82B1FF !important
+
+//Link underline red
+.link-underline-red
+  margin: auto !important
+  padding: 0.5rem 1rem !important
+  font-family: sans-serif !important
+  text-decoration: none !important
+  color: #ffffff
+  position: relative !important
+  z-index: 1 !important
+  border-bottom: 1px solid transparent !important
+  transition: all 0.5s !important
+
+  &:hover
+    border-color: #72161f !important
+
+  &:focus
+    border-color: #72161f !important
+
+//Link lighten
+.link-lighten
+  margin: auto !important
+  padding: 0.5rem 1rem !important
+  font-family: sans-serif !important
+  text-decoration: none !important
+  color: #000000
+  position: relative !important
+  z-index: 1 !important
+  transition: all 0.5s !important
+
+  &:hover
+    color: lighten(#555555, 30) !important
+
+  &:focus
+    color: lighten(#555555, 40) !important
+
+//Link darken
+.link-darken
+  margin: auto !important
+  padding: 0.5rem 1rem !important
+  font-family: sans-serif !important
+  text-decoration: none !important
+  color: #555555
+  position: relative !important
+  z-index: 1 !important
+  transition: all 0.5s !important
+
+  &:hover
+    color: #000000 !important
+
+  &:focus
+    color: #000000 !important
+
+//Link background change
+.link-bg
+  margin: auto !important
+  padding: 0.5rem 1rem !important
+  font-family: sans-serif !important
+  text-decoration: none !important
+  color: #ffffff
+  position: relative !important
+  z-index: 1 !important
+  transition: all 0.5s !important
+
+  &:hover
+    background-color: #999999 !important
+
+  &:focus
+    background-color: darken(#999999,10) !important
+    opacity: 0.8 !important
+
+
+//Link crossed out
+.link-crossed
+  margin: auto !important
+  padding: 0.5rem 1rem !important
+  font-family: sans-serif !important
+  text-decoration: none !important
+  color: #ffffff
+  position: relative !important
+  z-index: 1 !important
+  transition: all 0.5s !important
+
+  &:hover
+    text-decoration: line-through !important
+
+  &:focus
+    text-decoration: line-through !important
+//------------------------------------------

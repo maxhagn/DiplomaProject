@@ -1,0 +1,39 @@
+.tab-nav
+  position: relative
+  top: 0
+  left: 0
+  width: 100%
+  height: 50px
+
+.tab-list
+  list-style: none
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  padding: 0
+
+.tab
+  user-select: none
+  text-align: center
+  color: white
+  height: 50px
+  flex-shrink: 1
+  flex-grow: 1
+  flex-basis: auto
+  border-top-left-radius: 10px
+  border-top-right-radius: 10px
+  background-color: #13334C
+  margin-left: 1px
+  margin-right: 1px
+  border: 1px solid transparent
+  line-height: 50px
+  box-shadow: rgba(0, 0, 0, 0.0117647) 0px 4px 5px 0px, rgba(0, 0, 0, 0.0117647) 0px 1px 10px 0px, rgba(0, 0, 0, 0.0117647) 0px 2px 4px -1px, rgba(0, 0, 0, 0.0117647) 0px 4px 5px -2px
+
+  &:hover
+    background-color: lighten(#13334C, 10)
+
+  &:active
+    background-color: darken(#13334C, 10)
+
+  .active
+    font-weight: bold

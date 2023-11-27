@@ -1,0 +1,23 @@
+.link-lighten {
+  font-size: 18px; }
+
+.bttn {
+  width: 300px;
+  margin: 10px; }
+
+.flatfield {
+  width: 300px;
+  margin: 10px; }
+
+.container-xs {
+  width: 400px;
+  padding: 2rem;
+  margin-top: 10%;
+  opacity: 0.95; }
+
+.margin-auto {
+  margin-left: auto;
+  margin-right: auto; }
+
+body {
+  background-size: cover; }

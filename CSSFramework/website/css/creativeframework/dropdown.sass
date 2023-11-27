@@ -1,0 +1,45 @@
+.dropdown-main
+  text-align: center
+
+.dropdown
+  display: inline-block
+  margin: 0 auto
+  padding: 0
+  color: white
+  list-style: none
+  box-shadow: rgba(0, 0, 0, 0.152941) 0px 4px 5px 0px, rgba(0, 0, 0, 0.152941) 0px 1px 10px 0px, rgba(0, 0, 0, 0.152941) 0px 2px 4px -1px, rgba(0, 0, 0, 0.152941) 0px 4px 5px -2px
+
+
+  li
+    float: left
+    background-color: #13334C
+    height: 50px
+    line-height: 50px
+    width: 220px
+    box-shadow: rgba(0, 0, 0, 0.152941) 0px 4px 5px 0px, rgba(0, 0, 0, 0.152941) 0px 1px 10px 0px, rgba(0, 0, 0, 0.152941) 0px 2px 4px -1px, rgba(0, 0, 0, 0.152941) 0px 4px 5px -2px
+
+  ul li:hover
+    background-color: lighten(#13334C, 20)
+
+ul.dropdown-index li
+  display: none
+
+li:hover > ul.dropdown-index li
+  display: block
+  margin-left: -40px
+
+  @for $i from 1 through 6
+    &:nth-child(#{$i})
+      animation:
+        name: dropdown-smooth
+        duration: 300ms * $i
+        timing-function: ease-in-out
+        fill-mode: forwards
+
+
+
+@keyframes dropdown-smooth
+  0%
+    transform: rotateY(-60deg) translateY(30px)
+  1000%
+    transform: rotateY(0) translateY(0)

@@ -1,0 +1,29 @@
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #13334C; }
+
+.content_large {
+  height: 400px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #13334C; }
+
+.content_small {
+  height: 200px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px; }
+
+.col {
+  background-color: #13334C; }
+
+.margin-top {
+  margin-top: 50px; }
+
+.margin-bottom {
+  margin-bottom: 50px; }

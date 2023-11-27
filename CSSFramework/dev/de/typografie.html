@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!---------------------------------------- Metadata ---------------------------------------->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!---------------------------------------- Google Analytics ---------------------------------------->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-101506688-1');
+    </script>
+
+    <!---------------------------------------- Title ---------------------------------------->
+    <title>CreativePuzzle Framework</title>
+
+    <!---------------------------------------- CSS Imports ---------------------------------------->
+    <link rel="alternate" hreflang="en" href="../en">
+    <link rel="shortcut icon" href="../lib/img/puzzle.png">
+    <link href="../lib/css/imports.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<!---------------------------------------- Header ---------------------------------------->
+<header id="top" class="header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header navpadding">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logopadding logo" href="index.html"><img class="navicon" alt="Brand"
+                                                                                src="../lib/img/logo.png"></a>
+            </div>
+            <div class="navbar-collapse collapse navpadding">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="nav-link" href="get_started.html">Get Started</a></li>
+                    <li><a class="nav-link active">Typografie</a></li>
+                    <li><a class="nav-link" href="css.html">CSS</a></li>
+                    <li><a class="nav-link" href="components.html">Komponents</a></li>
+                    <li><a class="nav-link" href="templates.html">Templates</a></li>
+                    <li><a target="_self" class="nav-link" href="http://www.creative-puzzle.com">.info</a></li>
+                    <li><a class="nav-link" target="_blank" href="http://creative-puzzle.com/app/">App</a></li>
+                    <li><a class="nav-link" href="../en/get_started.html">en</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!---------------------------------------- Side-Navigation ---------------------------------------->
+<aside class="aside">
+    <ul class="section table-of-contents">
+        <li class="aside-scroll"><a href="#title">Title</a></li>
+        <li class="aside-scroll"><a href="#heading">Heading</a></li>
+        <li class="aside-scroll"><a href="#paragraph">Paragraph</a></li>
+        <li class="aside-scroll"><a href="#shadow">Textschatten</a></li>
+        <li class="aside-scroll"><a href="#position">Textausrichtungen</a></li>
+        <li class="aside-scroll"><a href="#schrift">Schriftstärken</a></li>
+        <li class="aside-scroll"><a href="#schriftart">Schriftarten</a></li>
+        <li class="aside-scroll"><a href="#lists">Listen</a></li>
+        <li class="aside-scroll"><a href="#andere">Andere Formate</a></li>
+        <li class="aside-scroll"><a href="#link">Links</a></li>
+    </ul>
+</aside>
+
+<!---------------------------------------- Main ---------------------------------------->
+<main class="content">
+    <!---------------------------------------- Title Des ---------------------------------------->
+    <div class="row">
+        <h1>Typografie</h1>
+        <p>
+            Die Typografie unseres Creative Frameworks ist in verschiedene Bereiche gegliedert.
+            Wie du sie einsetzt und welche Option sie umfasst ist in den unten angeführten Bereichen
+            beschrieben. In diesm Abschnitt findest du alles zur Typografie des Frameworks.
+        </p>
+    </div>
+
+    <!---------------------------------------- Line ---------------------------------------->
+    <div class="line">
+        <hr>
+        <div class="row centered">
+            <div class="col-lg-6 col-lg-offset-3"></div>
+            <div class="col-lg-3"></div>
+        </div>
+        <hr>
+    </div>
+
+    <!---------------------------------------- Directory ---------------------------------------->
+    <div class="row">
+        <div class="subnav-mobile">
+            <h4 class="title">Inhaltsverzeichnis</h4>
+            <ul class="dir_pad">
+                <li>
+                    <a class="directory" href="#title">Title</a>
+                </li>
+                <li>
+                    <a class="directory" href="#heading">Heading</a>
+                </li>
+                <li>
+                    <a class="directory" href="#paragraph">Paragraph</a>
+                </li>
+                <li>
+                    <a class="directory" href="#shadow">Textschatten</a>
+                </li>
+                <li>
+                    <a class="directory" href="#position">Textausrichtungen</a>
+                </li>
+                <li>
+                    <a class="directory" href="#schrift">Schriftstärken</a>
+                </li>
+                <li>
+                    <a class="directory" href="#schriftart">Schriftarten</a>
+                </li>
+                <li>
+                    <a class="directory" href="#lists">Listen</a>
+                </li>
+                <li>
+                    <a class="directory" href="#andere">Andere Formate</a>
+                </li>
+                <li>
+                    <a class="directory" href="#link">Links</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!---------------------------------------- Content -> falsch ---------------------------------------->
+    <div class="row">
+        <!--------------------Title-------------------->
+        <div id="title" class="section scrollspy">
+            <h2 class="title">Titel</h2>
+            <p>
+                Titel umfasst 5 verschiedene Titel Klassen die die Größe einer Überschrift bestimmen.
+                Die Klassen beginnen mit dem Klassennamen <i class="classname">title-size,</i> wobei anstatt
+                <i class="classname">size</i> die gewünschte Größe verwendet werden muss. Es gibt folgende Größen
+                <i class="classname">.xs,</i><i class="classname">.sl,</i><i class="classname">.md,</i><i
+                    class="classname">.lg</i>
+                und <i class="classname">.xl</i>. Titel sollten für Überschriften im Zusammenhang mit Paragraphen
+                verwendet werden.
+            </p>
+            <div class="row content_img">
+                <img class="img-responsive" src="../lib/img/typografie/title.PNG">
+            </div>
+            <div class="codeBox">
+                <-h1>Heading<-/h1><br><br>
+                <-h2>Heading<-/h2><br><br>
+                <-h3>Heading<-/h3><br><br>
+                <-h4>Heading<-/h4><br><br>
+                <-h5>Heading<-/h5><br><br>
+                <-h6>Heading<-/h6><br><br>
+            </div>
+        </div>
+
+        <!--------------------Line-------------------->
+        <div class="line">
+            <hr>
+            <div class="row centered">
+                <div class="col-lg-6 col-lg-offset-3"></div>
+                <div class="col-lg-3"></div>
+            </div>
+            <hr>
+        </div>
+
+        <!--------------------Heading-------------------->
+        <div id="heading" class="section scrollspy">
+            <h2 class="title">Heading</h2>
+            <p>
+                Die Überschriften Tags <i class="tagname">h1</i> bis <i class="tagname">h6</i> wurden ebenfalls von uns
+                gestyled mit
+                unterschiedlichen Größen. Für die Überschriften wird kein Klassenname benötigt.
+            </p>
+            <div class="row content_img">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../website_framework/img/typografie/heading.PNG">
+                </div>
+            </div>
+            <div class="codeBox">
+                <-h1>Heading<-/h1><br><br>
+                <-h2>Heading<-/h2><br><br>
+                <-h3>Heading<-/h3><br><br>
+                <-h4>Heading<-/h4><br><br>
+                <-h5>Heading<-/h5><br><br>
+                <-h6>Heading<-/h6><br><br>
+            </div>
+        </div>
+
+        <!--------------------Line-------------------->
+        <div class="line">
+            <hr>
+            <div class="row centered">
+                <div class="col-lg-6 col-lg-offset-3"></div>
+                <div class="col-lg-3"></div>
+            </div>
+            <hr>
+        </div>
+
+        <!--------------------Paragraph-------------------->
+        <div id="paragraph" class="section scrollspy">
+            <h2 class="title">Paragraph</h2>
+            <p>
+                Eben so wie die Überschriften Tags wurde auch der <i class="tagname">p</i> Tag gestyled um es dem
+                Benutzer einfach zu machen
+                Content Elemente zu erstellen die sich aus einem Titel oder Heading sowie einem Paragraphen bestehen.
+                Der <i class="tagname">p</i>
+                Tag hat einen <i class="tagname">margin</i> von 1rem und eine <i class="tagname">line-height</i> von
+                1.5rem.
+            </p>
+            <div class="row content_img">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../website_framework/img/typografie/paragraph.PNG">
+                </div>
+            </div>
+            <div class="codeBox">
+                <-p>Das ist ein Paragraph<-/p><br><br>
+                <-p>Das ist ein weiterer Paragraph<-/p><br><br>
+                <-p>Das ist der letzte Paragraph<-/p><br><br>
+            </div>
+        </div>
+
+        <!--------------------Line-------------------->
+        <div class="line">
+            <hr>
+            <div class="row centered">
+                <div class="col-lg-6 col-lg-offset-3"></div>
+                <div class="col-lg-3"></div>
+            </div>
+            <hr>
+        </div>
+
+        <!--------------------Text-Shadow-------------------->
+        <div id="shadow" class="section scrollspy">
+            <h2 class="title">Textschatten</h2>
+            <p>
+                Das Creative Framework bietet eine Auswahl an Text Schatten die in die zwei Arten <i class="classname">hard</i>
+                und
+                <i class="classname">blur</i> geliedert sind. Mit dem Klassenname <i
+                    class="classname">text-art-stärke</i> können
+                die gewünschten Schatten aufgerufen werden. Bei der Text Schattenstärke gibt es 3 verschiedene
+                Abstufungen <i class="classname">1,</i>
+                <i class="classname">2,</i> und <i class="classname">3</i>. Die Klasse für einen <i class="classname">blur</i>
+                Schatten könnte dann
+                so ausschauen: <i class="classname">text-blur-3</i>.
+            </p>
+            <div class="row content_img">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../website_framework/img/typografie/text_shadow.PNG">
+                </div>
+            </div>
+            <div class="codeBox">
+                <-p class="text-blur-1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<-/p><br><br>
+                <-p class="text-hard-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<-/p><br><br>
+                <-p class="text-blur-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<-/p><br><br>
+            </div>
+        </div>
+
+        <!--------------------Line-------------------->
+        <div class="line">
+            <hr>
+            <div class="row centered">
+                <div class="col-lg-6 col-lg-offset-3"></div>
+                <div class="col-lg-3"></div>
+            </div>
+            <hr>
+        </div>
+
+        <!--------------------Text Position-------------------->
+        <div id="position" class="section scrollspy">
+            <h2 class="title">Textausrichtung</h2>
+            <p>
+                Für die Textausrichtung gibt es ebenfalls Klassen die dem Benutzer das Ausrichten von Text erleichtern.
+                Die Klassen sind
+                ebenfalls mit dem Klassennamen <i class="classname">text-position</i> aufrufbar wobei es drei Arten der
+                Position gibt.
+                Position Rechts <i class="classname">text-right,</i> Position Links <i class="classname">text-left</i>
+                und Position Zentriert
+                <i class="classname">text-center.</i>
+            </p>
+            <div class="row content_img">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../website_framework/img/typografie/text_position.PNG">
+                </div>
+            </div>
+            <div class="codeBox">
+                <-p class="text-right">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<-/p><br><br>
+                <-p class="text-left">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<-/p><br><br>
+                <-p class="text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<-/p><br><br>
+            </div>
+        </div>
+
+        <!--------------------Line-------------------->
+        <div class="line">
+            <hr>
+            <div class="row centered">
+                <div class="col-lg-6 col-lg-offset-3"></div>
+                <div class="col-lg-3"></div>
+            </div>
+            <hr>
+        </div>
+
+        <!--------------------Font-Weight-------------------->
+        <div id="schrift" class="section scrollspy">
+            <h2 class="title">Schriftstärke</h2>
+            <p>
+                Mit dem Klassennamen <i class="classname">text-stärke</i> kann die Schriftstärke eines Absatzes oder
+                eines einzelnen Text
+                Elements bestimmt werden. Als Optionen für die Stärke gibt es 3 unterschiedliche Klassen <i
+                    class="classname">text-bold,</i>
+                <i class="classname">text- medium</i> und <i class="classname">text-light.</i> Die Klasse <i
+                    class="classname">text-bold</i>
+                stezt die <i class="tagname">font-weight</i> auf <i class="tagname">bold</i>. Ebenso setzen die Klassen
+                <i class="classname">text-medium</i> und <i class="classname">text-light</i> die <i class="tagname">font-weight</i>
+                des Elements
+                auf <i class="tagname">medium</i> und <i class="tagname">lighter</i>.
+            </p>
+            <div class="row content_img">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../website_framework/img/typografie/text_staerke.PNG">
+                </div>
+            </div>
+            <div class="codeBox">
+                <-p class="text-bold">Dieser Text ist bold<-/p><br><br>
+                <-p class="text-medium">Dieser Text ist medium<-/p><br><br>
+                <-p class="text-light">Dieser Text ist light<-/p><br><br>
+            </div>
+        </div>
+
+        <!--------------------Line-------------------->
+        <div class="line">
+            <hr>
+            <div class="row centered">
+                <div class="col-lg-6 col-lg-offset-3"></div>
+                <div class="col-lg-3"></div>
+            </div>
+            <hr>
+        </div>
+
+        <!--------------------Font-Family-------------------->
+        <div id="schriftart" class="section scrollspy">
+            <h2 class="title">Schriftart</h2>
+            <p>
+                Es gibt eine Vielzahl an Schriftarten die unser Framework bereitstellt. Es wurden 10 unterschiedliche
+                Schriftarten
+                von uns ausgewählt die über Klassenname aufgerufen werden können. Die Klassenname setzen sich aus
+                <i class="classname">font-schriftart</i> zusammen. Anstatt <i class="classname">schriftart</i> ist der
+                gewünschte
+                Schriftname einzusetzen. Die Klasse der Schriftart sollte am besten in den <i class="tagname">body</i>
+                eingefügt
+                werden um dem Dokument einen einheitlichen Stil zu verpassen. Wir bieten folgende Schriftarten an:
+                <i class="classname">roboto</i>,<i class="classname">open-sans</i>,<i class="classname">merriweather</i>,
+                <i class="classname">nunito</i>,<i class="classname">raleway</i>,<i class="classname">roboto-serif</i>,
+                <i class="classname">merriweather-serif</i>,<i class="classname">pt-serif</i>,<i class="classname">eb-garamond</i>,
+                <i class="classname">source</i>,<i class="classname">amatic</i> und <i class="classname">kavicanar,</i>.
+            </p>
+            <div class="row content_img">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../website_framework/img/typografie/schrift_art.PNG">
+                </div>
+            </div>
+            <div class="codeBox">
+                <-span class="font-roboto">Roboto<-/span>
+                <-span class="font-merriweather">Merriweather<-/span>
+                <-span class="font-nunito">Nunito<-/span>
+                <-span class="font-raleway">Raleway<-/span>
+                <-span class="font-roboto-serif">Roboto Serif<-/span>
+                <-span class="font-merriweather-serif">Merriweather Serif<-/span>
+                <-span class="font-pt-serif">PT Serif<-/span>
+                <-span class="font-eb-garamond">EB Garamond<-/span>
+                <-span class="font-source">Source<-/span>
+                <-span class="font-amatic">Amatic<-/span>
+                <-span class="font-kavicanar">Kavincanar<-/span>
+            </div>
+        </div>
+
+        <!--------------------Line-------------------->
+        <div class="line">
+            <hr>
+            <div class="row centered">
+                <div class="col-lg-6 col-lg-offset-3"></div>
+                <div class="col-lg-3"></div>
+            </div>
+            <hr>
+        </div>
+
+        <!--------------------Listen-------------------->
+        <div id="lists" class="section scrollspy">
+            <h2 class="title">Listen</h2>
+            <p>
+                Es wurden ebenfalls mehrere Klassen zum stylen von Listen bereitgestellt. Alle Listen <i
+                    class="tagname">ul,</i>
+                <i class="tagname">ol</i> und <i class="tagname">dl.</i> Es gibt die Klasse <i class="classname">list-inline,</i>
+                <i class="classname">list-styled</i> und <i class="classname">List-unstyled</i>. Bei Alle Listen wurde
+                <i class="tagname">margin-top</i> entfernt und ein <i class="tagname">margin-bottom</i> 1rem
+                hinzugefügt. Die Klasse
+                <i class="classname">list-unstyled</i> hat keine Aufzählungspunkte und die Klasse <i class="classname">list-inline</i>
+                stellt eine Liste als Inline Block Element dar. Die gestylte Liste <i class="classname">list-styled</i>
+                hat nicht gefüllte
+                Punkte als Auflistungszeichen sowie die allgemeinen <i class="tagname">margin</i> und <i
+                    class="tagname">padding</i>
+                Eigenschaften aller Listen.
+            </p>
+            <div class="row content_img">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../website_framework/img/typografie/list.PNG">
+                </div>
+            </div>
+            <div class="codeBox">
+                <-p><br>
+                <-ul class="list-unstyled"><br>
+                <-li>Lorem ipsum dolor sit amet<-/li><br>
+                <-li>consetetur sadipscing elitr<-/li><br>
+                <-li>sed diam nonumy eirmod tempor invidunt ut<-/li><br>
+                <-li>dolore magna aliquyam erat<-/li><br>
+                <-li>sed diam voluptua<-/li><br>
+                <-/ul><br>
+                <-/p><br><br>
+                <-p><br>
+                <-ul class="list-styled"><br>
+                <-li>Lorem ipsum dolor sit amet<-/li><br>
+                <-li>consetetur sadipscing elitr<-/li><br>
+                <-li>sed diam nonumy eirmod tempor invidunt ut<-/li><br>
+                <-li>dolore magna aliquyam erat<-/li><br>
+                <-li>sed diam voluptua<-/li><br>
+                <-/ul><br>
+                <-/p><br>
+                <-p><br><br>
+                <-ul class="list-inline"><br>
+                <-li>Lorem ipsum dolor sit amet<-/li><br>
+                <-li>consetetur sadipscing elitr<-/li><br>
+                <-li>sed diam nonumy eirmod tempor invidunt ut<-/li><br>
+                <-li>dolore magna aliquyam erat<-/li><br>
+                <-li>sed diam voluptua<-/li><br>
+                <-/ul><br>
+                <-/p>
+            </div>
+        </div>
+
+        <!--------------------Line-------------------->
+        <div class="line">
+            <hr>
+            <div class="row centered">
+                <div class="col-lg-6 col-lg-offset-3"></div>
+                <div class="col-lg-3"></div>
+            </div>
+            <hr>
+        </div>
+
+        <!--------------------Other-Formats-------------------->
+        <div id="andere" class="section scrollspy">
+            <h2 class="title">Inline Text Elemente</h2>
+            <p>
+                Inline Text Elemente können verwendet werden um Text hervor zu heben oder ermöglichen spezielle
+                Formatierung von Text. Creative Framework hat folgende Tags <i class="tagname">em,</i>
+                <i class="tagname">i,</i><i class="tagname">b,</i><i class="tagname">del,</i> <i
+                    class="tagname">small,</i>
+                <i class="tagname">strong,</i> und <i class="tagname">mark</i> standartgemäß gestylt. Besonders wichtige
+                Inline Text Elemente sind <i class="tagname">i</i> für kurisven Text, <i class="tagname">b</i> für fett
+                geschrieben Text
+                und <i class="tagname">del</i> für durchgestrichenen Text.
+            </p>
+            <div class="row content_img">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../website_framework/img/typografie/others.PNG">
+                </div>
+            </div>
+            <div class="codeBox">
+                <-p>Ein Teil des Textes ist leicht <-em>hervorgehoben<-/em><-/p><br><br>
+                <-p>Ein Teil des Textes ist <-i>kursive<-/i><-/p><br><br>
+                <-p>Ein Teil des Textes is <-b>bold<-/b><-/p><br><br>
+                <-p>Ein Teil des Textes ist <-del>durchgestrichen<-/del><-/p><br><br>
+                <-p>Ein Teil des Textes ist <-strong>strong<-/strong><-/p><br><br>
+                <-p><-mark>Dieser Text ist makiert.<-/mark><-/p>
+            </div>
+        </div>
+
+        <!--------------------Line-------------------->
+        <div class="line">
+            <hr>
+            <div class="row centered">
+                <div class="col-lg-6 col-lg-offset-3"></div>
+                <div class="col-lg-3"></div>
+            </div>
+            <hr>
+        </div>
+
+        <!--------------------Links-------------------->
+        <div id="link" class="section scrollspy">
+            <h2 class="title">Links</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <div class="codeBox">
+                <-body>
+
+                <-/body>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!---------------------------------------- Footer ---------------------------------------->
+<footer class="footer">
+    <ul class="sociallist">
+        <!---------------------------------------- Social Media Icons ---------------------------------------->
+        <li><a target="_blank" href="https://www.facebook.com/CreativePuzzleDevelop/"><img src="../lib/img/facebook.png"
+                                                                                           alt="facebook logo"
+                                                                                           class="img-responsive socialmedia"></a>
+        </li>
+        <li><a target="_blank" href="https://www.instagram.com/creative.puzzle/"><img src="../lib/img/instagram.png"
+                                                                                      alt="instagram logo"
+                                                                                      class="img-responsive socialmedia"></a>
+        </li>
+        <li><a target="_blank" href="https://twitter.com/creative_puzzle?lang=de"><img src="../lib/img/twitter.png"
+                                                                                       alt="twitter logo"
+                                                                                       class="img-responsive socialmedia"></a>
+        </li>
+    </ul>
+
+    <!---------------------------------------- Imprint Button ---------------------------------------->
+    <div class="col-lg-12 text-center">
+        <button type="button" class="btnimpr btn btn-md" data-toggle="modal" data-target="#Impressum">
+            Impressum
+        </button>
+    </div>
+    <!---------------------------------------- Modal Imprint ---------------------------------------->
+    <div class="modal fade " id="Impressum" tabindex="-1" role="dialog" aria-labelledby="ImpressumLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="ImpressumLabel">Impressum</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>Inhaber</h3>
+                    <p>Name: Maximilian Hagn</p>
+                    <h3>Adresse</h3>
+                    <p>
+                        Straße: Rudolf-Waisenhorn-Gasse 138/4
+                    </p>
+                    <p>
+                        PLZ: 1230
+                    </p>
+                    <p>
+                        Ort: Wien
+                    </p>
+                    <p>
+                        Land: Österreich
+                    </p>
+                    <h3>Kontakt</h3>
+                    <p>
+                        Telefon: <a href="tel:+436769579022">+43 676 9579022</a>
+                    </p>
+                    <p>
+                        E-Mail:
+                    </p>
+                    <ul class="imprmail">
+                        <li><a href="mailto:maximilian.hagn@htl.rennweg.at" target="_blank">maximilian.hagn@htl.rennweg.at</a>
+                        </li>
+                        <li><a href="mailto:web.creativePuzzle@gmail.com"
+                               target="_blank">web.creativePuzzle@gmail.com</a></li>
+                        <li><a href="mailto:team.creativePuzzle@gmail.com"
+                               target="_blank">team.creativePuzzle@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------------------- Footer Description ---------------------------------------->
+    <p class="centered">Created by CreativePuzzle</p>
+</footer>
+
+<!---------------------------------------- Javascript ---------------------------------------->
+<script src="https://code.jquery.com/jquery-3.3.0.js" integrity="sha256-TFWSuDJt6kS+huV+vVlyV1jM3dwGdeNWqezhTxXB/X8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="../lib/js/validator.js"></script>
+<script src="../lib/js/bootstrap.js"></script>
+<script src="../lib/js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.scrollspy').scrollSpy();
+    });
+</script>
+</body>
+</html>
