@@ -40,8 +40,7 @@
                     <li><a class="nav-link" href="../css/">CSS</a></li>
                     <li><a class="nav-link" href="../components/">Komponenten</a></li>
                     <li><a class="nav-link active">Vorlagen</a></li>
-                    <li><a target="_self" class="nav-link" href="http://www.info.creative-puzzle.com">.info</a></li>
-                    <li><a class="nav-link" target="_blank" href="http://www.app.creative-puzzle.com">App</a></li>
+                    <li><a target="_self" class="nav-link" href="https://info-diploma-thesis.hagn.network/">Thesis</a></li>
                     <li><a class="nav-link" href="../en/templates/">en</a></li>
                 </ul>
             </div>

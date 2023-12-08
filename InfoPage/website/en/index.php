@@ -42,7 +42,7 @@
                     <li><a class="slide" href="#team">Team</a></li>
                     <li><a class="slide" href="#time">Hours</a></li>
                     <li><a class="slide" href="#kontakt">Contact</a></li>
-                    <li><a href="../../app/">App</a></li>
+                    <li><a class="slide" target="_self" href="https://css-framework.hagn.network/">CSS Framework</a></li>
                     <li><a href="../">de</a></li>
                 </ul>
             </div>

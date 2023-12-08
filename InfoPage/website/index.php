@@ -40,7 +40,7 @@
                       <li><a class="slide" href="#team">Team</a></li>
                       <li><a class="slide" href="#zeit">Stunden</a></li>
                       <li><a class="slide" href="#kontakt">Kontakt</a></li>
-                      <li><a href="http://app.creative-puzzle.com/">App</a></li>
+                      <li><a class="slide" target="_self" href="https://css-framework.hagn.network/">CSS Framework</a></li>
                       <li><a href="en/">en</a></li>
                   </ul>
               </div>
@@ -198,16 +198,13 @@
                       </div>
                   </div>
               </div>
-
           </div>
       </section>
 
       <div class="container">
           <hr>
           <div class="row centered">
-              <div class="col-lg-6 col-lg-offset-3">
-
-              </div>
+              <div class="col-lg-6 col-lg-offset-3"></div>
               <div class="col-lg-3"></div>
           </div>
           <hr>
