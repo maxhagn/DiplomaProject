@@ -19,7 +19,7 @@
     <title>CreativePuzzle - Web Development E-Learning</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <header id="top">
@@ -40,7 +40,7 @@
                       <li><a class="slide" href="#team">Team</a></li>
                       <li><a class="slide" href="#zeit">Stunden</a></li>
                       <li><a class="slide" href="#kontakt">Kontakt</a></li>
-                      <li><a class="slide" target="_self" href="https://css-framework.hagn.network/">CSS Framework</a></li>
+                      <li><a target="_self" href="https://css-framework.hagn.network/">CSS Framework</a></li>
                       <li><a href="en/">en</a></li>
                   </ul>
               </div>
