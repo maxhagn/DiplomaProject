@@ -42,7 +42,7 @@
                     <li><a class="nav-link" href="templates/">Vorlagen</a></li>
                     <li><a target="_self" class="nav-link" href="http://www.info.creative-puzzle.com">.info</a></li>
                     <li><a class="nav-link" target="_blank" href="http://www.app.creative-puzzle.com">App</a></li>
-                    <li><a class="nav-link" href="en">en</a></li>
+                    <li><a class="nav-link" href="en/">en</a></li>
                 </ul>
             </div>
         </div>
