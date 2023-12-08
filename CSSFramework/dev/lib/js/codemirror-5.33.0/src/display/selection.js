@@ -1,9 +1,15 @@
-import { Pos } from "../line/pos.js"
-import { visualLine } from "../line/spans.js"
-import { getLine } from "../line/utils_line.js"
-import { charCoords, cursorCoords, displayWidth, paddingH, wrappedLineExtentChar } from "../measurement/position_measurement.js"
-import { getOrder, iterateBidiSections } from "../util/bidi.js"
-import { elt } from "../util/dom.js"
+import {Pos} from "../line/pos.js"
+import {visualLine} from "../line/spans.js"
+import {getLine} from "../line/utils_line.js"
+import {
+  charCoords,
+  cursorCoords,
+  displayWidth,
+  paddingH,
+  wrappedLineExtentChar
+} from "../measurement/position_measurement.js"
+import {getOrder, iterateBidiSections} from "../util/bidi.js"
+import {elt} from "../util/dom.js"
 
 export function updateSelection(cm) {
   cm.display.input.showSelection(cm.display.input.prepareSelection())
@@ -46,7 +52,9 @@ export function drawSelectionCursor(cm, head, output) {
   }
 }
 
-function cmpCoords(a, b) { return a.top - b.top || a.left - b.left }
+function cmpCoords(a, b) {
+  return a.top - b.top || a.left - b.left
+}
 
 // Draws the given range as a highlighted selection
 function drawSelectionRange(cm, range, output) {
@@ -69,6 +77,7 @@ function drawSelectionRange(cm, range, output) {
     let lineObj = getLine(doc, line)
     let lineLen = lineObj.text.length
     let start, end
+
     function coords(ch, bias) {
       return charCoords(cm, Pos(line, ch), "div", lineObj, bias)
     }

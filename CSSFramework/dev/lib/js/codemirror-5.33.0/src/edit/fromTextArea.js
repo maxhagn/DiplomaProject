@@ -1,7 +1,7 @@
-import { CodeMirror } from "./CodeMirror.js"
-import { activeElt } from "../util/dom.js"
-import { off, on } from "../util/event.js"
-import { copyObj } from "../util/misc.js"
+import {CodeMirror} from "./CodeMirror.js"
+import {activeElt} from "../util/dom.js"
+import {off, on} from "../util/event.js"
+import {copyObj} from "../util/misc.js"
 
 export function fromTextArea(textarea, options) {
   options = options ? copyObj(options) : {}
@@ -18,7 +18,9 @@ export function fromTextArea(textarea, options) {
       textarea.getAttribute("autofocus") != null && hasFocus == document.body
   }
 
-  function save() {textarea.value = cm.getValue()}
+  function save() {
+    textarea.value = cm.getValue()
+  }
 
   let realSubmit
   if (textarea.form) {
@@ -34,7 +36,8 @@ export function fromTextArea(textarea, options) {
           form.submit()
           form.submit = wrappedSubmit
         }
-      } catch(e) {}
+      } catch (e) {
+      }
     }
   }
 

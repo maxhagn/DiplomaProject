@@ -1,8 +1,8 @@
-import { elt, range, removeChildren, removeChildrenAndAdd } from "./dom.js"
-import { ie, ie_version } from "./browser.js"
+import {elt, range, removeChildren, removeChildrenAndAdd} from "./dom.js"
+import {ie, ie_version} from "./browser.js"
 
 // Detect drag-and-drop
-export let dragAndDrop = function() {
+export let dragAndDrop = function () {
   // There is *some* kind of drag-and-drop support in IE6-8, but I
   // couldn't get it to work yet.
   if (ie && ie_version < 9) return false
@@ -11,6 +11,7 @@ export let dragAndDrop = function() {
 }()
 
 let zwspSupported
+
 export function zeroWidthElement(measure) {
   if (zwspSupported == null) {
     let test = elt("span", "\u200b")
@@ -26,6 +27,7 @@ export function zeroWidthElement(measure) {
 
 // Feature-detect IE's crummy client rect reporting for bidi text
 let badBidiRects
+
 export function hasBadBidiRects(measure) {
   if (badBidiRects != null) return badBidiRects
   let txt = removeChildrenAndAdd(measure, document.createTextNode("A\u062eA"))
@@ -57,12 +59,17 @@ export let splitLinesAuto = "\n\nb".split(/\n/).length != 3 ? string => {
 } : string => string.split(/\r\n?|\n/)
 
 export let hasSelection = window.getSelection ? te => {
-  try { return te.selectionStart != te.selectionEnd }
-  catch(e) { return false }
+  try {
+    return te.selectionStart != te.selectionEnd
+  } catch (e) {
+    return false
+  }
 } : te => {
   let range
-  try {range = te.ownerDocument.selection.createRange()}
-  catch(e) {}
+  try {
+    range = te.ownerDocument.selection.createRange()
+  } catch (e) {
+  }
   if (!range || range.parentElement() != te) return false
   return range.compareEndPoints("StartToEnd", range) != 0
 }
@@ -75,6 +82,7 @@ export let hasCopyEvent = (() => {
 })()
 
 let badZoomedRects = null
+
 export function hasBadZoomedRects(measure) {
   if (badZoomedRects != null) return badZoomedRects
   let node = removeChildrenAndAdd(measure, elt("span", "x"))

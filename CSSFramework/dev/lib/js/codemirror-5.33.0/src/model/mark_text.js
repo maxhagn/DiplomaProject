@@ -1,19 +1,28 @@
-import { eltP } from "../util/dom.js"
-import { eventMixin, hasHandler, on } from "../util/event.js"
-import { endOperation, operation, runInOp, startOperation } from "../display/operations.js"
-import { clipPos, cmp, Pos } from "../line/pos.js"
-import { lineNo, updateLineHeight } from "../line/utils_line.js"
-import { clearLineMeasurementCacheFor, findViewForLine, textHeight } from "../measurement/position_measurement.js"
-import { seeReadOnlySpans, seeCollapsedSpans } from "../line/saw_special_spans.js"
-import { addMarkedSpan, conflictingCollapsedRange, getMarkedSpanFor, lineIsHidden, lineLength, MarkedSpan, removeMarkedSpan, visualLine } from "../line/spans.js"
-import { copyObj, indexOf, lst } from "../util/misc.js"
-import { signalLater } from "../util/operation_group.js"
-import { widgetHeight } from "../measurement/widgets.js"
-import { regChange, regLineChange } from "../display/view_tracking.js"
+import {eltP} from "../util/dom.js"
+import {eventMixin, hasHandler, on} from "../util/event.js"
+import {endOperation, operation, runInOp, startOperation} from "../display/operations.js"
+import {clipPos, cmp, Pos} from "../line/pos.js"
+import {lineNo, updateLineHeight} from "../line/utils_line.js"
+import {clearLineMeasurementCacheFor, findViewForLine, textHeight} from "../measurement/position_measurement.js"
+import {seeCollapsedSpans, seeReadOnlySpans} from "../line/saw_special_spans.js"
+import {
+  addMarkedSpan,
+  conflictingCollapsedRange,
+  getMarkedSpanFor,
+  lineIsHidden,
+  lineLength,
+  MarkedSpan,
+  removeMarkedSpan,
+  visualLine
+} from "../line/spans.js"
+import {copyObj, indexOf, lst} from "../util/misc.js"
+import {signalLater} from "../util/operation_group.js"
+import {widgetHeight} from "../measurement/widgets.js"
+import {regChange, regLineChange} from "../display/view_tracking.js"
 
-import { linkedDocs } from "./document_data.js"
-import { addChangeToHistory } from "./history.js"
-import { reCheckSelection } from "./selection_updates.js"
+import {linkedDocs} from "./document_data.js"
+import {addChangeToHistory} from "./history.js"
+import {reCheckSelection} from "./selection_updates.js"
 
 // TEXTMARKERS
 
@@ -147,6 +156,7 @@ export class TextMarker {
     }
   }
 }
+
 eventMixin(TextMarker)
 
 // Create a marker, wire it up to the right lines, and
@@ -172,7 +182,7 @@ export function markText(doc, from, to, options, type) {
   }
   if (marker.collapsed) {
     if (conflictingCollapsedRange(doc, from.line, from, to, marker) ||
-        from.line != to.line && conflictingCollapsedRange(doc, to.line, from, to, marker))
+      from.line != to.line && conflictingCollapsedRange(doc, to.line, from, to, marker))
       throw new Error("Inserting collapsed marker partially overlapping an existing one")
     seeCollapsedSpans()
   }
@@ -186,8 +196,8 @@ export function markText(doc, from, to, options, type) {
       updateMaxLine = true
     if (marker.collapsed && curLine != from.line) updateLineHeight(line, 0)
     addMarkedSpan(line, new MarkedSpan(marker,
-                                       curLine == from.line ? from.ch : null,
-                                       curLine == to.line ? to.ch : null))
+      curLine == from.line ? from.ch : null,
+      curLine == to.line ? to.ch : null))
     ++curLine
   })
   // lineIsHidden depends on the presence of the spans, so needs a second pass
@@ -244,6 +254,7 @@ export class SharedTextMarker {
     return this.primary.find(side, lineObj)
   }
 }
+
 eventMixin(SharedTextMarker)
 
 function markTextShared(doc, from, to, options, type) {

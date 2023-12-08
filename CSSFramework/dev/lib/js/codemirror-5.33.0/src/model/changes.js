@@ -1,21 +1,21 @@
-import { retreatFrontier } from "../line/highlight.js"
-import { startWorker } from "../display/highlight_worker.js"
-import { operation } from "../display/operations.js"
-import { regChange, regLineChange } from "../display/view_tracking.js"
-import { clipLine, clipPos, cmp, Pos } from "../line/pos.js"
-import { sawReadOnlySpans } from "../line/saw_special_spans.js"
-import { lineLength, removeReadOnlyRanges, stretchSpansOverChange, visualLine } from "../line/spans.js"
-import { getBetween, getLine, lineNo } from "../line/utils_line.js"
-import { estimateHeight } from "../measurement/position_measurement.js"
-import { hasHandler, signal, signalCursorActivity } from "../util/event.js"
-import { indexOf, lst, map, sel_dontScroll } from "../util/misc.js"
-import { signalLater } from "../util/operation_group.js"
+import {retreatFrontier} from "../line/highlight.js"
+import {startWorker} from "../display/highlight_worker.js"
+import {operation} from "../display/operations.js"
+import {regChange, regLineChange} from "../display/view_tracking.js"
+import {clipLine, clipPos, cmp, Pos} from "../line/pos.js"
+import {sawReadOnlySpans} from "../line/saw_special_spans.js"
+import {lineLength, removeReadOnlyRanges, stretchSpansOverChange, visualLine} from "../line/spans.js"
+import {getBetween, getLine, lineNo} from "../line/utils_line.js"
+import {estimateHeight} from "../measurement/position_measurement.js"
+import {hasHandler, signal, signalCursorActivity} from "../util/event.js"
+import {indexOf, lst, map, sel_dontScroll} from "../util/misc.js"
+import {signalLater} from "../util/operation_group.js"
 
-import { changeEnd, computeSelAfterChange } from "./change_measurement.js"
-import { isWholeLineUpdate, linkedDocs, updateDoc } from "./document_data.js"
-import { addChangeToHistory, historyChangeFromChange, mergeOldSpans, pushSelectionToHistory } from "./history.js"
-import { Range, Selection } from "./selection.js"
-import { setSelection, setSelectionNoUndo } from "./selection_updates.js"
+import {changeEnd, computeSelAfterChange} from "./change_measurement.js"
+import {isWholeLineUpdate, linkedDocs, updateDoc} from "./document_data.js"
+import {addChangeToHistory, historyChangeFromChange, mergeOldSpans, pushSelectionToHistory} from "./history.js"
+import {Range, Selection} from "./selection.js"
+import {setSelection, setSelectionNoUndo} from "./selection_updates.js"
 
 // UPDATING
 
@@ -101,7 +101,7 @@ export function makeChangeFromHistory(doc, type, allowSelectionOnly) {
   if (i == source.length) return
   hist.lastOrigin = hist.lastSelOrigin = null
 
-  for (;;) {
+  for (; ;) {
     event = source.pop()
     if (event.ranges) {
       pushSelectionToHistory(event, dest)
@@ -110,8 +110,7 @@ export function makeChangeFromHistory(doc, type, allowSelectionOnly) {
         return
       }
       selAfter = event
-    }
-    else break
+    } else break
   }
 
   // Build up a reverse change object to add to the opposite history
@@ -181,13 +180,17 @@ function makeChangeSingleDoc(doc, change, selAfter, spans) {
   if (change.from.line < doc.first) {
     let shift = change.text.length - 1 - (doc.first - change.from.line)
     shiftDoc(doc, shift)
-    change = {from: Pos(doc.first, 0), to: Pos(change.to.line + shift, change.to.ch),
-              text: [lst(change.text)], origin: change.origin}
+    change = {
+      from: Pos(doc.first, 0), to: Pos(change.to.line + shift, change.to.ch),
+      text: [lst(change.text)], origin: change.origin
+    }
   }
   let last = doc.lastLine()
   if (change.to.line > last) {
-    change = {from: change.from, to: Pos(last, getLine(doc, last).text.length),
-              text: [change.text[0]], origin: change.origin}
+    change = {
+      from: change.from, to: Pos(last, getLine(doc, last).text.length),
+      text: [change.text[0]], origin: change.origin
+    }
   }
 
   change.removed = getBetween(doc, change.from, change.to)
@@ -287,7 +290,10 @@ function rebaseHistArray(array, from, to, diff) {
   for (let i = 0; i < array.length; ++i) {
     let sub = array[i], ok = true
     if (sub.ranges) {
-      if (!sub.copied) { sub = array[i] = sub.deepCopy(); sub.copied = true }
+      if (!sub.copied) {
+        sub = array[i] = sub.deepCopy();
+        sub.copied = true
+      }
       for (let j = 0; j < sub.ranges.length; j++) {
         rebaseHistSelSingle(sub.ranges[j].anchor, from, to, diff)
         rebaseHistSelSingle(sub.ranges[j].head, from, to, diff)

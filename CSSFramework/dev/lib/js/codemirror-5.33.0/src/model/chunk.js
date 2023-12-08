@@ -1,6 +1,6 @@
-import { cleanUpLine } from "../line/line_data.js"
-import { indexOf } from "../util/misc.js"
-import { signalLater } from "../util/operation_group.js"
+import {cleanUpLine} from "../line/line_data.js"
+import {indexOf} from "../util/misc.js"
+import {signalLater} from "../util/operation_group.js"
 
 // The document is represented as a BTree consisting of leaves, with
 // chunk of lines in them, and branches, with up to ten leaves or
@@ -27,7 +27,9 @@ export function LeafChunk(lines) {
 }
 
 LeafChunk.prototype = {
-  chunkSize() { return this.lines.length },
+  chunkSize() {
+    return this.lines.length
+  },
 
   // Remove the n lines at offset 'at'.
   removeInner(at, n) {
@@ -65,7 +67,8 @@ export function BranchChunk(children) {
   let size = 0, height = 0
   for (let i = 0; i < children.length; ++i) {
     let ch = children[i]
-    size += ch.chunkSize(); height += ch.height
+    size += ch.chunkSize();
+    height += ch.height
     ch.parent = this
   }
   this.size = size
@@ -74,7 +77,9 @@ export function BranchChunk(children) {
 }
 
 BranchChunk.prototype = {
-  chunkSize() { return this.size },
+  chunkSize() {
+    return this.size
+  },
 
   removeInner(at, n) {
     this.size -= n
@@ -84,7 +89,10 @@ BranchChunk.prototype = {
         let rm = Math.min(n, sz - at), oldHeight = child.height
         child.removeInner(at, rm)
         this.height -= oldHeight - child.height
-        if (sz == rm) { this.children.splice(i--, 1); child.parent = null }
+        if (sz == rm) {
+          this.children.splice(i--, 1);
+          child.parent = null
+        }
         if ((n -= rm) == 0) break
         at = 0
       } else at -= sz
@@ -92,7 +100,7 @@ BranchChunk.prototype = {
     // If the result is smaller than 25 lines, ensure that it is a
     // single leaf node.
     if (this.size - n < 25 &&
-        (this.children.length > 1 || !(this.children[0] instanceof LeafChunk))) {
+      (this.children.length > 1 || !(this.children[0] instanceof LeafChunk))) {
       let lines = []
       this.collapse(lines)
       this.children = [new LeafChunk(lines)]
@@ -142,7 +150,7 @@ BranchChunk.prototype = {
         copy.parent = me
         me.children = [copy, sibling]
         me = copy
-     } else {
+      } else {
         me.size -= sibling.size
         me.height -= sibling.height
         let myIndex = indexOf(me.parent.children, me)

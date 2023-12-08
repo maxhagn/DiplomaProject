@@ -1,15 +1,15 @@
-import { runInOp } from "../display/operations.js"
-import { ensureCursorVisible } from "../display/scrolling.js"
-import { Pos } from "../line/pos.js"
-import { getLine } from "../line/utils_line.js"
-import { makeChange } from "../model/changes.js"
-import { ios, webkit } from "../util/browser.js"
-import { elt } from "../util/dom.js"
-import { lst, map } from "../util/misc.js"
-import { signalLater } from "../util/operation_group.js"
-import { splitLinesAuto } from "../util/feature_detection.js"
+import {runInOp} from "../display/operations.js"
+import {ensureCursorVisible} from "../display/scrolling.js"
+import {Pos} from "../line/pos.js"
+import {getLine} from "../line/utils_line.js"
+import {makeChange} from "../model/changes.js"
+import {ios, webkit} from "../util/browser.js"
+import {elt} from "../util/dom.js"
+import {lst, map} from "../util/misc.js"
+import {signalLater} from "../util/operation_group.js"
+import {splitLinesAuto} from "../util/feature_detection.js"
 
-import { indentLine } from "./indent.js"
+import {indentLine} from "./indent.js"
 
 // This will be set to a {lineWise: bool, text: [string]} object, so
 // that, when pasting, we know what kind of selections the copied
@@ -54,8 +54,10 @@ export function applyTextInput(cm, inserted, deleted, sel, origin) {
         from = to = Pos(from.line, 0)
     }
     updateInput = cm.curOp.updateInput
-    let changeEvent = {from: from, to: to, text: multiPaste ? multiPaste[i % multiPaste.length] : textLines,
-                       origin: origin || (paste ? "paste" : cm.state.cutIncoming ? "cut" : "+input")}
+    let changeEvent = {
+      from: from, to: to, text: multiPaste ? multiPaste[i % multiPaste.length] : textLines,
+      origin: origin || (paste ? "paste" : cm.state.cutIncoming ? "cut" : "+input")
+    }
     makeChange(cm.doc, changeEvent)
     signalLater(cm, "inputRead", cm, changeEvent)
   }

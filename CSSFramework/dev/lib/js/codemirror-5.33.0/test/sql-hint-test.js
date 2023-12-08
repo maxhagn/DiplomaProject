@@ -1,7 +1,7 @@
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: http://codemirror.net/LICENSE
 
-(function() {
+(function () {
   var Pos = CodeMirror.Pos;
 
   var simpleTables = {
@@ -18,13 +18,13 @@
     text: "mytable",
     displayText: "mytable | The main table",
     columns: [{text: "id", displayText: "id | Unique ID"},
-              {text: "name", displayText: "name | The name"}]
+      {text: "name", displayText: "name | The name"}]
   }];
 
   namespace = "sql-hint_";
 
   function test(name, spec) {
-    testCM(name, function(cm) {
+    testCM(name, function (cm) {
       cm.setValue(spec.value);
       cm.setCursor(spec.cursor);
       var completion = CodeMirror.hint.sql(cm, {tables: spec.tables});
@@ -124,7 +124,7 @@
     cursor: Pos(0, 12),
     tables: schemaTables,
     list: ["schema.users", "schema.countries",
-           "SCHEMA", "SCHEMA_NAME", "SCHEMAS"],
+      "SCHEMA", "SCHEMA_NAME", "SCHEMAS"],
     from: Pos(0, 7),
     to: Pos(0, 12)
   });
@@ -153,8 +153,8 @@
     cursor: Pos(0, 20),
     tables: schemaTables,
     list: ["schema.users.name",
-           "schema.users.score",
-           "schema.users.birthDate"],
+      "schema.users.score",
+      "schema.users.birthDate"],
     from: Pos(0, 7),
     to: Pos(0, 20)
   });
@@ -164,8 +164,8 @@
     cursor: Pos(0, 24),
     tables: schemaTables,
     list: ["`schema`.`users`.`name`",
-           "`schema`.`users`.`score`",
-           "`schema`.`users`.`birthDate`"],
+      "`schema`.`users`.`score`",
+      "`schema`.`users`.`birthDate`"],
     from: Pos(0, 7),
     to: Pos(0, 24)
   });
@@ -175,8 +175,8 @@
     cursor: Pos(0, 24),
     tables: schemaTables,
     list: ["\"schema\".\"users\".\"name\"",
-           "\"schema\".\"users\".\"score\"",
-           "\"schema\".\"users\".\"birthDate\""],
+      "\"schema\".\"users\".\"score\"",
+      "\"schema\".\"users\".\"birthDate\""],
     from: Pos(0, 7),
     to: Pos(0, 24),
     mode: "text/x-sqlite"
@@ -196,7 +196,7 @@
     cursor: Pos(0, 15),
     tables: displayTextTables,
     list: [{text: "mytable.id", displayText: "id | Unique ID"},
-           {text: "mytable.name", displayText: "name | The name"}],
+      {text: "mytable.name", displayText: "name | The name"}],
     from: Pos(0, 7),
     to: Pos(0, 15)
   });
@@ -215,7 +215,7 @@
     cursor: Pos(0, 9),
     tables: displayTextTables,
     list: [{text: "t.id", displayText: "id | Unique ID"},
-           {text: "t.name", displayText: "name | The name"}],
+      {text: "t.name", displayText: "name | The name"}],
     from: Pos(0, 7),
     to: Pos(0, 9)
   })
@@ -223,7 +223,7 @@
   function deepCompare(a, b) {
     if (a === b) return true
     if (!(a && typeof a == "object") ||
-        !(b && typeof b == "object")) return false
+      !(b && typeof b == "object")) return false
     var array = Array.isArray(a)
     if (Array.isArray(b) != array) return false
     if (array) {

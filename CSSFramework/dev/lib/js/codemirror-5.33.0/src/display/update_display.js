@@ -1,19 +1,25 @@
-import { sawCollapsedSpans } from "../line/saw_special_spans.js"
-import { heightAtLine, visualLineEndNo, visualLineNo } from "../line/spans.js"
-import { getLine, lineNumberFor } from "../line/utils_line.js"
-import { displayHeight, displayWidth, getDimensions, paddingVert, scrollGap } from "../measurement/position_measurement.js"
-import { mac, webkit } from "../util/browser.js"
-import { activeElt, removeChildren, contains } from "../util/dom.js"
-import { hasHandler, signal } from "../util/event.js"
-import { indexOf } from "../util/misc.js"
+import {sawCollapsedSpans} from "../line/saw_special_spans.js"
+import {heightAtLine, visualLineEndNo, visualLineNo} from "../line/spans.js"
+import {getLine, lineNumberFor} from "../line/utils_line.js"
+import {
+  displayHeight,
+  displayWidth,
+  getDimensions,
+  paddingVert,
+  scrollGap
+} from "../measurement/position_measurement.js"
+import {mac, webkit} from "../util/browser.js"
+import {activeElt, contains, removeChildren} from "../util/dom.js"
+import {hasHandler, signal} from "../util/event.js"
+import {indexOf} from "../util/misc.js"
 
-import { buildLineElement, updateLineForChanges } from "./update_line.js"
-import { startWorker } from "./highlight_worker.js"
-import { maybeUpdateLineNumberWidth } from "./line_numbers.js"
-import { measureForScrollbars, updateScrollbars } from "./scrollbars.js"
-import { updateSelection } from "./selection.js"
-import { updateHeightsInViewport, visibleLines } from "./update_lines.js"
-import { adjustView, countDirtyView, resetView } from "./view_tracking.js"
+import {buildLineElement, updateLineForChanges} from "./update_line.js"
+import {startWorker} from "./highlight_worker.js"
+import {maybeUpdateLineNumberWidth} from "./line_numbers.js"
+import {measureForScrollbars, updateScrollbars} from "./scrollbars.js"
+import {updateSelection} from "./selection.js"
+import {updateHeightsInViewport, visibleLines} from "./update_lines.js"
+import {adjustView, countDirtyView, resetView} from "./view_tracking.js"
 
 // DISPLAY DRAWING
 
@@ -37,6 +43,7 @@ export class DisplayUpdate {
     if (hasHandler(emitter, type))
       this.events.push(arguments)
   }
+
   finish() {
     for (let i = 0; i < this.events.length; i++)
       signal.apply(null, this.events[i])
@@ -97,9 +104,9 @@ export function updateDisplayIfNeeded(cm, update) {
 
   // Bail out if the visible area is already rendered and nothing changed.
   if (!update.force &&
-      update.visible.from >= display.viewFrom && update.visible.to <= display.viewTo &&
-      (display.updateLineNumbers == null || display.updateLineNumbers >= display.viewTo) &&
-      display.renderedView == display.view && countDirtyView(cm) == 0)
+    update.visible.from >= display.viewFrom && update.visible.to <= display.viewTo &&
+    (display.updateLineNumbers == null || display.updateLineNumbers >= display.viewTo) &&
+    display.renderedView == display.view && countDirtyView(cm) == 0)
     return false
 
   if (maybeUpdateLineNumberWidth(cm)) {
@@ -128,7 +135,7 @@ export function updateDisplayIfNeeded(cm, update) {
 
   let toUpdate = countDirtyView(cm)
   if (!different && toUpdate == 0 && !update.force && display.renderedView == display.view &&
-      (display.updateLineNumbers == null || display.updateLineNumbers >= display.viewTo))
+    (display.updateLineNumbers == null || display.updateLineNumbers >= display.viewTo))
     return false
 
   // For big changes, we hide the enclosing element during the
@@ -162,7 +169,7 @@ export function updateDisplayIfNeeded(cm, update) {
 export function postUpdateDisplay(cm, update) {
   let viewport = update.viewport
 
-  for (let first = true;; first = false) {
+  for (let first = true; ; first = false) {
     if (!first || !cm.options.lineWrapping || update.oldDisplayWidth == displayWidth(cm)) {
       // Clip forced viewport to actual scrollable area.
       if (viewport && viewport.top != null)
@@ -185,7 +192,8 @@ export function postUpdateDisplay(cm, update) {
   update.signal(cm, "update", cm)
   if (cm.display.viewFrom != cm.display.reportedViewFrom || cm.display.viewTo != cm.display.reportedViewTo) {
     update.signal(cm, "viewportChange", cm, cm.display.viewFrom, cm.display.viewTo)
-    cm.display.reportedViewFrom = cm.display.viewFrom; cm.display.reportedViewTo = cm.display.viewTo
+    cm.display.reportedViewFrom = cm.display.viewFrom;
+    cm.display.reportedViewTo = cm.display.viewTo
   }
 }
 

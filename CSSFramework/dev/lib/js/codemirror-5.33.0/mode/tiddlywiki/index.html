@@ -2,14 +2,17 @@
 
 <title>CodeMirror: TiddlyWiki mode</title>
 <meta charset="utf-8"/>
-<link rel=stylesheet href="../../doc/docs.css">
+<link href="../../doc/docs.css" rel=stylesheet>
 
-<link rel="stylesheet" href="../../lib/codemirror.css">
-<link rel="stylesheet" href="tiddlywiki.css">
+<link href="../../lib/codemirror.css" rel="stylesheet">
+<link href="tiddlywiki.css" rel="stylesheet">
 <script src="../../lib/codemirror.js"></script>
 <script src="../../addon/edit/matchbrackets.js"></script>
 <script src="tiddlywiki.js"></script>
-<style type="text/css">.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}</style>
+<style type="text/css">.CodeMirror {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}</style>
 <div id=nav>
   <a href="http://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png"></a>
 
@@ -25,10 +28,10 @@
 </div>
 
 <article>
-<h2>TiddlyWiki mode</h2>
+  <h2>TiddlyWiki mode</h2>
 
 
-<div><textarea id="code" name="code">
+  <div><textarea id="code" name="code">
 !TiddlyWiki Formatting
 * Rendered versions can be found at: http://www.tiddlywiki.com/#Reference
 
@@ -140,15 +143,15 @@ cf. [[TiddlyWiki.com|http://www.tiddlywiki.com/#EmbeddedImages]]
 * To prevent wiki markup from taking effect for a particular section, that section can be enclosed in three double quotes: e.g. {{{"""WikiWord"""}}}.
 </textarea></div>
 
-    <script>
-      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-        mode: 'tiddlywiki',      
-        lineNumbers: true,
-        matchBrackets: true
-      });
-    </script>
+  <script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+      mode: 'tiddlywiki',
+      lineNumbers: true,
+      matchBrackets: true
+    });
+  </script>
 
-    <p>TiddlyWiki mode supports a single configuration.</p>
+  <p>TiddlyWiki mode supports a single configuration.</p>
 
-    <p><strong>MIME types defined:</strong> <code>text/x-tiddlywiki</code>.</p>
-  </article>
+  <p><strong>MIME types defined:</strong> <code>text/x-tiddlywiki</code>.</p>
+</article>

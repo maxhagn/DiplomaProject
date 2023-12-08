@@ -1,14 +1,14 @@
-import { deleteNearSelection } from "./deleteNearSelection.js"
-import { runInOp } from "../display/operations.js"
-import { ensureCursorVisible } from "../display/scrolling.js"
-import { endOfLine } from "../input/movement.js"
-import { clipPos, Pos } from "../line/pos.js"
-import { visualLine, visualLineEnd } from "../line/spans.js"
-import { getLine, lineNo } from "../line/utils_line.js"
-import { Range } from "../model/selection.js"
-import { selectAll } from "../model/selection_updates.js"
-import { countColumn, sel_dontScroll, sel_move, spaceStr } from "../util/misc.js"
-import { getOrder } from "../util/bidi.js"
+import {deleteNearSelection} from "./deleteNearSelection.js"
+import {runInOp} from "../display/operations.js"
+import {ensureCursorVisible} from "../display/scrolling.js"
+import {endOfLine} from "../input/movement.js"
+import {clipPos, Pos} from "../line/pos.js"
+import {visualLine, visualLineEnd} from "../line/spans.js"
+import {getLine, lineNo} from "../line/utils_line.js"
+import {Range} from "../model/selection.js"
+import {selectAll} from "../model/selection_updates.js"
+import {countColumn, sel_dontScroll, sel_move, spaceStr} from "../util/misc.js"
+import {getOrder} from "../util/bidi.js"
 
 // Commands are parameter-less actions that can be performed on an
 // editor, mostly used for keybindings.
@@ -41,7 +41,7 @@ export let commands = {
   delWrappedLineRight: cm => deleteNearSelection(cm, range => {
     let top = cm.charCoords(range.head, "div").top + 5
     let rightPos = cm.coordsChar({left: cm.display.lineDiv.offsetWidth + 100, top: top}, "div")
-    return {from: range.from(), to: rightPos }
+    return {from: range.from(), to: rightPos}
   }),
   undo: cm => cm.undo(),
   redo: cm => cm.redo(),
@@ -124,14 +124,14 @@ export let commands = {
         if (cur.ch > 0) {
           cur = new Pos(cur.line, cur.ch + 1)
           cm.replaceRange(line.charAt(cur.ch - 1) + line.charAt(cur.ch - 2),
-                          Pos(cur.line, cur.ch - 2), cur, "+transpose")
+            Pos(cur.line, cur.ch - 2), cur, "+transpose")
         } else if (cur.line > cm.doc.first) {
           let prev = getLine(cm.doc, cur.line - 1).text
           if (prev) {
             cur = new Pos(cur.line, 1)
             cm.replaceRange(line.charAt(0) + cm.doc.lineSeparator() +
-                            prev.charAt(prev.length - 1),
-                            Pos(cur.line - 1, prev.length - 1), cur, "+transpose")
+              prev.charAt(prev.length - 1),
+              Pos(cur.line - 1, prev.length - 1), cur, "+transpose")
           }
         }
       }
@@ -159,12 +159,14 @@ function lineStart(cm, lineN) {
   if (visual != line) lineN = lineNo(visual)
   return endOfLine(true, cm, visual, lineN, 1)
 }
+
 function lineEnd(cm, lineN) {
   let line = getLine(cm.doc, lineN)
   let visual = visualLineEnd(line)
   if (visual != line) lineN = lineNo(visual)
   return endOfLine(true, cm, line, lineN, -1)
 }
+
 function lineStartSmart(cm, pos) {
   let start = lineStart(cm, pos.line)
   let line = getLine(cm.doc, start.line)

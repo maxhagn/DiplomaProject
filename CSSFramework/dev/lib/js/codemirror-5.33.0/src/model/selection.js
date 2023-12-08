@@ -1,5 +1,5 @@
-import { cmp, copyPos, equalCursorPos, maxPos, minPos } from "../line/pos.js"
-import { indexOf } from "../util/misc.js"
+import {cmp, copyPos, equalCursorPos, maxPos, minPos} from "../line/pos.js"
+import {indexOf} from "../util/misc.js"
 
 // Selection objects are immutable. A new one is created every time
 // the selection changes. A selection is one or more non-overlapping
@@ -12,7 +12,9 @@ export class Selection {
     this.primIndex = primIndex
   }
 
-  primary() { return this.ranges[this.primIndex] }
+  primary() {
+    return this.ranges[this.primIndex]
+  }
 
   equals(other) {
     if (other == this) return true
@@ -50,12 +52,21 @@ export class Selection {
 
 export class Range {
   constructor(anchor, head) {
-    this.anchor = anchor; this.head = head
+    this.anchor = anchor;
+    this.head = head
   }
 
-  from() { return minPos(this.anchor, this.head) }
-  to() { return maxPos(this.anchor, this.head) }
-  empty() { return this.head.line == this.anchor.line && this.head.ch == this.anchor.ch }
+  from() {
+    return minPos(this.anchor, this.head)
+  }
+
+  to() {
+    return maxPos(this.anchor, this.head)
+  }
+
+  empty() {
+    return this.head.line == this.anchor.line && this.head.ch == this.anchor.ch
+  }
 }
 
 // Take an unsorted, potentially overlapping set of ranges, and

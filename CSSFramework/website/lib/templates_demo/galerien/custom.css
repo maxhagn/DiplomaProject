@@ -1,33 +1,42 @@
 .card-header {
-  height: 100% !important; }
-  .card-header img {
+    height: 100% !important;
+}
+
+.card-header img {
     border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px; }
+    border-bottom-right-radius: 5px;
+}
 
 .col {
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto; }
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .row {
-  padding: 0 2rem; }
+    padding: 0 2rem;
+}
 
 .footer-container {
-  margin-top: 50px; }
+    margin-top: 50px;
+}
 
 .container-m {
-  border-radius: 3px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  margin-top: 70px;
-  margin-bottom: 70px; }
+    border-radius: 3px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
 
 .media-card {
-  width: 100%; }
+    width: 100%;
+}
 
 .headline {
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  line-height: 1.5rem;
-  padding: 0 5rem; }
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    line-height: 1.5rem;
+    padding: 0 5rem;
+}

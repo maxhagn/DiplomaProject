@@ -4,9 +4,9 @@ import {mockNavigation} from "./mock-navigation";
 
 @Injectable()
 export class ContentService {
-    getContent(): any {
-        return Promise.resolve(mockContent);
-    }
+  getContent(): any {
+    return Promise.resolve(mockContent);
+  }
 }
 
 @Injectable()

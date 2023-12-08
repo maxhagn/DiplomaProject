@@ -13,12 +13,12 @@ body
 
 h2
   font-weight: 300
-  color: rgba(255,255,255,.95)
+  color: rgba(255, 255, 255, .95)
 
 p
   font-size: 16px
   font-weight: 400 !important
-  color: rgba(255,255,255,.95)
+  color: rgba(255, 255, 255, .95)
 
 
 nav:first-child
@@ -37,6 +37,7 @@ nav
   flex-direction: row
   flex-wrap: nowrap
   line-height: 70px
+
   .nav-item
     -webkit-user-select: none
     -moz-user-select: none
@@ -47,12 +48,14 @@ nav
     padding-right: 10px
     font-weight: 200
     transition: all 500ms
+
     &:first-child
       padding-left: 20px
+
     &:hover
       border: none
-      border-bottom: 2.5px solid transparentize($sec-color,.2)
-      background-color: rgba(0,0,0,.05)
+      border-bottom: 2.5px solid transparentize($sec-color, .2)
+      background-color: rgba(0, 0, 0, .05)
 
 .infobox
   -webkit-user-select: none
@@ -63,7 +66,7 @@ nav
   margin: 0 auto
   width: 100%
   height: auto
-  background-color: transparentize($sec-color,.2)
+  background-color: transparentize($sec-color, .2)
 
   .textbox
     padding-top: 10px
@@ -79,8 +82,9 @@ nav
   height: 100%
   border: none
   border-right: .5px solid lightgray
+
   &:hover
-    background-color: rgba(0,0,0,.09)
+    background-color: rgba(0, 0, 0, .09)
     box-shadow: inset rgba(0, 0, 0, 0.0980392) 0px 4px 5px 0px, inset rgba(0, 0, 0, 0.0980392) 0px 1px 10px 0px, inset rgba(0, 0, 0, 0.0980392) 0px 2px 4px -1px, inset rgba(0, 0, 0, 0.0980392) 0px 4px 5px -2px
 
 
@@ -103,6 +107,7 @@ nav
     width: 300px
     background-color: white
     height: 100%
+
     .nav-item
       &:nth-child(1)
         display: flex
@@ -114,36 +119,45 @@ nav
         line-height: 65px
         font-size: 18px
         font-weight: 100 !important
+
         &:hover
           border: none
+
       &:nth-child(2)
         padding-left: 10px
         background: white url("../Images/Icon_Dashboard_grau.svg") no-repeat 5%
+
       &:nth-child(3)
         background: white url("../Images/Icon_Play_grau.svg") no-repeat 5%
+
       &:nth-child(4)
         background: white url("../Images/Icon_Profil_v3_grau.svg") no-repeat 5%
+
       &:nth-child(5)
         background: white url("../Images/Icon_stats_grau.svg") no-repeat 5%
+
       &:nth-child(6)
         background: white url("../Images/Icon_Profil_v3_grau.svg") no-repeat 5%
+
       &:nth-child(7)
         background: white url("../Images/Icon_Profil_v3_grau.svg") no-repeat 5%
+
       &:nth-child(8)
         background: white url("../Images/Icon_quellenverzeichniss_grau.svg") no-repeat 5%
+
       &:nth-child(9)
         background: white url("../Images/Icon_LogOut_v2_grau.svg") no-repeat 5%
+
       &:hover
         border: none
-        border-right: 5px solid transparentize($sec-color,.2)
-        background-color: rgba(0,0,0,.05)
+        border-right: 5px solid transparentize($sec-color, .2)
+        background-color: rgba(0, 0, 0, .05)
   .nav-logoitem
     margin-left: 50% !important
 
 @media (min-width: 550px) and (max-width: 1024px)
   .nav-item
     background-size: 15% !important
-
 
 
 .nav-logoitem
@@ -155,11 +169,12 @@ nav
 
 .profile-nav
   color: white
-  background-color: transparentize($base-color,.25)
+  background-color: transparentize($base-color, .25)
   width: 50%
   height: 65px
+
   &:nth-child(2)
-    background: transparentize($base-color,.25) url("../Images/Icon_Cancle_weis.svg") no-repeat 80%
+    background: transparentize($base-color, .25) url("../Images/Icon_Cancle_weis.svg") no-repeat 80%
     background-size: 20%
 
 .nav-item

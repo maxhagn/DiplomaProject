@@ -10,9 +10,12 @@
  */
 
 html
-  line-height: 1.15 /* 1 */
-  -ms-text-size-adjust: 100% /* 2 */
-  -webkit-text-size-adjust: 100% /* 2 */
+  line-height: 1.15
+  /* 1 */
+  -ms-text-size-adjust: 100%
+  /* 2 */
+  -webkit-text-size-adjust: 100%
+  /* 2 */
   font-family: sans-serif
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 
@@ -75,7 +78,8 @@ section
 
 figcaption,
 figure,
-main  /* 1 */
+main
+  /* 1 */
   display: block
 
 
@@ -93,9 +97,12 @@ figure
  */
 
 hr
-  box-sizing: content-box /* 1 */
-  height: 0 /* 1 */
-  overflow: visible /* 2 */
+  box-sizing: content-box
+  /* 1 */
+  height: 0
+  /* 1 */
+  overflow: visible
+  /* 2 */
   -moz-box-sizing: content-box
 
 
@@ -105,8 +112,10 @@ hr
  */
 
 pre
-  font-family: monospace, monospace /* 1 */
-  font-size: 1em /* 2 */
+  font-family: monospace, monospace
+  /* 1 */
+  font-size: 1em
+/* 2 */
 
 
 /* Text-level semantics
@@ -118,8 +127,10 @@ pre
  */
 
 a
-  background-color: transparent /* 1 */
-  -webkit-text-decoration-skip: objects /* 2 */
+  background-color: transparent
+  /* 1 */
+  -webkit-text-decoration-skip: objects
+/* 2 */
 
 
 /**
@@ -128,9 +139,12 @@ a
  */
 
 abbr[title]
-  border-bottom: none /* 1 */
-  text-decoration: underline /* 2 */
-  text-decoration: underline dotted /* 2 */
+  border-bottom: none
+  /* 1 */
+  text-decoration: underline
+  /* 2 */
+  text-decoration: underline dotted
+/* 2 */
 
 
 /**
@@ -159,8 +173,10 @@ strong
 code,
 kbd,
 samp
-  font-family: monospace, monospace /* 1 */
-  font-size: 1em /* 2 */
+  font-family: monospace, monospace
+  /* 1 */
+  font-size: 1em
+/* 2 */
 
 
 /**
@@ -259,10 +275,14 @@ input,
 optgroup,
 select,
 textarea
-  font-family: sans-serif /* 1 */
-  font-size: 100% /* 1 */
-  line-height: 1.15 /* 1 */
-  margin: 0 /* 2 */
+  font-family: sans-serif
+  /* 1 */
+  font-size: 100%
+  /* 1 */
+  line-height: 1.15
+  /* 1 */
+  margin: 0
+/* 2 */
 
 
 /**
@@ -271,7 +291,8 @@ textarea
  */
 
 button,
-input  /* 1 */
+input
+  /* 1 */
   overflow: visible
 
 
@@ -281,7 +302,8 @@ input  /* 1 */
  */
 
 button,
-select  /* 1 */
+select
+  /* 1 */
   text-transform: none
 
 
@@ -292,10 +314,12 @@ select  /* 1 */
  */
 
 button,
-html [type="button"], /* 1 */
+html [type="button"],
+  /* 1 */
 [type="reset"],
 [type="submit"]
-  -webkit-appearance: button /* 2 */
+  -webkit-appearance: button
+/* 2 */
 
 
 /**
@@ -337,12 +361,18 @@ fieldset
  */
 
 legend
-  box-sizing: border-box /* 1 */
-  color: inherit /* 2 */
-  display: table /* 1 */
-  max-width: 100% /* 1 */
-  padding: 0 /* 3 */
-  white-space: normal /* 1 */
+  box-sizing: border-box
+  /* 1 */
+  color: inherit
+  /* 2 */
+  display: table
+  /* 1 */
+  max-width: 100%
+  /* 1 */
+  padding: 0
+  /* 3 */
+  white-space: normal
+/* 1 */
 
 
 /**
@@ -351,8 +381,10 @@ legend
  */
 
 progress
-  display: inline-block /* 1 */
-  vertical-align: baseline /* 2 */
+  display: inline-block
+  /* 1 */
+  vertical-align: baseline
+/* 2 */
 
 
 /**
@@ -370,8 +402,10 @@ textarea
 
 [type="checkbox"],
 [type="radio"]
-  box-sizing: border-box /* 1 */
-  padding: 0 /* 2 */
+  box-sizing: border-box
+  /* 1 */
+  padding: 0
+/* 2 */
 
 
 /**
@@ -389,8 +423,10 @@ textarea
  */
 
 [type="search"]
-  -webkit-appearance: textfield /* 1 */
-  outline-offset: -2px /* 2 */
+  -webkit-appearance: textfield
+  /* 1 */
+  outline-offset: -2px
+/* 2 */
 
 
 /**
@@ -408,8 +444,10 @@ textarea
  */
 
 ::-webkit-file-upload-button
-  -webkit-appearance: button /* 1 */
-  font: inherit /* 2 */
+  -webkit-appearance: button
+  /* 1 */
+  font: inherit
+/* 2 */
 
 
 /* Interactive
@@ -420,7 +458,8 @@ textarea
  * 1. Add the correct display in Edge, IE, and Firefox.
  */
 
-details, /* 1 */
+details,
+  /* 1 */
 menu
   display: block
 
@@ -461,7 +500,6 @@ template
 
 [hidden]
   display: none
-
 
 
 // Classes from Bootstrap -> www.getbootstrap.com | Called at 24.01.2017
@@ -507,20 +545,20 @@ template
   .container
     width: 1170px
 
-.row 
+.row
   margin-right: -15px
   margin-left: -15px
 
 .row:before,
-.row:after 
+.row:after
   display: table
   content: " "
 
-.row:after 
+.row:after
   clear: both
 
 .row:before,
-.row:after 
+.row:after
   display: table
   content: " "
 
@@ -601,13 +639,11 @@ template
     margin-left: 25%
 
 
-
-
 .form-control:focus
   border-color: #66afe9
   outline: 0
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6)
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6)
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6)
 
 
 .form-control:-moz-placeholder
@@ -638,7 +674,7 @@ textarea.form-control
   height: auto
 
 
-.btn 
+.btn
   display: inline-block
   padding: 6px 12px
   margin-bottom: 0
@@ -658,20 +694,20 @@ textarea.form-control
   user-select: none
 
 
-.btn:focus 
+.btn:focus
   outline: thin dotted
   outline: 5px auto -webkit-focus-ring-color
   outline-offset: -2px
 
 
 .btn:hover,
-.btn:focus 
+.btn:focus
   color: #333333
   text-decoration: none
 
 
 .btn:active,
-.btn.active 
+.btn.active
   background-image: none
   outline: 0
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
@@ -680,7 +716,7 @@ textarea.form-control
 
 .btn.disabled,
 .btn[disabled],
-fieldset[disabled] .btn 
+fieldset[disabled] .btn
   pointer-events: none
   cursor: not-allowed
   opacity: 0.65
@@ -688,7 +724,7 @@ fieldset[disabled] .btn
   -webkit-box-shadow: none
   box-shadow: none
 
-.btn-default 
+.btn-default
   color: #333333
   background-color: #ffffff
   border-color: #cccccc
@@ -696,7 +732,7 @@ fieldset[disabled] .btn
 .btn-link,
 .btn-link:active,
 .btn-link[disabled],
-fieldset[disabled] .btn-link 
+fieldset[disabled] .btn-link
   background-color: transparent
   -webkit-box-shadow: none
   box-shadow: none
@@ -704,11 +740,11 @@ fieldset[disabled] .btn-link
 .btn-link,
 .btn-link:hover,
 .btn-link:focus,
-.btn-link:active 
+.btn-link:active
   border-color: transparent
 
 .btn-link:hover,
-.btn-link:focus 
+.btn-link:focus
   color: #2a6496
   text-decoration: underline
   background-color: transparent
@@ -716,57 +752,57 @@ fieldset[disabled] .btn-link
 .btn-link[disabled]:hover,
 fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
-fieldset[disabled] .btn-link:focus 
+fieldset[disabled] .btn-link:focus
   color: #999999
   text-decoration: none
 
-.btn-lg 
+.btn-lg
   padding: 10px 16px
   font-size: 18px
   line-height: 1.33
   border-radius: 6px
 
-.btn-sm 
+.btn-sm
   padding: 5px 10px
   font-size: 12px
   line-height: 1.5
   border-radius: 3px
 
-.btn-xs 
+.btn-xs
   padding: 1px 5px
   font-size: 12px
   line-height: 1.5
   border-radius: 3px
 
-.btn-block 
+.btn-block
   display: block
   width: 100%
   padding-right: 0
   padding-left: 0
 
-.btn-block + .btn-block 
+.btn-block + .btn-block
   margin-top: 5px
 
-.collapse 
+.collapse
   display: none
 
-.collapse.in 
+.collapse.in
   display: block
 
-.collapsing 
+.collapsing
   position: relative
   height: 0
   overflow: hidden
   -webkit-transition: height 0.35s ease
-          transition: height 0.35s ease
+    transition: height 0.35s ease
 
 // Glyphicon -----------------------------------------------------------------------------------------------------------------------
-@font-face 
+@font-face
   font-family: 'Glyphicons Halflings'
   src: url('../fonts/glyphicons-halflings-regular.eot')
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg')
 
-.glyphicon 
+.glyphicon
   position: relative
   top: 1px
   display: inline-block
@@ -783,84 +819,84 @@ fieldset[disabled] .btn-link:focus
 .glyphicon-send:before
   content: "\e171"
 
-.open > .dropdown-menu 
+.open > .dropdown-menu
   display: block
 
-.open > a 
+.open > a
   outline: 0
 
 [data-toggle="buttons"] > .btn > input[type="radio"],
 [data-toggle="buttons"] > .btn > input[type="checkbox"]
   display: none
 
-.input-group .form-control 
+.input-group .form-control
   width: 100%
   margin-bottom: 0
 
-.input-group-addon:last-child 
+.input-group-addon:last-child
   border-left: 0
 
-.input-group-btn 
+.input-group-btn
   position: relative
   white-space: nowrap
 
-.input-group-btn:first-child > .btn 
+.input-group-btn:first-child > .btn
   margin-right: -1px
 
-.input-group-btn:last-child > .btn 
+.input-group-btn:last-child > .btn
   margin-left: -1px
 
-.input-group-btn > .btn 
+.input-group-btn > .btn
   position: relative
 
-.input-group-btn > .btn + .btn 
+.input-group-btn > .btn + .btn
   margin-left: -4px
 
 .input-group-btn > .btn:hover,
-.input-group-btn > .btn:active 
+.input-group-btn > .btn:active
   z-index: 2
 
 // Navigation -----------------------------------------------------------------------------------------------------------------------
-.nav 
+.nav
   padding-left: 0
   margin-bottom: 0
   list-style: none
 
 .nav:before,
-.nav:after 
+.nav:after
   display: table
   content: " "
 
-.nav:after 
+.nav:after
   clear: both
 
 .nav:before,
-.nav:after 
+.nav:after
   display: table
   content: " "
 
-.nav:after 
+.nav:after
   clear: both
 
-.nav > li 
+.nav > li
   position: relative
   display: block
 
-.nav > li > a 
+.nav > li > a
   position: relative
   display: block
   padding: 10px 15px
 
 .nav > li > a:hover,
-.nav > li > a:focus 
+.nav > li > a:focus
   text-decoration: none
   background-color: #eeeeee
 
-.nav > li.disabled > a 
+.nav > li.disabled > a
   color: #999999
 
 .nav > li.disabled > a:hover,
-.nav > li.disabled > a:focus 
+.nav > li.disabled > a:focus
   color: #999999
   text-decoration: none
   cursor: not-allowed
@@ -868,63 +904,63 @@ fieldset[disabled] .btn-link:focus
 
 .nav .open > a,
 .nav .open > a:hover,
-.nav .open > a:focus 
+.nav .open > a:focus
   background-color: #eeeeee
   border-color: #428bca
 
-.nav .nav-divider 
+.nav .nav-divider
   height: 1px
   margin: 9px 0
   overflow: hidden
   background-color: #e5e5e5
 
-.navbar 
+.navbar
   position: relative
   min-height: 50px
   margin-bottom: 20px
   border: 1px solid transparent
 
 .navbar:before,
-.navbar:after 
+.navbar:after
   display: table
   content: " "
 
-.navbar:after 
+.navbar:after
   clear: both
 
 .navbar:before,
-.navbar:after 
+.navbar:after
   display: table
   content: " "
 
-.navbar:after 
+.navbar:after
   clear: both
 
-@media (min-width: 768px) 
-  .navbar 
+@media (min-width: 768px)
+  .navbar
     border-radius: 4px
 
 .navbar-header:before,
-.navbar-header:after 
+.navbar-header:after
   display: table
   content: " "
 
-.navbar-header:after 
+.navbar-header:after
   clear: both
 
 .navbar-header:before,
-.navbar-header:after 
+.navbar-header:after
   display: table
   content: " "
 
-.navbar-header:after 
+.navbar-header:after
   clear: both
 
-@media (min-width: 768px) 
-  .navbar-header 
+@media (min-width: 768px)
+  .navbar-header
     float: left
 
-.navbar-collapse 
+.navbar-collapse
   max-height: 340px
   padding-right: 15px
   padding-left: 15px
@@ -933,100 +969,100 @@ fieldset[disabled] .btn-link:focus
   -webkit-overflow-scrolling: touch
 
 .navbar-collapse:before,
-.navbar-collapse:after 
+.navbar-collapse:after
   display: table
   content: " "
 
-.navbar-collapse:after 
+.navbar-collapse:after
   clear: both
 
 .navbar-collapse:before,
-.navbar-collapse:after 
+.navbar-collapse:after
   display: table
   content: " "
 
-.navbar-collapse:after 
+.navbar-collapse:after
   clear: both
 
-.navbar-collapse.in 
+.navbar-collapse.in
   overflow-y: auto
 
-@media (min-width: 768px) 
-  .navbar-collapse 
+@media (min-width: 768px)
+  .navbar-collapse
     width: auto
     border-top: 0
     box-shadow: none
-  
-  .navbar-collapse.collapse 
+
+  .navbar-collapse.collapse
     display: block !important
     height: auto !important
     padding-bottom: 0
     overflow: visible !important
-  
-  .navbar-collapse.in 
+
+  .navbar-collapse.in
     overflow-y: visible
-  
+
   .navbar-fixed-top .navbar-collapse,
   .navbar-static-top .navbar-collapse,
-  .navbar-fixed-bottom .navbar-collapse 
+  .navbar-fixed-bottom .navbar-collapse
     padding-right: 0
     padding-left: 0
 
 .container > .navbar-header,
-.container > .navbar-collapse 
+.container > .navbar-collapse
   margin-right: -15px
   margin-left: -15px
 
-@media (min-width: 768px) 
+@media (min-width: 768px)
   .container > .navbar-header,
-  .container > .navbar-collapse 
+  .container > .navbar-collapse
     margin-right: 0
     margin-left: 0
 
-.navbar-static-top 
+.navbar-static-top
   z-index: 1000
   border-width: 0 0 1px
 
-@media (min-width: 768px) 
-  .navbar-static-top 
+@media (min-width: 768px)
+  .navbar-static-top
     border-radius: 0
 
 .navbar-fixed-top,
-.navbar-fixed-bottom 
+.navbar-fixed-bottom
   position: fixed
   right: 0
   left: 0
   z-index: 1030
 
-@media (min-width: 768px) 
+@media (min-width: 768px)
   .navbar-fixed-top,
-  .navbar-fixed-bottom 
+  .navbar-fixed-bottom
     border-radius: 0
 
-.navbar-fixed-top 
+.navbar-fixed-top
   top: 0
   border-width: 0 0 1px
 
-.navbar-fixed-bottom 
+.navbar-fixed-bottom
   bottom: 0
   margin-bottom: 0
   border-width: 1px 0 0
 
-.navbar-brand 
+.navbar-brand
   float: left
   padding: 15px 15px
   font-size: 18px
   line-height: 20px
 
 .navbar-brand:hover,
-.navbar-brand:focus 
+.navbar-brand:focus
   text-decoration: none
 
-@media (min-width: 768px) 
-  .navbar > .container .navbar-brand 
+@media (min-width: 768px)
+  .navbar > .container .navbar-brand
     margin-left: -15px
 
-.navbar-toggle 
+.navbar-toggle
   position: relative
   float: right
   padding: 9px 10px
@@ -1038,32 +1074,32 @@ fieldset[disabled] .btn-link:focus
   border: 1px solid transparent
   border-radius: 4px
 
-.navbar-toggle .icon-bar 
+.navbar-toggle .icon-bar
   display: block
   width: 22px
   height: 2px
   border-radius: 1px
 
-.navbar-toggle .icon-bar + .icon-bar 
+.navbar-toggle .icon-bar + .icon-bar
   margin-top: 4px
 
 
-@media (min-width: 768px) 
-  .navbar-toggle 
+@media (min-width: 768px)
+  .navbar-toggle
     display: none
 
-.navbar-nav 
+.navbar-nav
   margin: 7.5px -15px
 
 
-.navbar-nav > li > a 
+.navbar-nav > li > a
   padding-top: 10px
   padding-bottom: 10px
   line-height: 20px
 
 
-@media (max-width: 767px) 
-  .navbar-nav .open .dropdown-menu 
+@media (max-width: 767px)
+  .navbar-nav .open .dropdown-menu
     position: static
     float: none
     width: auto
@@ -1071,41 +1107,41 @@ fieldset[disabled] .btn-link:focus
     background-color: transparent
     border: 0
     box-shadow: none
-  
+
   .navbar-nav .open .dropdown-menu > li > a,
-  .navbar-nav .open .dropdown-menu .dropdown-header 
+  .navbar-nav .open .dropdown-menu .dropdown-header
     padding: 5px 15px 5px 25px
-  
-  .navbar-nav .open .dropdown-menu > li > a 
+
+  .navbar-nav .open .dropdown-menu > li > a
     line-height: 20px
-  
+
   .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-nav .open .dropdown-menu > li > a:focus 
+  .navbar-nav .open .dropdown-menu > li > a:focus
     background-image: none
 
-@media (min-width: 768px) 
-  .navbar-nav 
+@media (min-width: 768px)
+  .navbar-nav
     float: left
     margin: 0
-  
-  .navbar-nav > li 
+
+  .navbar-nav > li
     float: left
-  
-  .navbar-nav > li > a 
+
+  .navbar-nav > li > a
     padding-top: 15px
     padding-bottom: 15px
-  
-  .navbar-nav.navbar-right:last-child 
+
+  .navbar-nav.navbar-right:last-child
     margin-right: -15px
 
-@media (min-width: 768px) 
-  .navbar-left 
+@media (min-width: 768px)
+  .navbar-left
     float: left !important
-  
-  .navbar-right 
+
+  .navbar-right
     float: right !important
 
-.navbar-form 
+.navbar-form
   padding: 10px 15px
   margin-top: 8px
   margin-right: -15px
@@ -1117,36 +1153,36 @@ fieldset[disabled] .btn-link:focus
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1)
 
 
-@media (min-width: 768px) 
-  .navbar-form .form-group 
+@media (min-width: 768px)
+  .navbar-form .form-group
     display: inline-block
     margin-bottom: 0
     vertical-align: middle
-  
-  .navbar-form .form-control 
+
+  .navbar-form .form-control
     display: inline-block
-  
-  .navbar-form select.form-control 
+
+  .navbar-form select.form-control
     width: auto
-  
+
   .navbar-form .radio,
-  .navbar-form .checkbox 
+  .navbar-form .checkbox
     display: inline-block
     padding-left: 0
     margin-top: 0
     margin-bottom: 0
-  
+
   .navbar-form .radio input[type="radio"],
-  .navbar-form .checkbox input[type="checkbox"] 
+  .navbar-form .checkbox input[type="checkbox"]
     float: none
     margin-left: 0
 
-@media (max-width: 767px) 
-  .navbar-form .form-group 
+@media (max-width: 767px)
+  .navbar-form .form-group
     margin-bottom: 5px
 
-@media (min-width: 768px) 
-  .navbar-form 
+@media (min-width: 768px)
+  .navbar-form
     width: auto
     padding-top: 0
     padding-bottom: 0
@@ -1155,21 +1191,21 @@ fieldset[disabled] .btn-link:focus
     border: 0
     -webkit-box-shadow: none
     box-shadow: none
-  
-  .navbar-form.navbar-right:last-child 
+
+  .navbar-form.navbar-right:last-child
     margin-right: -15px
 
-.navbar-nav > li > .dropdown-menu 
+.navbar-nav > li > .dropdown-menu
   margin-top: 0
   border-top-right-radius: 0
   border-top-left-radius: 0
 
-.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu 
+.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu
   border-bottom-right-radius: 0
   border-bottom-left-radius: 0
 
 .navbar-nav.pull-right > li > .dropdown-menu,
-.navbar-nav > li > .dropdown-menu.pull-right 
+.navbar-nav > li > .dropdown-menu.pull-right
   right: 0
   left: auto
 
@@ -1177,110 +1213,110 @@ fieldset[disabled] .btn-link:focus
   margin-top: 8px
   margin-bottom: 8px
 
-.navbar-btn.btn-sm 
+.navbar-btn.btn-sm
   margin-top: 10px
   margin-bottom: 10px
 
-.navbar-btn.btn-xs 
+.navbar-btn.btn-xs
   margin-top: 14px
   margin-bottom: 14px
 
-.navbar-text 
+.navbar-text
   margin-top: 15px
   margin-bottom: 15px
 
-@media (min-width: 768px) 
-  .navbar-text 
+@media (min-width: 768px)
+  .navbar-text
     float: left
     margin-right: 15px
     margin-left: 15px
-  
-  .navbar-text.navbar-right:last-child 
+
+  .navbar-text.navbar-right:last-child
     margin-right: 0
 
-.navbar-default 
+.navbar-default
   background-color: #f8f8f8
   border-color: #e7e7e7
 
-.navbar-default .navbar-brand 
+.navbar-default .navbar-brand
   color: #777777
 
 .navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus 
+.navbar-default .navbar-brand:focus
   color: #ffffff
   background-color: transparent
 
-.navbar-default .navbar-text 
+.navbar-default .navbar-text
   color: #FFFFFF
 
-.navbar-default .navbar-nav > li > a 
+.navbar-default .navbar-nav > li > a
   color: #FFFFFF
 
 .navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus 
+.navbar-default .navbar-nav > li > a:focus
   color: #FFFFFF
   background-color: transparent
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus 
+.navbar-default .navbar-nav > .active > a:focus
   color: #FFFFFF
 
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
-.navbar-default .navbar-nav > .disabled > a:focus 
+.navbar-default .navbar-nav > .disabled > a:focus
   color: #FFFFFF
   background-color: transparent
 
-.navbar-default .navbar-toggle 
+.navbar-default .navbar-toggle
   border-color: #dddddd
 
 .navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus 
+.navbar-default .navbar-toggle:focus
   background-color: #dddddd
 
-.navbar-default .navbar-toggle .icon-bar 
+.navbar-default .navbar-toggle .icon-bar
   background-color: #cccccc
 
 .navbar-default .navbar-collapse,
-.navbar-default .navbar-form 
+.navbar-default .navbar-form
   border-color: #e7e7e7
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus 
+.navbar-default .navbar-nav > .open > a:focus
   color: #FFFFFF
   background-color: #e7e7e7
 
-@media (max-width: 767px) 
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a 
+@media (max-width: 767px)
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a
     color: #FFFFFF
-  
+
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus 
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus
     color: #FFFFFF
     background-color: transparent
-  
+
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus 
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus
     color: #FFFFFF
     background-color: #e7e7e7
-  
+
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus 
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus
     color: #FFFFFF
     background-color: transparent
 
-.navbar-default .navbar-link 
+.navbar-default .navbar-link
   color: #FFFFFF
 
-.navbar-default .navbar-link:hover 
+.navbar-default .navbar-link:hover
   color: #333333
 
 // Modal -----------------------------------------------------------------------------------------------------------------------
-.close 
+.close
   float: right
   font-size: 21px
   font-weight: bold
@@ -1291,17 +1327,17 @@ fieldset[disabled] .btn-link:focus
   filter: alpha(opacity=20)
 
 .close:hover,
-.close:focus 
+.close:focus
   color: #000000
   text-decoration: none
   cursor: pointer
   opacity: 0.5
   filter: alpha(opacity=50)
 
-.modal-open 
+.modal-open
   overflow: hidden
 
-.modal 
+.modal
   position: fixed
   top: 0
   right: 0
@@ -1312,7 +1348,7 @@ fieldset[disabled] .btn-link:focus
   overflow: auto
   overflow-y: scroll
 
-.modal.fade .modal-dialog 
+.modal.fade .modal-dialog
   -webkit-transform: translate(0, -25%)
   -ms-transform: translate(0, -25%)
   transform: translate(0, -25%)
@@ -1321,18 +1357,18 @@ fieldset[disabled] .btn-link:focus
   -o-transition: -o-transform 0.3s ease-out
   transition: transform 0.3s ease-out
 
-.modal.in .modal-dialog 
+.modal.in .modal-dialog
   -webkit-transform: translate(0, 0)
   -ms-transform: translate(0, 0)
   transform: translate(0, 0)
 
-.modal-dialog 
+.modal-dialog
   position: relative
   z-index: 1050
   width: auto
   margin: 10px
 
-.modal-content 
+.modal-content
   position: relative
   background-color: #ffffff
   border: 1px solid #999999
@@ -1343,60 +1379,60 @@ fieldset[disabled] .btn-link:focus
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5)
   background-clip: padding-box
 
-.modal-header 
+.modal-header
   min-height: 16.428571429px
   padding: 15px
   border-bottom: 1px solid #e5e5e5
 
-.modal-header .close 
+.modal-header .close
   margin-top: -2px
 
-.modal-title 
+.modal-title
   margin: 0
   line-height: 1.428571429
 
-.modal-body 
+.modal-body
   position: relative
   padding: 20px
 
-.modal-footer 
+.modal-footer
   padding: 19px 20px 20px
   margin-top: 15px
   text-align: right
   border-top: 1px solid #e5e5e5
 
 .modal-footer:before,
-.modal-footer:after 
+.modal-footer:after
   display: table
   content: " "
 
-.modal-footer:after 
+.modal-footer:after
   clear: both
 
 .modal-footer:before,
-.modal-footer:after 
+.modal-footer:after
   display: table
   content: " "
 
-.modal-footer:after 
+.modal-footer:after
   clear: both
 
-.modal-footer .btn + .btn 
+.modal-footer .btn + .btn
   margin-bottom: 0
   margin-left: 5px
 
-.modal-footer .btn-group .btn + .btn 
+.modal-footer .btn-group .btn + .btn
   margin-left: -1px
 
-.modal-footer .btn-block + .btn-block 
+.modal-footer .btn-block + .btn-block
   margin-left: 0
 
-@media screen and (min-width: 768px) 
-  .modal-dialog 
+@media screen and (min-width: 768px)
+  .modal-dialog
     width: 600px
     margin: 30px auto
-  
-  .modal-content 
+
+  .modal-content
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
 

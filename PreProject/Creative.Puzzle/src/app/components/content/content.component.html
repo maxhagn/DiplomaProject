@@ -1,5 +1,5 @@
 <aside>
-  <div class="side-nav" [class.showSide]="navigationOpen">
+  <div [class.showSide]="navigationOpen" class="side-nav">
 
     <div class="placeholder">
       creative-puzzle/info
@@ -7,20 +7,32 @@
     <div class="side-item hideBorder">
       <div class="side-subItem hideBorder side-sub--first">
         <form class="hideHover">
-          <input type="text" class="search">
+          <input class="search" type="text">
           <label></label>
         </form>
       </div>
     </div>
 
     <div *ngFor="let elem of NavigationArray" class="side-item">
-      <div class="side-subItem" (click)="openSub(elem)">{{elem.title}}</div>
-      <div class="side-subItem" *ngIf="elem.sub_1 !== ''" [class.hide-side]="!elem.open" [class.show-side]="elem.open">{{elem.sub_1}}</div>
-      <div class="side-subItem" *ngIf="elem.sub_2 !== ''" [class.hide-side]="!elem.open" [class.show-side]="elem.open">{{elem.sub_2}}</div>
-      <div class="side-subItem" *ngIf="elem.sub_3 !== ''" [class.hide-side]="!elem.open" [class.show-side]="elem.open">{{elem.sub_3}}</div>
-      <div class="side-subItem" *ngIf="elem.sub_4 !== ''" [class.hide-side]="!elem.open" [class.show-side]="elem.open">{{elem.sub_4}}</div>
-      <div class="side-subItem" *ngIf="elem.sub_5 !== ''" [class.hide-side]="!elem.open" [class.show-side]="elem.open">{{elem.sub_5}}</div>
-      <div class="side-subItem" *ngIf="elem.sub_6 !== ''" [class.hide-side]="!elem.open" [class.show-side]="elem.open">{{elem.sub_6}}</div>
+      <div (click)="openSub(elem)" class="side-subItem">{{ elem.title }}</div>
+      <div *ngIf="elem.sub_1 !== ''" [class.hide-side]="!elem.open" [class.show-side]="elem.open"
+           class="side-subItem">{{ elem.sub_1 }}
+      </div>
+      <div *ngIf="elem.sub_2 !== ''" [class.hide-side]="!elem.open" [class.show-side]="elem.open"
+           class="side-subItem">{{ elem.sub_2 }}
+      </div>
+      <div *ngIf="elem.sub_3 !== ''" [class.hide-side]="!elem.open" [class.show-side]="elem.open"
+           class="side-subItem">{{ elem.sub_3 }}
+      </div>
+      <div *ngIf="elem.sub_4 !== ''" [class.hide-side]="!elem.open" [class.show-side]="elem.open"
+           class="side-subItem">{{ elem.sub_4 }}
+      </div>
+      <div *ngIf="elem.sub_5 !== ''" [class.hide-side]="!elem.open" [class.show-side]="elem.open"
+           class="side-subItem">{{ elem.sub_5 }}
+      </div>
+      <div *ngIf="elem.sub_6 !== ''" [class.hide-side]="!elem.open" [class.show-side]="elem.open"
+           class="side-subItem">{{ elem.sub_6 }}
+      </div>
     </div>
   </div>
 </aside>
@@ -28,7 +40,7 @@
 <div class="container-large">
   <header>
     <div class="parallax">
-      <button class="navOpen" [class.moveMenu]="navigationOpen" (click)="openNav()">
+      <button (click)="openNav()" [class.moveMenu]="navigationOpen" class="navOpen">
 
       </button>
     </div>
@@ -39,7 +51,7 @@
     <div *ngFor="let elem of TaskArray" class="column-ld-6 column-md-6 column-sd-12 column-xsd-12 box">
       <h1 [innerHTML]="elem.header"></h1>
       <p [innerHTML]="elem.content"></p>
-      <small> posted on: {{formatDate(elem.Date)}} by {{elem.author}}</small>
+      <small> posted on: {{ formatDate(elem.Date) }} by {{ elem.author }}</small>
     </div>
   </div>
 </div>

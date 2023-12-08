@@ -1,16 +1,16 @@
-import { drawSelectionCursor } from "../display/selection.js"
-import { operation } from "../display/operations.js"
-import { clipPos } from "../line/pos.js"
-import { posFromMouse } from "../measurement/position_measurement.js"
-import { eventInWidget } from "../measurement/widgets.js"
-import { makeChange, replaceRange } from "../model/changes.js"
-import { changeEnd } from "../model/change_measurement.js"
-import { simpleSelection } from "../model/selection.js"
-import { setSelectionNoUndo, setSelectionReplaceHistory } from "../model/selection_updates.js"
-import { ie, presto, safari } from "../util/browser.js"
-import { elt, removeChildrenAndAdd } from "../util/dom.js"
-import { e_preventDefault, e_stop, signalDOMEvent } from "../util/event.js"
-import { indexOf } from "../util/misc.js"
+import {drawSelectionCursor} from "../display/selection.js"
+import {operation} from "../display/operations.js"
+import {clipPos} from "../line/pos.js"
+import {posFromMouse} from "../measurement/position_measurement.js"
+import {eventInWidget} from "../measurement/widgets.js"
+import {makeChange, replaceRange} from "../model/changes.js"
+import {changeEnd} from "../model/change_measurement.js"
+import {simpleSelection} from "../model/selection.js"
+import {setSelectionNoUndo, setSelectionReplaceHistory} from "../model/selection_updates.js"
+import {ie, presto, safari} from "../util/browser.js"
+import {elt, removeChildrenAndAdd} from "../util/dom.js"
+import {e_preventDefault, e_stop, signalDOMEvent} from "../util/event.js"
+import {indexOf} from "../util/misc.js"
 
 // Kludge to work around strange IE behavior where it'll sometimes
 // re-fire a series of drag-related events right after the drop (#1551)
@@ -31,7 +31,7 @@ export function onDrop(e) {
     let n = files.length, text = Array(n), read = 0
     let loadFile = (file, i) => {
       if (cm.options.allowDropFileTypes &&
-          indexOf(cm.options.allowDropFileTypes, file.type) == -1)
+        indexOf(cm.options.allowDropFileTypes, file.type) == -1)
         return
 
       let reader = new FileReader
@@ -41,9 +41,11 @@ export function onDrop(e) {
         text[i] = content
         if (++read == n) {
           pos = clipPos(cm.doc, pos)
-          let change = {from: pos, to: pos,
-                        text: cm.doc.splitLines(text.join(cm.doc.lineSeparator())),
-                        origin: "paste"}
+          let change = {
+            from: pos, to: pos,
+            text: cm.doc.splitLines(text.join(cm.doc.lineSeparator())),
+            origin: "paste"
+          }
           makeChange(cm.doc, change)
           setSelectionReplaceHistory(cm.doc, simpleSelection(pos, changeEnd(change)))
         }
@@ -71,13 +73,16 @@ export function onDrop(e) {
         cm.replaceSelection(text, "around", "paste")
         cm.display.input.focus()
       }
+    } catch (e) {
     }
-    catch(e){}
   }
 }
 
 export function onDragStart(cm, e) {
-  if (ie && (!cm.state.draggingText || +new Date - lastDrop < 100)) { e_stop(e); return }
+  if (ie && (!cm.state.draggingText || +new Date - lastDrop < 100)) {
+    e_stop(e);
+    return
+  }
   if (signalDOMEvent(cm, e) || eventInWidget(cm.display, e)) return
 
   e.dataTransfer.setData("Text", cm.getSelection())

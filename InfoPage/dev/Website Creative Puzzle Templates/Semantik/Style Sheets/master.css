@@ -12,7 +12,7 @@ header, nav, section, article, aside, footer {
 }
 
 header {
-    background-color: rgba(255,105,180,.2);
+    background-color: rgba(255, 105, 180, .2);
     width: 100vw;
     height: 5vh;
 }
@@ -21,25 +21,25 @@ nav {
     background-color: rgba(255, 105, 180, .4);
     width: 100vw;
     height: 7vh;
-    
+
 }
 
 section {
-    background-color: rgba(255,105,180,.3);
+    background-color: rgba(255, 105, 180, .3);
     width: 70vw;
     height: 80vh;
     float: left;
 }
 
 article {
-    background-color: rgba(255,105,180,.4);
+    background-color: rgba(255, 105, 180, .4);
     width: 70vw;
     height: 40vh;
     margin: 1px;
 }
 
 aside {
-    background-color: rgba(255,105,180,.3);
+    background-color: rgba(255, 105, 180, .3);
     width: 30vw;
     height: 80vh;
     float: right;
@@ -50,5 +50,5 @@ footer {
     clear: both;
     width: 100vw;
     height: 8vh;
-    background-color: rgba(255,105,180,.9);
+    background-color: rgba(255, 105, 180, .9);
 }

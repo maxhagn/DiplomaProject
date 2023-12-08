@@ -1,14 +1,14 @@
-import { cmp, Pos } from "../line/pos.js"
-import { lst } from "../util/misc.js"
+import {cmp, Pos} from "../line/pos.js"
+import {lst} from "../util/misc.js"
 
-import { normalizeSelection, Range, Selection } from "./selection.js"
+import {normalizeSelection, Range, Selection} from "./selection.js"
 
 // Compute the position of the end of a change (its 'to' property
 // refers to the pre-change end).
 export function changeEnd(change) {
   if (!change.text) return change.to
   return Pos(change.from.line + change.text.length - 1,
-             lst(change.text).length + (change.text.length == 1 ? change.from.ch : 0))
+    lst(change.text).length + (change.text.length == 1 ? change.from.ch : 0))
 }
 
 // Adjust a position to refer to the post-change position of the
@@ -27,7 +27,7 @@ export function computeSelAfterChange(doc, change) {
   for (let i = 0; i < doc.sel.ranges.length; i++) {
     let range = doc.sel.ranges[i]
     out.push(new Range(adjustForChange(range.anchor, change),
-                       adjustForChange(range.head, change)))
+      adjustForChange(range.head, change)))
   }
   return normalizeSelection(out, doc.sel.primIndex)
 }

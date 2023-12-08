@@ -1,8 +1,8 @@
-import { buildViewArray } from "../line/line_data.js"
-import { sawCollapsedSpans } from "../line/saw_special_spans.js"
-import { visualLineEndNo, visualLineNo } from "../line/spans.js"
-import { findViewIndex } from "../measurement/position_measurement.js"
-import { indexOf } from "../util/misc.js"
+import {buildViewArray} from "../line/line_data.js"
+import {sawCollapsedSpans} from "../line/saw_special_spans.js"
+import {visualLineEndNo, visualLineNo} from "../line/spans.js"
+import {findViewIndex} from "../measurement/position_measurement.js"
+import {indexOf} from "../util/misc.js"
 
 // Updates the display.view data structure for a given change to the
 // document. From and to are in pre-change coordinates. Lendiff is
@@ -17,7 +17,7 @@ export function regChange(cm, from, to, lendiff) {
 
   let display = cm.display
   if (lendiff && to < display.viewTo &&
-      (display.updateLineNumbers == null || display.updateLineNumbers > from))
+    (display.updateLineNumbers == null || display.updateLineNumbers > from))
     display.updateLineNumbers = from
 
   cm.curOp.viewChanged = true
@@ -110,7 +110,8 @@ function viewCuttingPoint(cm, oldN, newN, dir) {
     } else {
       diff = n - oldN
     }
-    oldN += diff; newN += diff
+    oldN += diff;
+    newN += diff
   }
   while (visualLineNo(cm.doc, newN) != newN) {
     if (index == (dir < 0 ? 0 : view.length - 1)) return null

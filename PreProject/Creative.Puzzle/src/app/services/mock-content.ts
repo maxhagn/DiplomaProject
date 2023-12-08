@@ -41,7 +41,7 @@ export const mockContent: any = [
     order: 1,
     size: 2,
     author: "Maximilian Hagn"
-  },{
+  }, {
     Date: new Date(2017, 1, 12, 13, 15),
     header: "URL Structur",
     content: "For a better navigation you should give your Subpages a meaningful name. It will help you, the User and the search engine. The optimal name should be short, not cryptic and informativ. <br /> Avoid URL’s like  “/thisIsTheLoginForm234823zhq”, rather use “/login”. It is way easier to read and understand for the User and the search engine.  <br /> Avoid: <ul> <li> unnecessary parameters, ID’s and generic names like “Page1.html”. </li>  <li>Too many keywords in your URL like “css-framework-cssframework-frameworkcss.html” </li> <li>Too many sublevels “../../../../../../../index.html” </li> <li>Camelcase in the URL </li></ul>",
@@ -71,14 +71,14 @@ export const mockContent: any = [
     order: 5,
     size: 2,
     author: "Maximilian Hagn"
-  },{
+  }, {
     Date: new Date(2017, 1, 12, 13, 15),
     header: "Offer quality Content",
     content: "<ul> <li> Obviously you have to supply some qualitative, unique and exclusive content to get some attention. No one likes to see the same content over and over again. Copy pasting an other website is always a bad idea, especially if it’s protected by a Copyright </li> <li> You will have two different kinds of users. The experts and the newbies. The expert will have a more specific and complex search query than a newbie, so always mix up the keyword phrases to provide more possibilities. As always, Google is your friend, as mentioned above you can use their Webmaster Tool to have a look at the most searched search queries. </li> <li> Always use easy-to-read language to make it easier for your user </li> <li>Never forget, that the website is built for the user and not for the search engine. If you just optimise it for the search engine it will be a disaster for the customer. </li> <li> You also should use hyperlinks over links because it’s easier to identify what’s happening behind the link. Avoid hyperlinks like “click here” and “Page1”. </li> </ul>",
     order: 5,
     size: 2,
     author: "Maximilian Hagn"
-  },{
+  }, {
     Date: new Date(2017, 1, 12, 13, 15),
     header: "Optimising the Use of Images",
     content: "<ul> <li> Always use the “alt” attribute to alternatively describe the image if it’s not displayed. If you use the image as a link it’s used as an anchor text. To have a better overall view of your images just use one directory for them and don’t spread them all over your website.  </li> <li> The optimal file extensions are “JPEG”, “GIF”, “PNG” or “BMP”  </li> <li> Avoid: “pic.png”, “thisIsAPicture.jpg”  </li> </ul>",
@@ -92,7 +92,7 @@ export const mockContent: any = [
     order: 7,
     size: 2,
     author: "Maximilian Hagn"
-  },{
+  }, {
     Date: new Date(2017, 1, 12, 13, 15),
     header: "How to create easy Parallax",
     content: "Did you ever saw a picture standing still on scrolling and thought how the hell did they implemented that. It's more easier than you think. The point of matter is to give the div you want to be an image a CSS class and add the picturepath as background-image. Afterwards you have to write the command background-attachment: fixed. That's all the magic. You can modify the layout by setting the background-position for example to left center.",

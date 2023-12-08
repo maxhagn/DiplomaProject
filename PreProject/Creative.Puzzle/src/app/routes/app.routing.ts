@@ -1,12 +1,12 @@
 import {ModuleWithProviders} from "@angular/core";
-import {Routes, RouterModule} from "@angular/router";
+import {RouterModule, Routes} from "@angular/router";
 
-import {ContentComponent}  from '../components/content/content.component';
+import {ContentComponent} from '../components/content/content.component';
 
 const appRoutes: Routes = [
-    {
-        path: '',
-        component: ContentComponent
-    },
+  {
+    path: '',
+    component: ContentComponent
+  },
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

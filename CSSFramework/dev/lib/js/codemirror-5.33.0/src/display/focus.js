@@ -1,18 +1,23 @@
-import { restartBlink } from "./selection.js"
-import { webkit } from "../util/browser.js"
-import { addClass, rmClass } from "../util/dom.js"
-import { signal } from "../util/event.js"
+import {restartBlink} from "./selection.js"
+import {webkit} from "../util/browser.js"
+import {addClass, rmClass} from "../util/dom.js"
+import {signal} from "../util/event.js"
 
 export function ensureFocus(cm) {
-  if (!cm.state.focused) { cm.display.input.focus(); onFocus(cm) }
+  if (!cm.state.focused) {
+    cm.display.input.focus();
+    onFocus(cm)
+  }
 }
 
 export function delayBlurEvent(cm) {
   cm.state.delayingBlurEvent = true
-  setTimeout(() => { if (cm.state.delayingBlurEvent) {
-    cm.state.delayingBlurEvent = false
-    onBlur(cm)
-  } }, 100)
+  setTimeout(() => {
+    if (cm.state.delayingBlurEvent) {
+      cm.state.delayingBlurEvent = false
+      onBlur(cm)
+    }
+  }, 100)
 }
 
 export function onFocus(cm, e) {
@@ -34,6 +39,7 @@ export function onFocus(cm, e) {
   }
   restartBlink(cm)
 }
+
 export function onBlur(cm, e) {
   if (cm.state.delayingBlurEvent) return
 
@@ -43,5 +49,7 @@ export function onBlur(cm, e) {
     rmClass(cm.display.wrapper, "CodeMirror-focused")
   }
   clearInterval(cm.display.blinker)
-  setTimeout(() => { if (!cm.state.focused) cm.display.shift = false }, 150)
+  setTimeout(() => {
+    if (!cm.state.focused) cm.display.shift = false
+  }, 150)
 }

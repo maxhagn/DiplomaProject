@@ -3,7 +3,7 @@
 <head>
   <title>creative-puzzle.com/info</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 
   <base href='/'>
@@ -47,65 +47,80 @@
       -moz-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      line-height: 1.1rem; }
+      line-height: 1.1rem;
+    }
 
     body {
-      margin: 0; }
+      margin: 0;
+    }
 
     ul {
-      list-style: none; }
+      list-style: none;
+    }
 
     a {
       text-decoration: none;
       line-height: 1rem;
-      color: black; }
+      color: black;
+    }
 
     .lineHeight {
-      line-height: .6rem; }
+      line-height: .6rem;
+    }
 
     h1 {
       font-size: 34px;
       color: #8F0500;
-      line-height: 2rem; }
+      line-height: 2rem;
+    }
 
     h1 small {
       font-size: 32px;
       color: #8F0500;
-      line-height: 2rem; }
+      line-height: 2rem;
+    }
 
     h2 {
       font-size: 30px;
       color: #8F0500;
-      line-height: 2rem; }
+      line-height: 2rem;
+    }
 
     h2 small {
       font-size: 28px;
       color: rgba(67, 2, 0, 0.2);
-      line-height: 2rem; }
+      line-height: 2rem;
+    }
 
     h3 {
       font-size: 26px;
       color: black;
-      line-height: 2rem; }
+      line-height: 2rem;
+    }
 
     h3 small {
       font-size: 24px;
       color: rgba(51, 2, 0, 0.2);
-      line-height: 2rem; }
+      line-height: 2rem;
+    }
 
     h4 {
       font-size: 22px;
-      color: rgba(0, 0, 0, 0.5); }
+      color: rgba(0, 0, 0, 0.5);
+    }
 
     h4 small {
       font-size: 16px;
-      color: rgba(0, 0, 0, 0.5); }
+      color: rgba(0, 0, 0, 0.5);
+    }
 
     ul {
-      margin-left: -40px; }
+      margin-left: -40px;
+    }
 
     li {
-      list-style: none; }
+      list-style: none;
+    }
 
     li:before {
       content: "- ";
@@ -115,16 +130,19 @@
     a label {
       font-size: 20px;
       line-height: 24px;
-      color: white; }
+      color: white;
+    }
 
     a:hover {
       font-size: 30px;
-      line-height: 24px; }
+      line-height: 24px;
+    }
 
     label {
       color: black;
       font-size: 15px;
-      line-height: .6rem; }
+      line-height: .6rem;
+    }
 
     .spinner {
       width: 100px;
@@ -135,6 +153,7 @@
       margin: 30% 50%;
       display: inline-block;
     }
+
     .spinner:after, .spinner:before {
       content: "";
       display: block;
@@ -189,12 +208,14 @@
 <body>
 <app>
   <div style="padding-left: 2rem">
-  <div class="loader"><div class="spinner spinner-1"> </div> </div>
+    <div class="loader">
+      <div class="spinner spinner-1"></div>
+    </div>
   </div>
 </app>
 </body>
 
-<script type="text/javascript" src="Skripts/jQuery.js"></script>
+<script src="Skripts/jQuery.js" type="text/javascript"></script>
 
 
 </html>

@@ -1,21 +1,26 @@
 .margin-top {
-  margin-top: 50px; }
+    margin-top: 50px;
+}
 
 .margin-bottom {
-  margin-bottom: 50px; }
+    margin-bottom: 50px;
+}
 
 .image-wrapper {
-  width: 500px;
-  height: auto; }
+    width: 500px;
+    height: auto;
+}
 
 .row {
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important; }
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
 
 .content {
-  font-family: "Roboto", sans-serif;
-  font-weight: lighter;
-  font-size: 16px;
-  line-height: 1.5rem;
-  letter-spacing: 0.5px; }
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 1.5rem;
+    letter-spacing: 0.5px;
+}

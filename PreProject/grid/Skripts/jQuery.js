@@ -27,7 +27,7 @@ $(function () {
 
     });
 
-   lastWidth = $(window).width();
+    lastWidth = $(window).width();
     /*---------- Check if user is outside the Footer View and Display none Footer -> ----------*/
     if (($(this).scrollTop()) < $('.container-large').height() - 790) {
         $('.footer').addClass('footer-hidden');
@@ -60,7 +60,7 @@ $(function () {
 var isDown = 1;
 
 $(window).resize(function () {
-    if($(window).width()!==lastWidth) {
+    if ($(window).width() !== lastWidth) {
         if ($(window).width() < 951) {
             $('.side-subItem').removeClass('show-side').removeClass('hide-side');
             lastWidth = $(window).width();
@@ -90,6 +90,7 @@ $(window).scroll(function () {
         isDown = 1;
     }
 });
+
 /*---------- Opens the Side Nav by Click on the Menu Button, Only on small devices -> ----------*/
 function openSide() {
     $('.side-nav').toggleClass('showSide');

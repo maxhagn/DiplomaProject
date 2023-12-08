@@ -1,9 +1,9 @@
-import { countColumn } from "../util/misc.js"
-import { copyState, innerMode, startState } from "../modes.js"
+import {countColumn} from "../util/misc.js"
+import {copyState, innerMode, startState} from "../modes.js"
 import StringStream from "../util/StringStream.js"
 
-import { getLine, lineNo } from "./utils_line.js"
-import { clipPos } from "./pos.js"
+import {getLine, lineNo} from "./utils_line.js"
+import {clipPos} from "./pos.js"
 
 class SavedContext {
   constructor(state, lookAhead) {
@@ -22,6 +22,13 @@ class Context {
     this.baseTokenPos = 1
   }
 
+  static fromSaved(doc, saved, line) {
+    if (saved instanceof SavedContext)
+      return new Context(doc, copyState(doc.mode, saved.state), line, saved.lookAhead)
+    else
+      return new Context(doc, copyState(doc.mode, saved), line)
+  }
+
   lookAhead(n) {
     let line = this.doc.getLine(this.line + n)
     if (line != null && n > this.maxLookAhead) this.maxLookAhead = n
@@ -33,20 +40,15 @@ class Context {
     while (this.baseTokens[this.baseTokenPos] <= n)
       this.baseTokenPos += 2
     let type = this.baseTokens[this.baseTokenPos + 1]
-    return {type: type && type.replace(/( |^)overlay .*/, ""),
-            size: this.baseTokens[this.baseTokenPos] - n}
+    return {
+      type: type && type.replace(/( |^)overlay .*/, ""),
+      size: this.baseTokens[this.baseTokenPos] - n
+    }
   }
 
   nextLine() {
     this.line++
     if (this.maxLookAhead > 0) this.maxLookAhead--
-  }
-
-  static fromSaved(doc, saved, line) {
-    if (saved instanceof SavedContext)
-      return new Context(doc, copyState(doc.mode, saved.state), line, saved.lookAhead)
-    else
-      return new Context(doc, copyState(doc.mode, saved), line)
   }
 
   save(copy) {
@@ -66,7 +68,7 @@ export function highlightLine(cm, line, context, forceToEnd) {
   let st = [cm.state.modeGen], lineClasses = {}
   // Compute the base array of styles
   runMode(cm, line.text, cm.doc.mode, context, (end, style) => st.push(end, style),
-          lineClasses, forceToEnd)
+    lineClasses, forceToEnd)
   let state = context.state
 
   // Run overlays, adjust style array.
@@ -80,7 +82,7 @@ export function highlightLine(cm, line, context, forceToEnd) {
       while (at < end) {
         let i_end = st[i]
         if (i_end > end)
-          st.splice(i, 1, end, st[i+1], i_end)
+          st.splice(i, 1, end, st[i + 1], i_end)
         i += 2
         at = Math.min(end, i_end)
       }
@@ -90,8 +92,8 @@ export function highlightLine(cm, line, context, forceToEnd) {
         i = start + 2
       } else {
         for (; start < i; start += 2) {
-          let cur = st[start+1]
-          st[start+1] = (cur ? cur + " " : "") + "overlay " + style
+          let cur = st[start + 1]
+          st[start + 1] = (cur ? cur + " " : "") + "overlay " + style
         }
       }
     }, lineClasses)
@@ -168,7 +170,8 @@ export function readToken(mode, stream, state, inner) {
 
 class Token {
   constructor(stream, type, state) {
-    this.start = stream.start; this.end = stream.pos
+    this.start = stream.start;
+    this.end = stream.pos
     this.string = stream.current()
     this.type = type || null
     this.state = state
@@ -191,7 +194,7 @@ export function takeToken(cm, pos, precise, asArray) {
 }
 
 function extractLineClasses(type, output) {
-  if (type) for (;;) {
+  if (type) for (; ;) {
     let lineClass = type.match(/(?:^|\s+)line-(background-)?(\S+)/)
     if (!lineClass) break
     type = type.slice(0, lineClass.index) + type.slice(lineClass.index + lineClass[0].length)

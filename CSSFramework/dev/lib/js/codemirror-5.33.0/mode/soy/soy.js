@@ -1,24 +1,28 @@
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: http://codemirror.net/LICENSE
 
-(function(mod) {
+(function (mod) {
   if (typeof exports == "object" && typeof module == "object") // CommonJS
     mod(require("../../lib/codemirror"), require("../htmlmixed/htmlmixed"));
   else if (typeof define == "function" && define.amd) // AMD
     define(["../../lib/codemirror", "../htmlmixed/htmlmixed"], mod);
   else // Plain browser env
     mod(CodeMirror);
-})(function(CodeMirror) {
+})(function (CodeMirror) {
   "use strict";
 
   var indentingTags = ["template", "literal", "msg", "fallbackmsg", "let", "if", "elseif",
-                       "else", "switch", "case", "default", "foreach", "ifempty", "for",
-                       "call", "param", "deltemplate", "delcall", "log"];
+    "else", "switch", "case", "default", "foreach", "ifempty", "for",
+    "call", "param", "deltemplate", "delcall", "log"];
 
-  CodeMirror.defineMode("soy", function(config) {
+  CodeMirror.defineMode("soy", function (config) {
     var textMode = CodeMirror.getMode(config, "text/plain");
     var modes = {
-      html: CodeMirror.getMode(config, {name: "text/html", multilineTagIndentFactor: 2, multilineTagIndentPastTag: false}),
+      html: CodeMirror.getMode(config, {
+        name: "text/html",
+        multilineTagIndentFactor: 2,
+        multilineTagIndentPastTag: false
+      }),
       attributes: textMode,
       text: textMode,
       uri: textMode,
@@ -44,7 +48,7 @@
         // This uses an undocumented API.
         stream.string = oldString.substr(0, stream.pos + match.index);
       }
-      var result = stream.hideFirstChars(state.indent, function() {
+      var result = stream.hideFirstChars(state.indent, function () {
         var localState = last(state.localStates);
         return localState.mode.token(stream, localState.state);
       });
@@ -81,7 +85,7 @@
     }
 
     return {
-      startState: function() {
+      startState: function () {
         return {
           kind: [],
           kindTag: [],
@@ -98,7 +102,7 @@
         };
       },
 
-      copyState: function(state) {
+      copyState: function (state) {
         return {
           tag: state.tag, // Last seen Soy tag.
           kind: state.kind.concat([]), // Values of kind="" attributes.
@@ -109,7 +113,7 @@
           scopes: state.scopes,
           indent: state.indent, // Indentation of the following line.
           quoteKind: state.quoteKind,
-          localStates: state.localStates.map(function(localState) {
+          localStates: state.localStates.map(function (localState) {
             return {
               mode: localState.mode,
               state: CodeMirror.copyState(localState.mode, localState.state)
@@ -118,7 +122,7 @@
         };
       },
 
-      token: function(stream, state) {
+      token: function (stream, state) {
         var match;
 
         switch (last(state.soyState)) {
@@ -131,7 +135,7 @@
             if (!state.scopes) {
               var paramRe = /@param\??\s+(\S+)/g;
               var current = stream.current();
-              for (var match; (match = paramRe.exec(current)); ) {
+              for (var match; (match = paramRe.exec(current));) {
                 state.variables = prepend(state.variables, match[1]);
               }
             }
@@ -220,7 +224,7 @@
                   popscope(state);
                 }
                 state.indent -= config.indentUnit *
-                    (stream.current() == "/}" || indentingTags.indexOf(state.tag) == -1 ? 2 : 1);
+                  (stream.current() == "/}" || indentingTags.indexOf(state.tag) == -1 ? 2 : 1);
               }
               state.soyState.pop();
               return "keyword";
@@ -268,7 +272,7 @@
           state.soyState.push("literal");
           return "keyword";
 
-        // A tag-keyword must be followed by whitespace, comment or a closing tag.
+          // A tag-keyword must be followed by whitespace, comment or a closing tag.
         } else if (match = stream.match(/^\{([\/@\\]?\w+\??)(?=[\s\}]|\/[/*])/)) {
           if (match[1] != "/switch")
             state.indent += (/^(\/|(else|elseif|ifempty|case|fallbackmsg|default)$)/.test(match[1]) && state.tag != "switch" ? 1 : 2) * config.indentUnit;
@@ -302,7 +306,7 @@
           }
           return "keyword";
 
-        // Not a tag-keyword; it's an implicit print tag.
+          // Not a tag-keyword; it's an implicit print tag.
         } else if (stream.eat('{')) {
           state.tag = "print";
           state.indent += 2 * config.indentUnit;
@@ -313,7 +317,7 @@
         return tokenUntil(stream, state, /\{|\s+\/\/|\/\*/);
       },
 
-      indent: function(state, textAfter) {
+      indent: function (state, textAfter) {
         var indent = state.indent, top = last(state.soyState);
         if (top == "comment") return CodeMirror.Pass;
 
@@ -332,7 +336,7 @@
         return indent;
       },
 
-      innerMode: function(state) {
+      innerMode: function (state) {
         if (state.soyState.length && last(state.soyState) != "literal") return null;
         else return last(state.localStates);
       },
@@ -348,7 +352,7 @@
   }, "htmlmixed");
 
   CodeMirror.registerHelper("hintWords", "soy", indentingTags.concat(
-      ["delpackage", "namespace", "alias", "print", "css", "debugger"]));
+    ["delpackage", "namespace", "alias", "print", "css", "debugger"]));
 
   CodeMirror.defineMIME("text/x-soy", "soy");
 });

@@ -1,18 +1,19 @@
-import { cmp, copyPos } from "../line/pos.js"
-import { stretchSpansOverChange } from "../line/spans.js"
-import { getBetween } from "../line/utils_line.js"
-import { signal } from "../util/event.js"
-import { indexOf, lst } from "../util/misc.js"
+import {cmp, copyPos} from "../line/pos.js"
+import {stretchSpansOverChange} from "../line/spans.js"
+import {getBetween} from "../line/utils_line.js"
+import {signal} from "../util/event.js"
+import {indexOf, lst} from "../util/misc.js"
 
-import { changeEnd } from "./change_measurement.js"
-import { linkedDocs } from "./document_data.js"
-import { Selection } from "./selection.js"
+import {changeEnd} from "./change_measurement.js"
+import {linkedDocs} from "./document_data.js"
+import {Selection} from "./selection.js"
 
 export function History(startGen) {
   // Arrays of change events and selections. Doing something adds an
   // event to done and clears undo. Undoing moves events from done
   // to undone, redoing moves them in the other direction.
-  this.done = []; this.undone = []
+  this.done = [];
+  this.undone = []
   this.undoDepth = Infinity
   // Used to track when changes can be merged into a single undo
   // event
@@ -66,10 +67,10 @@ export function addChangeToHistory(doc, change, selAfter, opId) {
   let last
 
   if ((hist.lastOp == opId ||
-       hist.lastOrigin == change.origin && change.origin &&
-       ((change.origin.charAt(0) == "+" && doc.cm && hist.lastModTime > time - doc.cm.options.historyEventDelay) ||
+      hist.lastOrigin == change.origin && change.origin &&
+      ((change.origin.charAt(0) == "+" && doc.cm && hist.lastModTime > time - doc.cm.options.historyEventDelay) ||
         change.origin.charAt(0) == "*")) &&
-      (cur = lastChangeEvent(hist, hist.lastOp == opId))) {
+    (cur = lastChangeEvent(hist, hist.lastOp == opId))) {
     // Merge this change into the last event
     last = lst(cur.changes)
     if (cmp(change.from, change.to) == 0 && cmp(change.from, last.to) == 0) {
@@ -85,8 +86,10 @@ export function addChangeToHistory(doc, change, selAfter, opId) {
     let before = lst(hist.done)
     if (!before || !before.ranges)
       pushSelectionToHistory(doc.sel, hist.done)
-    cur = {changes: [historyChangeFromChange(doc, change)],
-           generation: hist.generation}
+    cur = {
+      changes: [historyChangeFromChange(doc, change)],
+      generation: hist.generation
+    }
     hist.done.push(cur)
     while (hist.done.length > hist.undoDepth) {
       hist.done.shift()
@@ -123,8 +126,8 @@ export function addSelectionToHistory(doc, sel, opId, options) {
   // starting with * are always merged, those starting with + are
   // merged when similar and close together in time.
   if (opId == hist.lastSelOp ||
-      (origin && hist.lastSelOrigin == origin &&
-       (hist.lastModTime == hist.lastSelTime && hist.lastOrigin == origin ||
+    (origin && hist.lastSelOrigin == origin &&
+      (hist.lastModTime == hist.lastSelTime && hist.lastOrigin == origin ||
         selectionEventCanBeMerged(doc, origin, lst(hist.done), sel))))
     hist.done[hist.done.length - 1] = sel
   else
@@ -159,8 +162,9 @@ function removeClearedSpans(spans) {
   if (!spans) return null
   let out
   for (let i = 0; i < spans.length; ++i) {
-    if (spans[i].marker.explicitlyCleared) { if (!out) out = spans.slice(0, i) }
-    else if (out) out.push(spans[i])
+    if (spans[i].marker.explicitlyCleared) {
+      if (!out) out = spans.slice(0, i)
+    } else if (out) out.push(spans[i])
   }
   return !out ? spans : out.length ? out : null
 }

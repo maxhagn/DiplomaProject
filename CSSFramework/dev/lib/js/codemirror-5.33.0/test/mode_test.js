@@ -18,9 +18,9 @@
  * See the test.js files in the css, markdown, gfm, and stex mode
  * directories for examples.
  */
-(function() {
+(function () {
   function findSingle(str, pos, ch) {
-    for (;;) {
+    for (; ;) {
       var found = str.indexOf(ch, pos);
       if (found == -1) return null;
       if (str.charAt(found + 1) != ch) return found;
@@ -29,6 +29,7 @@
   }
 
   var styleName = /[\w&-_]+/g;
+
   function parseTokens(strs) {
     var tokens = [], plain = "";
     for (var i = 0; i < strs.length; ++i) {
@@ -36,7 +37,7 @@
       var str = strs[i], pos = 0;
       while (pos < str.length) {
         var style = null, text;
-        if (str.charAt(pos) == "[" && str.charAt(pos+1) != "[") {
+        if (str.charAt(pos) == "[" && str.charAt(pos + 1) != "[") {
           styleName.lastIndex = pos + 1;
           var m = styleName.exec(str);
           style = m[0].replace(/&/g, " ");
@@ -51,7 +52,9 @@
           text = str.slice(pos, end);
           pos = end;
         }
-        text = text.replace(/\[\[|\]\]/g, function(s) {return s.charAt(0);});
+        text = text.replace(/\[\[|\]\]/g, function (s) {
+          return s.charAt(0);
+        });
         tokens.push({style: style, text: text});
         plain += text;
       }
@@ -59,9 +62,9 @@
     return {tokens: tokens, plain: plain};
   }
 
-  test.mode = function(name, mode, tokens, modeName) {
+  test.mode = function (name, mode, tokens, modeName) {
     var data = parseTokens(tokens);
-    return test((modeName || mode.name) + "_" + name, function() {
+    return test((modeName || mode.name) + "_" + name, function () {
       return compare(data.plain, data.tokens, mode);
     });
   };
@@ -85,13 +88,13 @@
     var diff = highlightOutputsDifferent(expectedOutput, observedOutput);
     if (diff != null) {
       s += '<div class="mt-test mt-fail">';
-      s +=   '<pre>' + esc(text) + '</pre>';
-      s +=   '<div class="cm-s-default">';
+      s += '<pre>' + esc(text) + '</pre>';
+      s += '<div class="cm-s-default">';
       s += 'expected:';
-      s +=   prettyPrintOutputTable(expectedOutput, diff);
+      s += prettyPrintOutputTable(expectedOutput, diff);
       s += 'observed: [<a onclick="this.parentElement.className+=\' mt-state-unhide\'">display states</a>]';
-      s +=   prettyPrintOutputTable(observedOutput, diff);
-      s +=   '</div>';
+      s += prettyPrintOutputTable(observedOutput, diff);
+      s += '</div>';
       s += '</div>';
     }
     if (observedOutput.indentFailures) {
@@ -109,6 +112,7 @@
       }
       return obj;
     }
+
     if (window.JSON && JSON.stringify)
       return JSON.stringify(obj, replacer, 2);
     return "[unsupported]";  // Fail safely if no native JSON.
@@ -117,7 +121,7 @@
   function highlight(string, mode) {
     var state = mode.startState();
 
-    var lines = string.replace(/\r\n/g,'\n').split('\n');
+    var lines = string.replace(/\r\n/g, '\n').split('\n');
     var st = [], pos = 0;
     for (var i = 0; i < lines.length; ++i) {
       var line = lines[i], newLine = true;
@@ -129,20 +133,22 @@
             "Indentation of line " + (i + 1) + " is " + indent + " (expected " + ws.length + ")");
       }
       var stream = new CodeMirror.StringStream(line, 4, {
-        lookAhead: function(n) { return lines[i + n] }
+        lookAhead: function (n) {
+          return lines[i + n]
+        }
       });
       if (line == "" && mode.blankLine) mode.blankLine(state);
       /* Start copied code from CodeMirror.highlight */
       while (!stream.eol()) {
         for (var j = 0; j < 10 && stream.start >= stream.pos; j++)
-          var compare = mode.token(stream, state);
+             var compare = mode.token(stream, state);
         if (j == 10)
           throw new Failure("Failed to advance the stream." + stream.string + " " + stream.pos);
         var substr = stream.current();
         if (compare && compare.indexOf(" ") > -1) compare = compare.split(' ').sort().join(' ');
         stream.start = stream.pos;
-        if (pos && st[pos-1].style == compare && !newLine) {
-          st[pos-1].text += substr;
+        if (pos && st[pos - 1].style == compare && !newLine) {
+          st[pos - 1].text += substr;
         } else if (substr) {
           st[pos++] = {style: compare, text: substr, state: stringify(state)};
         }
@@ -171,9 +177,9 @@
     for (var i = 0; i < output.length; ++i) {
       var style = output[i].style, val = output[i].text;
       s +=
-      '<td class="mt-token"' + (i == diffAt ? " style='background: pink'" : "") + '>' +
+        '<td class="mt-token"' + (i == diffAt ? " style='background: pink'" : "") + '>' +
         '<span class="cm-' + esc(String(style)) + '">' +
-        esc(val.replace(/ /g,'\xb7')) +  // · MIDDLE DOT
+        esc(val.replace(/ /g, '\xb7')) +  // · MIDDLE DOT
         '</span>' +
         '</td>';
     }
@@ -181,7 +187,7 @@
     for (var i = 0; i < output.length; ++i) {
       s += '<td class="mt-style"><span>' + (output[i].style || null) + '</span></td>';
     }
-    if(output[0].state) {
+    if (output[0].state) {
       s += '</tr><tr class="mt-state-row" title="State AFTER each token">';
       for (var i = 0; i < output.length; ++i) {
         s += '<td class="mt-state"><pre>' + esc(output[i].state) + '</pre></td>';

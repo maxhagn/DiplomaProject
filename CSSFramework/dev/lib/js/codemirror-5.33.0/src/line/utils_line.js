@@ -1,4 +1,4 @@
-import { indexOf } from "../util/misc.js"
+import {indexOf} from "../util/misc.js"
 
 // Find the line object corresponding to the given line number.
 export function getLine(doc, n) {
@@ -6,9 +6,12 @@ export function getLine(doc, n) {
   if (n < 0 || n >= doc.size) throw new Error("There is no line " + (n + doc.first) + " in the document.")
   let chunk = doc
   while (!chunk.lines) {
-    for (let i = 0;; ++i) {
+    for (let i = 0; ; ++i) {
       let child = chunk.children[i], sz = child.chunkSize()
-      if (n < sz) { chunk = child; break }
+      if (n < sz) {
+        chunk = child;
+        break
+      }
       n -= sz
     }
   }
@@ -28,10 +31,13 @@ export function getBetween(doc, start, end) {
   })
   return out
 }
+
 // Get the lines between from and to, as array of strings.
 export function getLines(doc, from, to) {
   let out = []
-  doc.iter(from, to, line => { out.push(line.text) }) // iter aborts when callback returns truthy value
+  doc.iter(from, to, line => {
+    out.push(line.text)
+  }) // iter aborts when callback returns truthy value
   return out
 }
 
@@ -48,7 +54,7 @@ export function lineNo(line) {
   if (line.parent == null) return null
   let cur = line.parent, no = indexOf(cur.lines, line)
   for (let chunk = cur.parent; chunk; cur = chunk, chunk = chunk.parent) {
-    for (let i = 0;; ++i) {
+    for (let i = 0; ; ++i) {
       if (chunk.children[i] == cur) break
       no += chunk.children[i].chunkSize()
     }
@@ -63,7 +69,10 @@ export function lineAtHeight(chunk, h) {
   outer: do {
     for (let i = 0; i < chunk.children.length; ++i) {
       let child = chunk.children[i], ch = child.height
-      if (h < ch) { chunk = child; continue outer }
+      if (h < ch) {
+        chunk = child;
+        continue outer
+      }
       h -= ch
       n += child.chunkSize()
     }
@@ -78,7 +87,9 @@ export function lineAtHeight(chunk, h) {
   return n + i
 }
 
-export function isLine(doc, l) {return l >= doc.first && l < doc.first + doc.size}
+export function isLine(doc, l) {
+  return l >= doc.first && l < doc.first + doc.size
+}
 
 export function lineNumberFor(options, i) {
   return String(options.lineNumberFormatter(i + options.firstLineNumber))

@@ -1,5 +1,5 @@
 body {
-  background-color: #f2f2f2;
+    background-color: #f2f2f2;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -16,18 +16,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 40px;
+    font-size: 40px;
 }
 
 h3 {
-	color: #95a5a6;
-	font-weight: 400;
+    color: #95a5a6;
+    font-weight: 400;
 }
 
 h4 {
-	color: #95a5a6;
-	font-weight: 400;
-	font-size: 20px;
+    color: #95a5a6;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 .clearfix {
@@ -44,7 +44,7 @@ p {
     font-size: 16px;
 }
 
-.bg{
+.bg {
     background-image: url("../img/pcss_titelbild_hochformat.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -52,15 +52,15 @@ p {
     width: 100%;
 }
 
-#piechart{
+#piechart {
     min-height: 200px;
 }
 
-.logopadding{
+.logopadding {
     padding-top: 1%;
 }
 
-.navpadding{
+.navpadding {
     padding-top: 0.5%;
 }
 
@@ -69,6 +69,7 @@ p {
     margin: 0;
 
 }
+
 .sociallist {
     list-style: none;
     padding-left: 30%;
@@ -126,7 +127,7 @@ a:after {
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
- hr {
+hr {
     display: block;
     height: 1px;
     border: 0;
@@ -136,16 +137,16 @@ a:after {
 }
 
 .navbar-default {
-	background-color: hsl(0.6, 53.8%, 39%);
-	border-color: transparent;
+    background-color: hsl(0.6, 53.8%, 39%);
+    border-color: transparent;
 }
 
 .navbar-default .navbar-brand {
-	color: white;
+    color: white;
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: white;
+    color: white;
 }
 
 .btnkontakt {
@@ -154,28 +155,28 @@ a:after {
 }
 
 .mt {
-	margin-top: 40px;
-	margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .form-control {
-	height: 42px;
-	font-size: 18px;
-	width: 280px;
+    height: 42px;
+    font-size: 18px;
+    width: 280px;
 }
 
 i {
-	margin: 8px;
-	color:  hsl(0.6, 53.8%, 39%);
+    margin: 8px;
+    color: hsl(0.6, 53.8%, 39%);
 }
 
 
 #headerwrap {
-	background-color:  hsl(0.6, 53.8%, 39%);
-	margin-top: -75px;
-	padding-top:200px;
-	min-height: 650px;
-	width: 100%;
+    background-color: hsl(0.6, 53.8%, 39%);
+    margin-top: -75px;
+    padding-top: 200px;
+    min-height: 650px;
+    width: 100%;
 
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -189,19 +190,19 @@ i {
 }
 
 #headerwrap h1 {
-	margin-top: 60px;
-	margin-bottom: 15px;
-	color: white;
-	font-size: 45px;
-	font-weight: 300;
-	letter-spacing: 1px;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 45px;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
-.profilepic{
+.profilepic {
     width: 140px;
 }
 
-.btnimpr{
+.btnimpr {
     border: none;
     color: #555;
     background-color: transparent;
@@ -209,7 +210,7 @@ i {
 }
 
 
-.hexa{
+.hexa {
     border: 0px;
     float: left;
     text-align: center;
@@ -222,7 +223,7 @@ i {
     margin-top: 15px;
 }
 
-.hexa:before{
+.hexa:before {
     content: "";
     position: absolute;
     left: 0;
@@ -234,7 +235,7 @@ i {
     top: -15px;
 }
 
-.hexa:after{
+.hexa:after {
     content: "";
     position: absolute;
     left: 0;
@@ -263,13 +264,13 @@ i {
     width: 2px;
     height: 100%;
     margin-left: -1px;
-    background: rgb(213,213,213);
-    background: -moz-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
-    background: -webkit-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-    background: -o-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-    background: -ms-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-    background: linear-gradient(to bottom, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
+    background: rgb(213, 213, 213);
+    background: -moz-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
+    background: -webkit-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+    background: -o-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+    background: linear-gradient(to bottom, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
     z-index: 5;
 }
 
@@ -277,7 +278,7 @@ i {
     padding: 2em 0;
 }
 
-.timeline .hexa{
+.timeline .hexa {
     width: 16px;
     height: 10px;
     position: absolute;
@@ -285,8 +286,8 @@ i {
     z-index: 5;
     left: 0;
     right: 0;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
     top: -30px;
     margin-top: 0;
 }
@@ -320,7 +321,7 @@ i {
 .flag {
     position: relative;
     display: inline;
-    background: rgb(255,255,255);
+    background: rgb(255, 255, 255);
     font-weight: 600;
     z-index: 15;
     padding: 6px 10px;
@@ -338,21 +339,21 @@ i {
     width: 0;
     margin-left: -8px;
     border: solid transparent;
-    border-bottom-color: rgb(255,255,255);
+    border-bottom-color: rgb(255, 255, 255);
     border-width: 8px;
     pointer-events: none;
 }
 
 .direction-l .flag {
-    -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-    -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-    box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
 }
 
 .direction-r .flag {
-    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
 }
 
 .time-wrapper {
@@ -383,10 +384,10 @@ i {
     position: relative;
     margin: 1em 0 0 0;
     padding: 1em;
-    background: rgb(254,254,254);
-    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-    -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-    box-shadow: 0 0 1px rgba(0,0,0,0.20);
+    background: rgb(254, 254, 254);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
     z-index: 15;
 }
 
@@ -399,13 +400,13 @@ i {
 }
 
 
-@media(min-width: 768px){
+@media (min-width: 768px) {
 
-    .sociallist{
+    .sociallist {
         padding-left: 40%;
     }
 
-    .bg{
+    .bg {
         background-image: url("../img/pcss_titelbild.svg");
         background-repeat: no-repeat;
         background-size: contain;
@@ -413,11 +414,11 @@ i {
         width: 100%;
     }
 
-    #piechart{
+    #piechart {
         min-height: 400px !important;
     }
 
-    .nopadding{
+    .nopadding {
         padding: 0;
     }
 
@@ -474,7 +475,7 @@ i {
         top: 50%;
         margin-top: -8px;
         border: solid transparent;
-        border-left-color: rgb(254,254,254);
+        border-left-color: rgb(254, 254, 254);
         border-width: 8px;
     }
 
@@ -482,7 +483,7 @@ i {
         top: 50%;
         margin-top: -8px;
         border: solid transparent;
-        border-right-color: rgb(254,254,254);
+        border-right-color: rgb(254, 254, 254);
         border-width: 8px;
         left: -8px;
     }
@@ -510,8 +511,7 @@ i {
     }
 }
 
-@media(min-width: 992px){
-
+@media (min-width: 992px) {
 
 
     .timeline {
@@ -541,11 +541,11 @@ i {
     border: none;
 }
 
-.none{
+.none {
     display: none;
 }
 
-@media(min-width: 1100px){
+@media (min-width: 1100px) {
 
     .sociallist {
         padding-left: 44%;

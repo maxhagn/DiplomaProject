@@ -1,4 +1,4 @@
-import { getHandlers } from "./event.js"
+import {getHandlers} from "./event.js"
 
 let operationGroup = null
 
@@ -33,8 +33,9 @@ export function finishOperation(op, endCb) {
   let group = op.ownsGroup
   if (!group) return
 
-  try { fireCallbacksForOps(group) }
-  finally {
+  try {
+    fireCallbacksForOps(group)
+  } finally {
     operationGroup = null
     endCb(group)
   }

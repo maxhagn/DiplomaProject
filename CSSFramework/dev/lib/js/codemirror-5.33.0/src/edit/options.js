@@ -1,23 +1,27 @@
-import { onBlur } from "../display/focus.js"
-import { setGuttersForLineNumbers, updateGutters } from "../display/gutters.js"
-import { alignHorizontally } from "../display/line_numbers.js"
-import { loadMode, resetModeState } from "../display/mode_state.js"
-import { initScrollbars, updateScrollbars } from "../display/scrollbars.js"
-import { updateSelection } from "../display/selection.js"
-import { regChange } from "../display/view_tracking.js"
-import { getKeyMap } from "../input/keymap.js"
-import { defaultSpecialCharPlaceholder } from "../line/line_data.js"
-import { Pos } from "../line/pos.js"
-import { findMaxLine } from "../line/spans.js"
-import { clearCaches, compensateForHScroll, estimateLineHeights } from "../measurement/position_measurement.js"
-import { replaceRange } from "../model/changes.js"
-import { mobile, windows } from "../util/browser.js"
-import { addClass, rmClass } from "../util/dom.js"
-import { off, on } from "../util/event.js"
+import {onBlur} from "../display/focus.js"
+import {setGuttersForLineNumbers, updateGutters} from "../display/gutters.js"
+import {alignHorizontally} from "../display/line_numbers.js"
+import {loadMode, resetModeState} from "../display/mode_state.js"
+import {initScrollbars, updateScrollbars} from "../display/scrollbars.js"
+import {updateSelection} from "../display/selection.js"
+import {regChange} from "../display/view_tracking.js"
+import {getKeyMap} from "../input/keymap.js"
+import {defaultSpecialCharPlaceholder} from "../line/line_data.js"
+import {Pos} from "../line/pos.js"
+import {findMaxLine} from "../line/spans.js"
+import {clearCaches, compensateForHScroll, estimateLineHeights} from "../measurement/position_measurement.js"
+import {replaceRange} from "../model/changes.js"
+import {mobile, windows} from "../util/browser.js"
+import {addClass, rmClass} from "../util/dom.js"
+import {off, on} from "../util/event.js"
 
-import { themeChanged } from "./utils.js"
+import {themeChanged} from "./utils.js"
 
-export let Init = {toString: function(){return "CodeMirror.Init"}}
+export let Init = {
+  toString: function () {
+    return "CodeMirror.Init"
+  }
+}
 
 export let defaults = {}
 export let optionHandlers = {}
@@ -28,7 +32,9 @@ export function defineOptions(CodeMirror) {
   function option(name, deflt, handle, notOnInit) {
     CodeMirror.defaults[name] = deflt
     if (handle) optionHandlers[name] =
-      notOnInit ? (cm, val, old) => {if (old != Init) handle(cm, val, old)} : handle
+      notOnInit ? (cm, val, old) => {
+        if (old != Init) handle(cm, val, old)
+      } : handle
   }
 
   CodeMirror.defineOption = option
@@ -58,7 +64,7 @@ export function defineOptions(CodeMirror) {
     if (!val) return
     let newBreaks = [], lineNo = cm.doc.first
     cm.doc.iter(line => {
-      for (let pos = 0;;) {
+      for (let pos = 0; ;) {
         let found = line.text.indexOf(val, pos)
         if (found == -1) break
         pos = found + val.length
@@ -130,7 +136,9 @@ export function defineOptions(CodeMirror) {
     }
     cm.display.input.readOnlyChanged(val)
   })
-  option("disableInput", false, (cm, val) => {if (!val) cm.display.input.reset()}, true)
+  option("disableInput", false, (cm, val) => {
+    if (!val) cm.display.input.reset()
+  }, true)
   option("dragDrop", true, dragDropChanged)
   option("allowDropFileTypes", null)
 

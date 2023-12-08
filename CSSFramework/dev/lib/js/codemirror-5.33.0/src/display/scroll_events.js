@@ -1,8 +1,8 @@
-import { chrome, gecko, ie, mac, presto, safari, webkit } from "../util/browser.js"
-import { e_preventDefault } from "../util/event.js"
+import {chrome, gecko, ie, mac, presto, safari, webkit} from "../util/browser.js"
+import {e_preventDefault} from "../util/event.js"
 
-import { updateDisplaySimple } from "./update_display.js"
-import { setScrollLeft, updateScrollTop } from "./scrolling.js"
+import {updateDisplaySimple} from "./update_display.js"
+import {setScrollLeft, updateScrollTop} from "./scrolling.js"
 
 // Since the delta values reported on mouse wheel events are
 // unstandardized between browsers and even browser versions, and
@@ -23,7 +23,7 @@ let wheelSamples = 0, wheelPixelsPerUnit = null
 if (ie) wheelPixelsPerUnit = -.53
 else if (gecko) wheelPixelsPerUnit = 15
 else if (chrome) wheelPixelsPerUnit = -.7
-else if (safari) wheelPixelsPerUnit = -1/3
+else if (safari) wheelPixelsPerUnit = -1 / 3
 
 function wheelEventDelta(e) {
   let dx = e.wheelDeltaX, dy = e.wheelDeltaY
@@ -32,6 +32,7 @@ function wheelEventDelta(e) {
   else if (dy == null) dy = e.wheelDelta
   return {x: dx, y: dy}
 }
+
 export function wheelEventPixels(e) {
   let delta = wheelEventDelta(e)
   delta.x *= wheelPixelsPerUnit
@@ -95,8 +96,10 @@ export function onScrollWheel(cm, e) {
 
   if (wheelSamples < 20) {
     if (display.wheelStartX == null) {
-      display.wheelStartX = scroll.scrollLeft; display.wheelStartY = scroll.scrollTop
-      display.wheelDX = dx; display.wheelDY = dy
+      display.wheelStartX = scroll.scrollLeft;
+      display.wheelStartY = scroll.scrollTop
+      display.wheelDX = dx;
+      display.wheelDY = dy
       setTimeout(() => {
         if (display.wheelStartX == null) return
         let movedX = scroll.scrollLeft - display.wheelStartX
@@ -109,7 +112,8 @@ export function onScrollWheel(cm, e) {
         ++wheelSamples
       }, 200)
     } else {
-      display.wheelDX += dx; display.wheelDY += dy
+      display.wheelDX += dx;
+      display.wheelDY += dy
     }
   }
 }

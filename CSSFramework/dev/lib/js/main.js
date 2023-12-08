@@ -1,4 +1,4 @@
-    /**
+/**
  * Created by jakobdinhof on 21.09.17.
  */
 
@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     window.onload = function () {
         setTimeout(function () {
-            if(window.location.pathname.endsWith("en/")){
+            if (window.location.pathname.endsWith("en/")) {
                 new Image().src = "../img/hagn.jpg";
                 new Image().src = "../img/dinhof.jpg";
                 new Image().src = "../img/kutis.jpg";
@@ -41,18 +41,18 @@ String.prototype.endsWith = function (pattern) {
     return d >= 0 && this.lastIndexOf(pattern) === d;
 };
 
-google.charts.load('current', {'packages':['corechart']});
+google.charts.load('current', {'packages': ['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
 
     var data = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
-        ['Max Hagn',     205.22],
-        ['Jakob Dinhof',      147.22],
-        ['Fabian Lenz',  129.33],
+        ['Max Hagn', 205.22],
+        ['Jakob Dinhof', 147.22],
+        ['Fabian Lenz', 129.33],
         ['Flo Schwingenschlögl', 120.34],
-        ['Michi Kutis',    66.16]
+        ['Michi Kutis', 66.16]
     ]);
 
     var options = {
@@ -63,7 +63,7 @@ function drawChart() {
 
     chart.draw(data, options);
 
-        $('.scrollspy').scrollSpy();
+    $('.scrollspy').scrollSpy();
 
 }
 

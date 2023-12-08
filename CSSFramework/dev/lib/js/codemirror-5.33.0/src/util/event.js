@@ -1,5 +1,5 @@
-import { mac } from "./browser.js"
-import { indexOf } from "./misc.js"
+import {mac} from "./browser.js"
+import {indexOf} from "./misc.js"
 
 // EVENT HANDLING
 
@@ -8,7 +8,7 @@ import { indexOf } from "./misc.js"
 
 const noHandlers = []
 
-export let on = function(emitter, type, f) {
+export let on = function (emitter, type, f) {
   if (emitter.addEventListener) {
     emitter.addEventListener(type, f, false)
   } else if (emitter.attachEvent) {
@@ -50,7 +50,11 @@ export function signal(emitter, type /*, values...*/) {
 // and preventDefault-ing the event in that handler.
 export function signalDOMEvent(cm, e, override) {
   if (typeof e == "string")
-    e = {type: e, preventDefault: function() { this.defaultPrevented = true }}
+    e = {
+      type: e, preventDefault: function () {
+        this.defaultPrevented = true
+      }
+    }
   signal(cm, override || e.type, cm, e)
   return e_defaultPrevented(e) || e.codemirrorIgnore
 }
@@ -70,8 +74,12 @@ export function hasHandler(emitter, type) {
 // Add on and off methods to a constructor's prototype, to make
 // registering events on such objects more convenient.
 export function eventMixin(ctor) {
-  ctor.prototype.on = function(type, f) {on(this, type, f)}
-  ctor.prototype.off = function(type, f) {off(this, type, f)}
+  ctor.prototype.on = function (type, f) {
+    on(this, type, f)
+  }
+  ctor.prototype.off = function (type, f) {
+    off(this, type, f)
+  }
 }
 
 // Due to the fact that we still support jurassic IE versions, some
@@ -81,16 +89,25 @@ export function e_preventDefault(e) {
   if (e.preventDefault) e.preventDefault()
   else e.returnValue = false
 }
+
 export function e_stopPropagation(e) {
   if (e.stopPropagation) e.stopPropagation()
   else e.cancelBubble = true
 }
+
 export function e_defaultPrevented(e) {
   return e.defaultPrevented != null ? e.defaultPrevented : e.returnValue == false
 }
-export function e_stop(e) {e_preventDefault(e); e_stopPropagation(e)}
 
-export function e_target(e) {return e.target || e.srcElement}
+export function e_stop(e) {
+  e_preventDefault(e);
+  e_stopPropagation(e)
+}
+
+export function e_target(e) {
+  return e.target || e.srcElement
+}
+
 export function e_button(e) {
   let b = e.which
   if (b == null) {

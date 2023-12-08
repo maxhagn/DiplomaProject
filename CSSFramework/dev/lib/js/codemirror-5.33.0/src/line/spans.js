@@ -1,14 +1,15 @@
-import { indexOf, lst } from "../util/misc.js"
+import {indexOf, lst} from "../util/misc.js"
 
-import { cmp } from "./pos.js"
-import { sawCollapsedSpans } from "./saw_special_spans.js"
-import { getLine, isLine, lineNo } from "./utils_line.js"
+import {cmp} from "./pos.js"
+import {sawCollapsedSpans} from "./saw_special_spans.js"
+import {getLine, isLine, lineNo} from "./utils_line.js"
 
 // TEXTMARKER SPANS
 
 export function MarkedSpan(marker, from, to) {
   this.marker = marker
-  this.from = from; this.to = to
+  this.from = from;
+  this.to = to
 }
 
 // Search an array of spans for a span matching the given marker.
@@ -18,6 +19,7 @@ export function getMarkedSpanFor(spans, marker) {
     if (span.marker == marker) return span
   }
 }
+
 // Remove a span from an array, returning undefined if no spans are
 // left (we don't store arrays for lines without spans).
 export function removeMarkedSpan(spans, span) {
@@ -26,6 +28,7 @@ export function removeMarkedSpan(spans, span) {
     if (spans[i] != span) (r || (r = [])).push(spans[i])
   return r
 }
+
 // Add a span to a line.
 export function addMarkedSpan(line, span) {
   line.markedSpans = line.markedSpans ? line.markedSpans.concat([span]) : [span]
@@ -48,6 +51,7 @@ function markedSpansBefore(old, startCh, isInsert) {
   }
   return nw
 }
+
 function markedSpansAfter(old, endCh, isInsert) {
   let nw
   if (old) for (let i = 0; i < old.length; ++i) {
@@ -56,7 +60,7 @@ function markedSpansAfter(old, endCh, isInsert) {
     if (endsAfter || span.from == endCh && marker.type == "bookmark" && (!isInsert || span.marker.insertLeft)) {
       let startsBefore = span.from == null || (marker.inclusiveLeft ? span.from <= endCh : span.from < endCh)
       ;(nw || (nw = [])).push(new MarkedSpan(marker, startsBefore ? null : span.from - endCh,
-                                            span.to == null ? null : span.to - endCh))
+        span.to == null ? null : span.to - endCh))
     }
   }
   return nw
@@ -177,6 +181,7 @@ export function detachMarkedSpans(line) {
     spans[i].marker.detachLine(line)
   line.markedSpans = null
 }
+
 export function attachMarkedSpans(line, spans) {
   if (!spans) return
   for (let i = 0; i < spans.length; ++i)
@@ -186,8 +191,13 @@ export function attachMarkedSpans(line, spans) {
 
 // Helpers used when computing which overlapping collapsed span
 // counts as the larger one.
-function extraLeft(marker) { return marker.inclusiveLeft ? -1 : 0 }
-function extraRight(marker) { return marker.inclusiveRight ? 1 : 0 }
+function extraLeft(marker) {
+  return marker.inclusiveLeft ? -1 : 0
+}
+
+function extraRight(marker) {
+  return marker.inclusiveRight ? 1 : 0
+}
 
 // Returns a number indicating which of two overlapping collapsed
 // spans is larger (and thus includes the other). Falls back to
@@ -210,13 +220,19 @@ function collapsedSpanAtSide(line, start) {
   if (sps) for (let sp, i = 0; i < sps.length; ++i) {
     sp = sps[i]
     if (sp.marker.collapsed && (start ? sp.from : sp.to) == null &&
-        (!found || compareCollapsedMarkers(found, sp.marker) < 0))
+      (!found || compareCollapsedMarkers(found, sp.marker) < 0))
       found = sp.marker
   }
   return found
 }
-export function collapsedSpanAtStart(line) { return collapsedSpanAtSide(line, true) }
-export function collapsedSpanAtEnd(line) { return collapsedSpanAtSide(line, false) }
+
+export function collapsedSpanAtStart(line) {
+  return collapsedSpanAtSide(line, true)
+}
+
+export function collapsedSpanAtEnd(line) {
+  return collapsedSpanAtSide(line, false)
+}
 
 // Test whether there exists a collapsed span that partially
 // overlaps (covers the start or end, but not both) of a new span.
@@ -232,7 +248,7 @@ export function conflictingCollapsedRange(doc, lineNo, from, to, marker) {
     let toCmp = cmp(found.to, to) || extraRight(sp.marker) - extraRight(marker)
     if (fromCmp >= 0 && toCmp <= 0 || fromCmp <= 0 && toCmp >= 0) continue
     if (fromCmp <= 0 && (sp.marker.inclusiveRight && marker.inclusiveLeft ? cmp(found.to, from) >= 0 : cmp(found.to, from) > 0) ||
-        fromCmp >= 0 && (sp.marker.inclusiveRight && marker.inclusiveLeft ? cmp(found.from, to) <= 0 : cmp(found.from, to) < 0))
+      fromCmp >= 0 && (sp.marker.inclusiveRight && marker.inclusiveLeft ? cmp(found.from, to) <= 0 : cmp(found.from, to) < 0))
       return true
   }
 }
@@ -299,6 +315,7 @@ export function lineIsHidden(doc, line) {
       return true
   }
 }
+
 function lineIsHiddenInner(doc, line, span) {
   if (span.to == null) {
     let end = span.marker.find(1, true)
@@ -309,9 +326,9 @@ function lineIsHiddenInner(doc, line, span) {
   for (let sp, i = 0; i < line.markedSpans.length; ++i) {
     sp = line.markedSpans[i]
     if (sp.marker.collapsed && !sp.marker.widgetNode && sp.from == span.to &&
-        (sp.to == null || sp.to != span.from) &&
-        (sp.marker.inclusiveLeft || span.marker.inclusiveRight) &&
-        lineIsHiddenInner(doc, line, sp)) return true
+      (sp.to == null || sp.to != span.from) &&
+      (sp.marker.inclusiveLeft || span.marker.inclusiveRight) &&
+      lineIsHiddenInner(doc, line, sp)) return true
   }
 }
 

@@ -3,10 +3,10 @@
 <head>
     <!---------------------------------------- Metadata ---------------------------------------->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
 
     <!---------------------------------------- Google Analytics ---------------------------------------->
     <script>
@@ -25,8 +25,8 @@
     <title>CreativePuzzle Framework</title>
 
     <!---------------------------------------- CSS Imports ---------------------------------------->
-    <link rel="alternate" hreflang="en" href="../en">
-    <link rel="shortcut icon" href="../lib/img/puzzle.png">
+    <link href="../en" hreflang="en" rel="alternate">
+    <link href="../lib/img/puzzle.png" rel="shortcut icon">
     <link href="../lib/css/imports.css" rel="stylesheet">
 
     <!---------------------------------------- Font Imports ---------------------------------------->
@@ -35,17 +35,17 @@
 </head>
 <body>
 <!---------------------------------------- Header ---------------------------------------->
-<header id="top" class="header">
+<header class="header" id="top">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header navpadding">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand logopadding logo" href="index.html"><img class="navicon" alt="Brand"
+                <a class="navbar-brand logopadding logo" href="index.html"><img alt="Brand" class="navicon"
                                                                                 src="../lib/img/logo.png"></a>
             </div>
             <div class="navbar-collapse collapse navpadding">
@@ -55,7 +55,8 @@
                     <li><a class="nav-link active">CSS</a></li>
                     <li><a class="nav-link" href="components.html">Komponents</a></li>
                     <li><a class="nav-link" href="templates.html">Templates</a></li>
-                    <li><a target="_self" class="nav-link" href="https://info-diploma-thesis.hagn.network/">Thesis</a></li>
+                    <li><a class="nav-link" href="https://info-diploma-thesis.hagn.network/" target="_self">Thesis</a>
+                    </li>
                     <li><a class="nav-link" href="../en/get_started.html">en</a></li>
                 </ul>
             </div>
@@ -151,7 +152,7 @@
     </div>
 
     <!---------------------------- Grid System ---------------------------->
-    <article id="gridsystem" class="section scrollspy">
+    <article class="section scrollspy" id="gridsystem">
         <h2>Grid System</h2>
         <p>
             Gestalte komplexe Layouts mithilfe eines 12 Spalten Grid Systems. Eine Webseite kann gedanklich in eine
@@ -165,11 +166,12 @@
     </article>
 
     <!---------------------------- Container | Ein Table mit Infos fehlt (Breakpoint Infos) ---------------------------->
-    <article id="container" class="section scrollspy">
+    <article class="section scrollspy" id="container">
         <h3>Container</h3>
         <p>Container umschließen mehrere DOM Elemente und definieren deren maximale Breite. Im Optimalfall sollten
             die
-            Containerklassen in semantische Elemente eingebunden werden, also zum Beispiel im <i class="classname">&lt;main&gt; &lt;/main&gt;</i>
+            Containerklassen in semantische Elemente eingebunden werden, also zum Beispiel im <i class="classname">&lt;main&gt;
+                &lt;/main&gt;</i>
             oder <i class="classname"> &lt;section&gt; &lt;/section&gt; </i> Tag.
         </p>
 
@@ -189,54 +191,56 @@
     </article>
 
     <!----------------------------  Column ---------------------------->
-    <article id="column" class="section scrollspy">
+    <article class="section scrollspy" id="column">
         <article>
-        <h3>Gleiche Spaltengröße</h3>
-        <p>Nachdem die Größen der Container bestimmt wurden, wird eine <i class="classname">.row</i> Klasse eingerichtet. Jeder <i class="tagname">&lt;div&gt;</i>
-            Tag mit
-            der Klasse <i class="classname">.row</i> repräsentiert eine Zeile in unserer gedanklichen Tabelle. Innerhalb der Row können bis zu
-            12 <i class="classname">.col</i>
-            Klassen eingebunden werden. Diese teilen sich den freien Platz untereinander auf.
-        </p>
-        <div class="row content_img">
-            <div class="col-lg-12">
-                <img class="img-responsive" src="../lib/img/css/column.png">
+            <h3>Gleiche Spaltengröße</h3>
+            <p>Nachdem die Größen der Container bestimmt wurden, wird eine <i class="classname">.row</i> Klasse
+                eingerichtet. Jeder <i class="tagname">&lt;div&gt;</i>
+                Tag mit
+                der Klasse <i class="classname">.row</i> repräsentiert eine Zeile in unserer gedanklichen Tabelle.
+                Innerhalb der Row können bis zu
+                12 <i class="classname">.col</i>
+                Klassen eingebunden werden. Diese teilen sich den freien Platz untereinander auf.
+            </p>
+            <div class="row content_img">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../lib/img/css/column.png">
+                </div>
             </div>
-        </div>
 
-        <div class="codeBox">
-            &lt;div class="row center"&gt;<br>
-            &lt;div class="col blue-medium"&gt;Erste von zwei Spalten&lt;/div&gt;<br>
-            &lt;div class="col blue-medium"&gt;Zweite von zwei Spalten&lt;/div&gt;<br>
-            &lt;/div&gt;
-        </div>
+            <div class="codeBox">
+                &lt;div class="row center"&gt;<br>
+                &lt;div class="col blue-medium"&gt;Erste von zwei Spalten&lt;/div&gt;<br>
+                &lt;div class="col blue-medium"&gt;Zweite von zwei Spalten&lt;/div&gt;<br>
+                &lt;/div&gt;
+            </div>
 
         </article>
-    <article>
-        <h3 class="title">Spaltengröße setzen</h3>
-        <p>Alternativ können einzelne oder alle Elemente mit einer bestimmten Größe versehen werden. Je nach
-            Vorsilbe werden
-            andere Bildschirmgrößen angesprochen. Sollen Elemente auf jeder Bildschirmgrößen gleich groß sein, so
-            reicht es
-            <i class="classname">.xs</i> zu definieren.
-        </p>
-        <div class="row content_img">
-            <div class="col-lg-12">
-                <img class="img-responsive" src="../lib/img/css/widercolumn.png">
+        <article>
+            <h3 class="title">Spaltengröße setzen</h3>
+            <p>Alternativ können einzelne oder alle Elemente mit einer bestimmten Größe versehen werden. Je nach
+                Vorsilbe werden
+                andere Bildschirmgrößen angesprochen. Sollen Elemente auf jeder Bildschirmgrößen gleich groß sein, so
+                reicht es
+                <i class="classname">.xs</i> zu definieren.
+            </p>
+            <div class="row content_img">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../lib/img/css/widercolumn.png">
+                </div>
             </div>
-        </div>
 
-        <div class="codeBox">
-            &lt;div class="row center"&gt;<br>
-            &lt;div class="col blue-medium"&gt;Erste von zwei Spalten&lt;/div&gt;<br>
-            &lt;div class="col blue-medium"&gt;Zweite von zwei Spalten&lt;/div&gt;<br>
-            &lt;/div&gt;
-        </div>
-    </article>
+            <div class="codeBox">
+                &lt;div class="row center"&gt;<br>
+                &lt;div class="col blue-medium"&gt;Erste von zwei Spalten&lt;/div&gt;<br>
+                &lt;div class="col blue-medium"&gt;Zweite von zwei Spalten&lt;/div&gt;<br>
+                &lt;/div&gt;
+            </div>
+        </article>
     </article>
 
     <!---------------------------- Nesting ---------------------------->
-    <article id="nesting" class="section scrollspy">
+    <article class="section scrollspy" id="nesting">
         <h2>Verschachtelung</h2>
         <p>Ebenfalls möglich ist es, mehrere Tabellen ineinander zu verschachteln - so entstehen noch mehr
             Möglichkeiten ein
@@ -260,7 +264,7 @@
     </div>
 
     <!---------------------------- Horizontal Positioning ---------------------------->
-    <article id="position" class="section scrollspy">
+    <article class="section scrollspy" id="position">
         <h2 class="title">Horizontale Zentrierung</h2>
         <p>Füllen die angegebenen Spalten in einer Tabelle nicht die maximale Breite des Bildschirms aus, so können
             diese
@@ -300,7 +304,7 @@
     </article>
 
     <!---------------------------- Extended Positioning ---------------------------->
-    <article id="extendedposition" class="section scrollspy">
+    <article class="section scrollspy" id="extendedposition">
         <h2 class="title">Erweiterte Positionierung</h2>
         <p>Auch im Nachhinein ist es noch möglich die Position einiger Elemente zu ändern. Zum Beispiel können die
             Spalten
@@ -350,7 +354,7 @@
     </div>
 
     <!---------------------------- Initialization Sass ---------------------------->
-    <article id="sassconfig" class="section scrollspy">
+    <article class="section scrollspy" id="sassconfig">
         <h2>Mit Sass personalisieren</h2>
         <p>Falls Vorkenntnisse über Precompiler und im Speziellen über die Sprachen SASS und SCSS vorhanden ist,
             können die
@@ -360,7 +364,7 @@
     </article>
 
     !---------------------------- Vars ---------------------------->
-    <article id="variablen" class="section scrollspy">
+    <article class="section scrollspy" id="variablen">
         <h3>Variablen</h3>
         <p>Des Weiteren könnten die Breakpoints oder der Seitenrand verändert werden.</p>
     </article>
@@ -369,7 +373,7 @@
     </div>
 
     <!---------------------------- Color System ---------------------------->
-    <article id="colorsystem" class="section scrollspy">
+    <article class="section scrollspy" id="colorsystem">
         <h2>Farb System</h2>
         <p>Das Framework bietet eine kleine Selektion an vordefinierten Farbräumen. Neben den Grundfarben bieten wir
             einen Erweiterten Farbraum und vordefinierte Themen, wie zum Beispiel eines für Farben des Herbstes.</p>
@@ -383,7 +387,7 @@
     </article>
 
     <!---------------------------- Colorwheel ---------------------------->
-    <article id="wheel" class="section scrollspy">
+    <article class="section scrollspy" id="wheel">
         <h3>Farbrad</h3>
         <p>Hier werden alle Farbrad Farben mit 12 verschiedenen Tans als Klassennamen aufbereitet. </p>
         <div class="row content_img">
@@ -394,7 +398,7 @@
     </article>
 
     <!---------------------------- Extra Spectrum ---------------------------->
-    <article id="extracolors" class="section scrollspy">
+    <article class="section scrollspy" id="extracolors">
         <h3>Erweitertes Spektrum</h3>
         <p>Der erweiterte Farbraum fügt weitere wichtige Farben zur Farbauswahl hinzu. </p>
         <div class="row content_img">
@@ -408,46 +412,46 @@
     </div>
 
     <!---------------------------- Colorcreations ---------------------------->
-    <article id="colorthemes" class="section scrollspy">
+    <article class="section scrollspy" id="colorthemes">
         <h2>Farbkreationen</h2>
         <p>Wollen Sie einen Webshop für Herbstmode eröffnen, jedoch kein Vorwissen im Bereich Farblehre? Auch das
             sollte
             mit den vordefinierten Schemata keine Problem für sie werden.</p>
 
 
-    <!---------------------------- Autumntheme ---------------------------->
-    <article>
-        <h3 class="title">Herbst Kollektion</h3>
-        <div class="row content_img">
-            <div class="col-lg-12">
-                <img class="img-responsive" src="../lib/img/css/autumn.png">
+        <!---------------------------- Autumntheme ---------------------------->
+        <article>
+            <h3 class="title">Herbst Kollektion</h3>
+            <div class="row content_img">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../lib/img/css/autumn.png">
+                </div>
             </div>
-        </div>
-    </article>
+        </article>
 
-    <!---------------------------- Camotheme ---------------------------->
-    <article>
-        <h3 class="title">Camouflage Kollektion</h3>
-        <div class="row content_img">
-            <div class="col-lg-12">
-                <img class="img-responsive" src="../lib/img/css/camo.png">
+        <!---------------------------- Camotheme ---------------------------->
+        <article>
+            <h3 class="title">Camouflage Kollektion</h3>
+            <div class="row content_img">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../lib/img/css/camo.png">
+                </div>
             </div>
-        </div>
-    </article>
+        </article>
 
-    <!---------------------------- Supremetheme ---------------------------->
-    <article>
-        <h3 class="title">Supreme Kollektion</h3>
-        <div class="row content_img">
-            <div class="col-lg-12">
-                <img class="img-responsive" src="../lib/img/css/supreme.png">
+        <!---------------------------- Supremetheme ---------------------------->
+        <article>
+            <h3 class="title">Supreme Kollektion</h3>
+            <div class="row content_img">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../lib/img/css/supreme.png">
+                </div>
             </div>
-        </div>
-    </article>
+        </article>
     </article>
 
     <!---------------------------- Media ---------------------------->
-    <article id="media" class="section scrollspy">
+    <article class="section scrollspy" id="media">
         <h2>Media</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -463,7 +467,7 @@
     </article>
 
     <!---------------------------- Images ---------------------------->
-    <article id="images" class="section scrollspy">
+    <article class="section scrollspy" id="images">
         <h3>Bilder</h3>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -479,7 +483,7 @@
     </article>
 
     <!---------------------------- Video ---------------------------->
-    <article id="video" class="section scrollspy">
+    <article class="section scrollspy" id="video">
         <h3>Video</h3>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -495,7 +499,7 @@
     </article>
 
     <!---------------------------- Audio ---------------------------->
-    <article id="audio" class="section scrollspy">
+    <article class="section scrollspy" id="audio">
         <h3>Audio</h3>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -514,7 +518,7 @@
     </div>
 
     <!---------------------------- Tabels ---------------------------->
-    <article id="table" class="section scrollspy">
+    <article class="section scrollspy" id="table">
         <h2>Tabellen</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -530,7 +534,7 @@
     </article>
 
     <!---------------------------- Tools ---------------------------->
-    <article id="helper" class="section scrollspy">
+    <article class="section scrollspy" id="helper">
         <h2>Werkzeuge</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -546,7 +550,7 @@
     </article>
 
     <!---------------------------- Shadow ---------------------------->
-    <article id="shadow" class="section scrollspy">
+    <article class="section scrollspy" id="shadow">
         <h2>Schatten</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -562,7 +566,7 @@
     </article>
 
     <!---------------------------- Show/Hide ---------------------------->
-    <article id="showhide" class="section scrollspy">
+    <article class="section scrollspy" id="showhide">
         <h2>Elemente ausblenden</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -581,7 +585,7 @@
     </div>
 
     <!---------------------------- Parallax ---------------------------->
-    <article id="parallax" class="section scrollspy">
+    <article class="section scrollspy" id="parallax">
         <h2>Parallax</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -601,32 +605,32 @@
 <footer class="footer">
     <ul class="sociallist">
         <!---------------------------------------- Social Media Icons ---------------------------------------->
-        <li><a target="_blank" href="https://www.facebook.com/CreativePuzzleDevelop/"><img src="../lib/img/facebook.png"
-                                                                                           alt="facebook logo"
-                                                                                           class="img-responsive socialmedia"></a>
+        <li><a href="https://www.facebook.com/CreativePuzzleDevelop/" target="_blank"><img alt="facebook logo"
+                                                                                           class="img-responsive socialmedia"
+                                                                                           src="../lib/img/facebook.png"></a>
         </li>
-        <li><a target="_blank" href="https://www.instagram.com/creative.puzzle/"><img src="../lib/img/instagram.png"
-                                                                                      alt="instagram logo"
-                                                                                      class="img-responsive socialmedia"></a>
+        <li><a href="https://www.instagram.com/creative.puzzle/" target="_blank"><img alt="instagram logo"
+                                                                                      class="img-responsive socialmedia"
+                                                                                      src="../lib/img/instagram.png"></a>
         </li>
-        <li><a target="_blank" href="https://twitter.com/creative_puzzle?lang=de"><img src="../lib/img/twitter.png"
-                                                                                       alt="twitter logo"
-                                                                                       class="img-responsive socialmedia"></a>
+        <li><a href="https://twitter.com/creative_puzzle?lang=de" target="_blank"><img alt="twitter logo"
+                                                                                       class="img-responsive socialmedia"
+                                                                                       src="../lib/img/twitter.png"></a>
         </li>
     </ul>
 
     <!---------------------------------------- Imprint Button ---------------------------------------->
     <div class="col-lg-12 text-center">
-        <button type="button" class="btnimpr btn btn-md" data-toggle="modal" data-target="#Impressum">
+        <button class="btnimpr btn btn-md" data-target="#Impressum" data-toggle="modal" type="button">
             Impressum
         </button>
     </div>
     <!---------------------------------------- Modal Imprint ---------------------------------------->
-    <div class="modal fade " id="Impressum" tabindex="-1" role="dialog" aria-labelledby="ImpressumLabel">
+    <div aria-labelledby="ImpressumLabel" class="modal fade " id="Impressum" role="dialog" tabindex="-1">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
                             aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="ImpressumLabel">Impressum</h4>
                 </div>
@@ -663,7 +667,7 @@
                     </ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+                    <button class="btn btn-default" data-dismiss="modal" type="button">Schließen</button>
                 </div>
             </div>
         </div>
@@ -674,10 +678,10 @@
 </footer>
 
 <!---------------------------------------- Javascript ---------------------------------------->
-<script src="https://code.jquery.com/jquery-3.3.0.js" integrity="sha256-TFWSuDJt6kS+huV+vVlyV1jM3dwGdeNWqezhTxXB/X8="
-        crossorigin="anonymous"></script>
+<script crossorigin="anonymous" integrity="sha256-TFWSuDJt6kS+huV+vVlyV1jM3dwGdeNWqezhTxXB/X8="
+        src="https://code.jquery.com/jquery-3.3.0.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://www.gstatic.com/charts/loader.js" type="text/javascript"></script>
 <script src="../lib/js/validator.js"></script>
 <script src="../lib/js/bootstrap.js"></script>
 <script src="../lib/js/main.js"></script>

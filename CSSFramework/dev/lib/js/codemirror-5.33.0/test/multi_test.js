@@ -1,4 +1,4 @@
-(function() {
+(function () {
   namespace = "multi_";
 
   function hasSelections(cm) {
@@ -13,6 +13,7 @@
       eqCharPos(sels[i].head, head, "head of selection " + i);
     }
   }
+
   function hasCursors(cm) {
     var sels = cm.listSelections();
     var given = (arguments.length - 1) / 2;
@@ -25,28 +26,28 @@
     }
   }
 
-  testCM("getSelection", function(cm) {
+  testCM("getSelection", function (cm) {
     select(cm, {anchor: Pos(0, 0), head: Pos(1, 2)}, {anchor: Pos(2, 2), head: Pos(2, 0)});
     eq(cm.getSelection(), "1234\n56\n90");
     eq(cm.getSelection(false).join("|"), "1234|56|90");
     eq(cm.getSelections().join("|"), "1234\n56|90");
   }, {value: "1234\n5678\n90"});
 
-  testCM("setSelection", function(cm) {
+  testCM("setSelection", function (cm) {
     select(cm, Pos(3, 0), Pos(0, 0), {anchor: Pos(2, 5), head: Pos(1, 0)});
     hasSelections(cm, 0, 0, 0, 0,
-                  2, 5, 1, 0,
-                  3, 0, 3, 0);
+      2, 5, 1, 0,
+      3, 0, 3, 0);
     cm.setSelection(Pos(1, 2), Pos(1, 1));
     hasSelections(cm, 1, 2, 1, 1);
     select(cm, {anchor: Pos(1, 1), head: Pos(2, 4)},
-           {anchor: Pos(0, 0), head: Pos(1, 3)},
-           Pos(3, 0), Pos(2, 2));
+      {anchor: Pos(0, 0), head: Pos(1, 3)},
+      Pos(3, 0), Pos(2, 2));
     hasSelections(cm, 0, 0, 2, 4,
-                  3, 0, 3, 0);
+      3, 0, 3, 0);
     cm.setSelections([{anchor: Pos(0, 1), head: Pos(0, 2)},
-                      {anchor: Pos(1, 1), head: Pos(1, 2)},
-                      {anchor: Pos(2, 1), head: Pos(2, 2)}], 1);
+      {anchor: Pos(1, 1), head: Pos(1, 2)},
+      {anchor: Pos(2, 1), head: Pos(2, 2)}], 1);
     eqCharPos(cm.getCursor("head"), Pos(1, 2));
     eqCharPos(cm.getCursor("anchor"), Pos(1, 1));
     eqCharPos(cm.getCursor("from"), Pos(1, 1));
@@ -55,86 +56,86 @@
     hasCursors(cm, 1, 1);
   }, {value: "abcde\nabcde\nabcde\n"});
 
-  testCM("somethingSelected", function(cm) {
+  testCM("somethingSelected", function (cm) {
     select(cm, Pos(0, 1), {anchor: Pos(0, 3), head: Pos(0, 5)});
     eq(cm.somethingSelected(), true);
     select(cm, Pos(0, 1), Pos(0, 3), Pos(0, 5));
     eq(cm.somethingSelected(), false);
   }, {value: "123456789"});
 
-  testCM("extendSelection", function(cm) {
+  testCM("extendSelection", function (cm) {
     select(cm, Pos(0, 1), Pos(1, 1), Pos(2, 1));
     cm.setExtending(true);
     cm.extendSelections([Pos(0, 2), Pos(1, 0), Pos(2, 3)]);
     hasSelections(cm, 0, 1, 0, 2,
-                  1, 1, 1, 0,
-                  2, 1, 2, 3);
+      1, 1, 1, 0,
+      2, 1, 2, 3);
     cm.extendSelection(Pos(2, 4), Pos(2, 0));
     hasSelections(cm, 2, 4, 2, 0);
   }, {value: "1234\n1234\n1234"});
 
-  testCM("addSelection", function(cm) {
+  testCM("addSelection", function (cm) {
     select(cm, Pos(0, 1), Pos(1, 1));
     cm.addSelection(Pos(0, 0), Pos(0, 4));
     hasSelections(cm, 0, 0, 0, 4,
-                  1, 1, 1, 1);
+      1, 1, 1, 1);
     cm.addSelection(Pos(2, 2));
     hasSelections(cm, 0, 0, 0, 4,
-                  1, 1, 1, 1,
-                  2, 2, 2, 2);
+      1, 1, 1, 1,
+      2, 2, 2, 2);
   }, {value: "1234\n1234\n1234"});
 
-  testCM("replaceSelection", function(cm) {
+  testCM("replaceSelection", function (cm) {
     var selections = [{anchor: Pos(0, 0), head: Pos(0, 1)},
-                      {anchor: Pos(0, 2), head: Pos(0, 3)},
-                      {anchor: Pos(0, 4), head: Pos(0, 5)},
-                      {anchor: Pos(2, 1), head: Pos(2, 4)},
-                      {anchor: Pos(2, 5), head: Pos(2, 6)}];
+      {anchor: Pos(0, 2), head: Pos(0, 3)},
+      {anchor: Pos(0, 4), head: Pos(0, 5)},
+      {anchor: Pos(2, 1), head: Pos(2, 4)},
+      {anchor: Pos(2, 5), head: Pos(2, 6)}];
     var val = "123456\n123456\n123456";
     cm.setValue(val);
     cm.setSelections(selections);
     cm.replaceSelection("ab", "around");
     eq(cm.getValue(), "ab2ab4ab6\n123456\n1ab5ab");
     hasSelections(cm, 0, 0, 0, 2,
-                  0, 3, 0, 5,
-                  0, 6, 0, 8,
-                  2, 1, 2, 3,
-                  2, 4, 2, 6);
+      0, 3, 0, 5,
+      0, 6, 0, 8,
+      2, 1, 2, 3,
+      2, 4, 2, 6);
     cm.setValue(val);
     cm.setSelections(selections);
     cm.replaceSelection("", "around");
     eq(cm.getValue(), "246\n123456\n15");
     hasSelections(cm, 0, 0, 0, 0,
-                  0, 1, 0, 1,
-                  0, 2, 0, 2,
-                  2, 1, 2, 1,
-                  2, 2, 2, 2);
+      0, 1, 0, 1,
+      0, 2, 0, 2,
+      2, 1, 2, 1,
+      2, 2, 2, 2);
     cm.setValue(val);
     cm.setSelections(selections);
     cm.replaceSelection("X\nY\nZ", "around");
     hasSelections(cm, 0, 0, 2, 1,
-                  2, 2, 4, 1,
-                  4, 2, 6, 1,
-                  8, 1, 10, 1,
-                  10, 2, 12, 1);
+      2, 2, 4, 1,
+      4, 2, 6, 1,
+      8, 1, 10, 1,
+      10, 2, 12, 1);
     cm.replaceSelection("a", "around");
     hasSelections(cm, 0, 0, 0, 1,
-                  0, 2, 0, 3,
-                  0, 4, 0, 5,
-                  2, 1, 2, 2,
-                  2, 3, 2, 4);
+      0, 2, 0, 3,
+      0, 4, 0, 5,
+      2, 1, 2, 2,
+      2, 3, 2, 4);
     cm.replaceSelection("xy", "start");
     hasSelections(cm, 0, 0, 0, 0,
-                  0, 3, 0, 3,
-                  0, 6, 0, 6,
-                  2, 1, 2, 1,
-                  2, 4, 2, 4);
+      0, 3, 0, 3,
+      0, 6, 0, 6,
+      2, 1, 2, 1,
+      2, 4, 2, 4);
     cm.replaceSelection("z\nf");
     hasSelections(cm, 1, 1, 1, 1,
-                  2, 1, 2, 1,
-                  3, 1, 3, 1,
-                  6, 1, 6, 1,
-                  7, 1, 7, 1);
+      2, 1, 2, 1,
+      3, 1, 3, 1,
+      6, 1, 6, 1,
+      7, 1, 7, 1);
     eq(cm.getValue(), "z\nfxy2z\nfxy4z\nfxy6\n123456\n1z\nfxy5z\nfxy");
   });
 
@@ -148,7 +149,7 @@
     cm.setSelections(sels, sels.length - 1);
   }
 
-  testCM("indentSelection", function(cm) {
+  testCM("indentSelection", function (cm) {
     select(cm, Pos(0, 1), Pos(1, 1));
     cm.indentSelection(4);
     eq(cm.getValue(), "    foo\n    bar\nbaz");
@@ -158,12 +159,12 @@
     eq(cm.getValue(), "  foo\n    bar\nbaz");
 
     select(cm, {anchor: Pos(0, 0), head: Pos(1, 2)},
-           {anchor: Pos(1, 3), head: Pos(2, 0)});
+      {anchor: Pos(1, 3), head: Pos(2, 0)});
     cm.indentSelection(-2);
     eq(cm.getValue(), "foo\n  bar\nbaz");
   }, {value: "foo\nbar\nbaz"});
 
-  testCM("killLine", function(cm) {
+  testCM("killLine", function (cm) {
     select(cm, Pos(0, 1), Pos(0, 2), Pos(1, 1));
     cm.execCommand("killLine");
     eq(cm.getValue(), "f\nb\nbaz");
@@ -175,10 +176,10 @@
     eq(cm.getValue(), "faz");
   }, {value: "foo\nbar\nbaz"});
 
-  testCM("deleteLine", function(cm) {
+  testCM("deleteLine", function (cm) {
     select(cm, Pos(0, 0),
-           {head: Pos(0, 1), anchor: Pos(2, 0)},
-           Pos(4, 0));
+      {head: Pos(0, 1), anchor: Pos(2, 0)},
+      Pos(4, 0));
     cm.execCommand("deleteLine");
     eq(cm.getValue(), "4\n6\n7");
     select(cm, Pos(2, 1));
@@ -186,7 +187,7 @@
     eq(cm.getValue(), "4\n6\n");
   }, {value: "1\n2\n3\n4\n5\n6\n7"});
 
-  testCM("deleteH", function(cm) {
+  testCM("deleteH", function (cm) {
     select(cm, Pos(0, 4), {anchor: Pos(1, 4), head: Pos(1, 5)});
     cm.execCommand("delWordAfter");
     eq(cm.getValue(), "foo bar baz\nabc ef ghi\n");
@@ -200,7 +201,7 @@
     eq(cm.getValue(), "fo \nab ghi\n");
   }, {value: "foo bar baz\nabc def ghi\n"});
 
-  testCM("goLineStart", function(cm) {
+  testCM("goLineStart", function (cm) {
     select(cm, Pos(0, 2), Pos(0, 3), Pos(1, 1));
     cm.execCommand("goLineStart");
     hasCursors(cm, 0, 0, 1, 0);
@@ -208,10 +209,10 @@
     cm.setExtending(true);
     cm.execCommand("goLineStart");
     hasSelections(cm, 0, 1, 0, 0,
-                  1, 1, 1, 0);
+      1, 1, 1, 0);
   }, {value: "foo\nbar\nbaz"});
 
-  testCM("moveV", function(cm) {
+  testCM("moveV", function (cm) {
     select(cm, Pos(0, 2), Pos(1, 2));
     cm.execCommand("goLineDown");
     hasCursors(cm, 1, 2, 2, 2);
@@ -227,7 +228,7 @@
     hasSelections(cm, 0, 2, 2, 2);
   }, {value: "12345\n12345\n12345"});
 
-  testCM("moveH", function(cm) {
+  testCM("moveH", function (cm) {
     select(cm, Pos(0, 1), Pos(0, 3), Pos(0, 5), Pos(2, 3));
     cm.execCommand("goCharRight");
     hasCursors(cm, 0, 2, 0, 4, 1, 0, 2, 4);
@@ -238,7 +239,7 @@
     hasCursors(cm, 2, 4, 2, 5);
   }, {value: "12345\n12345\n12345"});
 
-  testCM("newlineAndIndent", function(cm) {
+  testCM("newlineAndIndent", function (cm) {
     select(cm, Pos(0, 5), Pos(1, 5));
     cm.execCommand("newlineAndIndent");
     hasCursors(cm, 1, 2, 3, 2);
@@ -252,7 +253,7 @@
     eq(cm.getValue(), "x = [\n  1\n];\ny = [2];");
   }, {value: "x = [1];\ny = [2];", mode: "javascript"});
 
-  testCM("goDocStartEnd", function(cm) {
+  testCM("goDocStartEnd", function (cm) {
     select(cm, Pos(0, 1), Pos(1, 1));
     cm.execCommand("goDocStart");
     hasCursors(cm, 0, 0);
@@ -265,7 +266,7 @@
     hasSelections(cm, 1, 1, 1, 3);
   }, {value: "abc\ndef"});
 
-  testCM("selectionHistory", function(cm) {
+  testCM("selectionHistory", function (cm) {
     for (var i = 0; i < 3; ++i)
       cm.addSelection(Pos(0, i * 2), Pos(0, i * 2 + 1));
     cm.execCommand("undoSelection");

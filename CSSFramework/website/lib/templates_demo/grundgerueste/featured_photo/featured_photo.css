@@ -1,23 +1,29 @@
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300; }
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
 
 .side-nav-container {
-  background-color: #13334C; }
+    background-color: #13334C;
+}
 
 .content {
-  background-color: #13334C;
-  height: 450px; }
+    background-color: #13334C;
+    height: 450px;
+}
 
 .container-s {
-  position: relative;
-  width: 70%;
-  left: 10%;
-  top: 0;
-  margin-top: 50px; }
+    position: relative;
+    width: 70%;
+    left: 10%;
+    top: 0;
+    margin-top: 50px;
+}
 
 .margin-top {
-  margin-top: 50px; }
+    margin-top: 50px;
+}
 
 .margin-bottom {
-  margin-bottom: 50px; }
+    margin-bottom: 50px;
+}

@@ -4,47 +4,47 @@
     <meta charset="UTF-8">
     <title>Template Benutzereingabe</title>
 
-    <link rel="stylesheet" href="../../css/creativeframework/master.css" />
-    <link rel="stylesheet" href="custom.css" />
+    <link href="../../css/creativeframework/master.css" rel="stylesheet"/>
+    <link href="custom.css" rel="stylesheet"/>
 
 </head>
 <body>
-    <div class="container-xs">
-        <h1 class="text-center font-roboto text-thin">Benutzereingabe</h1>
-        <form class="form">
-            <p>
-                <input type="text" class="flatfield" placeholder="Email">
-            </p>
-            <p>
-                <input type="text" class="flatfield" placeholder="Username">
-            </p>
-            <p>
-                <input type="password" class="flatfield" placeholder="Passwort">
-            </p>
-            <p>
-                <input type="password" class="flatfield" placeholder="Passwort bestätigen">
-            </p>
-            <div class="align-items">
-                <input type="radio" class="radio-bttn-light" id="m" name="geschlecht" value="m">
-                <label class="label">Männlich</label>
-                <input type="radio" class="radio-bttn-light" id="w" name="geschlecht" value="w">
-                <label class="label">Weiblich</label>
-            </div>
-            <p>
-                <label class="label">Geburtsdatum:</label><br>
-                <input type="date" class="date">
-            </p>
-            <div class="align-items_center">
-                <input type="checkbox" class="checkbox-light">
-                <label class="label">AGB akzeptiert</label>
-            </div>
-            <p>
-                <input type="submit" class="bttn square olive ex-lg" value="Submit">
-            </p>
-            <p class="text-center">
-                <a class="bttn gray square ex-lg" href="../../../templates/index.php">Creative Framework</a>
-            </p>
-        </form>
-    </div>
+<div class="container-xs">
+    <h1 class="text-center font-roboto text-thin">Benutzereingabe</h1>
+    <form class="form">
+        <p>
+            <input class="flatfield" placeholder="Email" type="text">
+        </p>
+        <p>
+            <input class="flatfield" placeholder="Username" type="text">
+        </p>
+        <p>
+            <input class="flatfield" placeholder="Passwort" type="password">
+        </p>
+        <p>
+            <input class="flatfield" placeholder="Passwort bestätigen" type="password">
+        </p>
+        <div class="align-items">
+            <input class="radio-bttn-light" id="m" name="geschlecht" type="radio" value="m">
+            <label class="label">Männlich</label>
+            <input class="radio-bttn-light" id="w" name="geschlecht" type="radio" value="w">
+            <label class="label">Weiblich</label>
+        </div>
+        <p>
+            <label class="label">Geburtsdatum:</label><br>
+            <input class="date" type="date">
+        </p>
+        <div class="align-items_center">
+            <input class="checkbox-light" type="checkbox">
+            <label class="label">AGB akzeptiert</label>
+        </div>
+        <p>
+            <input class="bttn square olive ex-lg" type="submit" value="Submit">
+        </p>
+        <p class="text-center">
+            <a class="bttn gray square ex-lg" href="../../../templates/index.php">Creative Framework</a>
+        </p>
+    </form>
+</div>
 </body>
 </html>

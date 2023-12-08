@@ -1,12 +1,12 @@
-import { signalLater } from "../util/operation_group.js"
-import { ensureCursorVisible } from "../display/scrolling.js"
-import { clipPos, cmp, Pos } from "../line/pos.js"
-import { getLine } from "../line/utils_line.js"
-import { hasHandler, signal, signalCursorActivity } from "../util/event.js"
-import { lst, sel_dontScroll } from "../util/misc.js"
+import {signalLater} from "../util/operation_group.js"
+import {ensureCursorVisible} from "../display/scrolling.js"
+import {clipPos, cmp, Pos} from "../line/pos.js"
+import {getLine} from "../line/utils_line.js"
+import {hasHandler, signal, signalCursorActivity} from "../util/event.js"
+import {lst, sel_dontScroll} from "../util/misc.js"
 
-import { addSelectionToHistory } from "./history.js"
-import { normalizeSelection, Range, Selection, simpleSelection } from "./selection.js"
+import {addSelectionToHistory} from "./history.js"
+import {normalizeSelection, Range, Selection, simpleSelection} from "./selection.js"
 
 // The 'scroll' parameter given to many of these indicated whether
 // the new cursor position should be scrolled into view after
@@ -68,11 +68,11 @@ export function setSimpleSelection(doc, anchor, head, options) {
 function filterSelectionChange(doc, sel, options) {
   let obj = {
     ranges: sel.ranges,
-    update: function(ranges) {
+    update: function (ranges) {
       this.ranges = []
       for (let i = 0; i < ranges.length; i++)
         this.ranges[i] = new Range(clipPos(doc, ranges[i].anchor),
-                                   clipPos(doc, ranges[i].head))
+          clipPos(doc, ranges[i].head))
     },
     origin: options && options.origin
   }
@@ -150,12 +150,15 @@ function skipAtomicInner(doc, pos, oldPos, dir, mayClear) {
   if (line.markedSpans) for (let i = 0; i < line.markedSpans.length; ++i) {
     let sp = line.markedSpans[i], m = sp.marker
     if ((sp.from == null || (m.inclusiveLeft ? sp.from <= pos.ch : sp.from < pos.ch)) &&
-        (sp.to == null || (m.inclusiveRight ? sp.to >= pos.ch : sp.to > pos.ch))) {
+      (sp.to == null || (m.inclusiveRight ? sp.to >= pos.ch : sp.to > pos.ch))) {
       if (mayClear) {
         signal(m, "beforeCursorEnter")
         if (m.explicitlyCleared) {
           if (!line.markedSpans) break
-          else {--i; continue}
+          else {
+            --i;
+            continue
+          }
         }
       }
       if (!m.atomic) continue
@@ -181,9 +184,9 @@ function skipAtomicInner(doc, pos, oldPos, dir, mayClear) {
 export function skipAtomic(doc, pos, oldPos, bias, mayClear) {
   let dir = bias || 1
   let found = skipAtomicInner(doc, pos, oldPos, dir, mayClear) ||
-      (!mayClear && skipAtomicInner(doc, pos, oldPos, dir, true)) ||
-      skipAtomicInner(doc, pos, oldPos, -dir, mayClear) ||
-      (!mayClear && skipAtomicInner(doc, pos, oldPos, -dir, true))
+    (!mayClear && skipAtomicInner(doc, pos, oldPos, dir, true)) ||
+    skipAtomicInner(doc, pos, oldPos, -dir, mayClear) ||
+    (!mayClear && skipAtomicInner(doc, pos, oldPos, -dir, true))
   if (!found) {
     doc.cantEdit = true
     return Pos(doc.first, 0)

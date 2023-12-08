@@ -1,7 +1,7 @@
-import { flipCtrlCmd, mac, presto } from "../util/browser.js"
-import { map } from "../util/misc.js"
+import {flipCtrlCmd, mac, presto} from "../util/browser.js"
+import {map} from "../util/misc.js"
 
-import { keyNames } from "./keynames.js"
+import {keyNames} from "./keynames.js"
 
 export let keyMap = {}
 
@@ -35,13 +35,36 @@ keyMap.emacsy = {
   "Ctrl-O": "openLine"
 }
 keyMap.macDefault = {
-  "Cmd-A": "selectAll", "Cmd-D": "deleteLine", "Cmd-Z": "undo", "Shift-Cmd-Z": "redo", "Cmd-Y": "redo",
-  "Cmd-Home": "goDocStart", "Cmd-Up": "goDocStart", "Cmd-End": "goDocEnd", "Cmd-Down": "goDocEnd", "Alt-Left": "goGroupLeft",
-  "Alt-Right": "goGroupRight", "Cmd-Left": "goLineLeft", "Cmd-Right": "goLineRight", "Alt-Backspace": "delGroupBefore",
-  "Ctrl-Alt-Backspace": "delGroupAfter", "Alt-Delete": "delGroupAfter", "Cmd-S": "save", "Cmd-F": "find",
-  "Cmd-G": "findNext", "Shift-Cmd-G": "findPrev", "Cmd-Alt-F": "replace", "Shift-Cmd-Alt-F": "replaceAll",
-  "Cmd-[": "indentLess", "Cmd-]": "indentMore", "Cmd-Backspace": "delWrappedLineLeft", "Cmd-Delete": "delWrappedLineRight",
-  "Cmd-U": "undoSelection", "Shift-Cmd-U": "redoSelection", "Ctrl-Up": "goDocStart", "Ctrl-Down": "goDocEnd",
+  "Cmd-A": "selectAll",
+  "Cmd-D": "deleteLine",
+  "Cmd-Z": "undo",
+  "Shift-Cmd-Z": "redo",
+  "Cmd-Y": "redo",
+  "Cmd-Home": "goDocStart",
+  "Cmd-Up": "goDocStart",
+  "Cmd-End": "goDocEnd",
+  "Cmd-Down": "goDocEnd",
+  "Alt-Left": "goGroupLeft",
+  "Alt-Right": "goGroupRight",
+  "Cmd-Left": "goLineLeft",
+  "Cmd-Right": "goLineRight",
+  "Alt-Backspace": "delGroupBefore",
+  "Ctrl-Alt-Backspace": "delGroupAfter",
+  "Alt-Delete": "delGroupAfter",
+  "Cmd-S": "save",
+  "Cmd-F": "find",
+  "Cmd-G": "findNext",
+  "Shift-Cmd-G": "findPrev",
+  "Cmd-Alt-F": "replace",
+  "Shift-Cmd-Alt-F": "replaceAll",
+  "Cmd-[": "indentLess",
+  "Cmd-]": "indentMore",
+  "Cmd-Backspace": "delWrappedLineLeft",
+  "Cmd-Delete": "delWrappedLineRight",
+  "Cmd-U": "undoSelection",
+  "Shift-Cmd-U": "redoSelection",
+  "Ctrl-Up": "goDocStart",
+  "Ctrl-Down": "goDocEnd",
   fallthrough: ["basic", "emacsy"]
 }
 keyMap["default"] = mac ? keyMap.macDefault : keyMap.pcDefault
@@ -77,7 +100,10 @@ export function normalizeKeyMap(keymap) {
   for (let keyname in keymap) if (keymap.hasOwnProperty(keyname)) {
     let value = keymap[keyname]
     if (/^(name|fallthrough|(de|at)tach)$/.test(keyname)) continue
-    if (value == "...") { delete keymap[keyname]; continue }
+    if (value == "...") {
+      delete keymap[keyname];
+      continue
+    }
 
     let keys = map(keyname.split(" "), normalizeKeyName)
     for (let i = 0; i < keys.length; i++) {

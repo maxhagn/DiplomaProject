@@ -1,15 +1,15 @@
-import { operation, runInOp } from "../display/operations.js"
-import { prepareSelection } from "../display/selection.js"
-import { applyTextInput, copyableRanges, handlePaste, hiddenTextarea, setLastCopied } from "./input.js"
-import { cursorCoords, posFromMouse } from "../measurement/position_measurement.js"
-import { eventInWidget } from "../measurement/widgets.js"
-import { simpleSelection } from "../model/selection.js"
-import { selectAll, setSelection } from "../model/selection_updates.js"
-import { captureRightClick, ie, ie_version, ios, mac, mobile, presto, webkit } from "../util/browser.js"
-import { activeElt, removeChildrenAndAdd, selectInput } from "../util/dom.js"
-import { e_preventDefault, e_stop, off, on, signalDOMEvent } from "../util/event.js"
-import { hasSelection } from "../util/feature_detection.js"
-import { Delayed, sel_dontScroll } from "../util/misc.js"
+import {operation, runInOp} from "../display/operations.js"
+import {prepareSelection} from "../display/selection.js"
+import {applyTextInput, copyableRanges, handlePaste, hiddenTextarea, setLastCopied} from "./input.js"
+import {cursorCoords, posFromMouse} from "../measurement/position_measurement.js"
+import {eventInWidget} from "../measurement/widgets.js"
+import {simpleSelection} from "../model/selection.js"
+import {selectAll, setSelection} from "../model/selection_updates.js"
+import {captureRightClick, ie, ie_version, ios, mac, mobile, presto, webkit} from "../util/browser.js"
+import {activeElt, removeChildrenAndAdd, selectInput} from "../util/dom.js"
+import {e_preventDefault, e_stop, off, on, signalDOMEvent} from "../util/event.js"
+import {hasSelection} from "../util/feature_detection.js"
+import {Delayed, sel_dontScroll} from "../util/misc.js"
 
 // TEXTAREA INPUT STYLE
 
@@ -74,6 +74,7 @@ export default class TextareaInput {
       }
       if (e.type == "cut") cm.state.cutIncoming = true
     }
+
     on(te, "cut", prepareCopyCut)
     on(te, "copy", prepareCopyCut)
 
@@ -115,9 +116,9 @@ export default class TextareaInput {
       let headPos = cursorCoords(cm, doc.sel.primary().head, "div")
       let wrapOff = display.wrapper.getBoundingClientRect(), lineOff = display.lineDiv.getBoundingClientRect()
       result.teTop = Math.max(0, Math.min(display.wrapper.clientHeight - 10,
-                                          headPos.top + lineOff.top - wrapOff.top))
+        headPos.top + lineOff.top - wrapOff.top))
       result.teLeft = Math.max(0, Math.min(display.wrapper.clientWidth - 10,
-                                           headPos.left + lineOff.left - wrapOff.left))
+        headPos.left + lineOff.left - wrapOff.left))
     }
 
     return result
@@ -150,24 +151,34 @@ export default class TextareaInput {
     }
   }
 
-  getField() { return this.textarea }
+  getField() {
+    return this.textarea
+  }
 
-  supportsTouch() { return false }
+  supportsTouch() {
+    return false
+  }
 
   focus() {
     if (this.cm.options.readOnly != "nocursor" && (!mobile || activeElt() != this.textarea)) {
-      try { this.textarea.focus() }
-      catch (e) {} // IE8 will throw if the textarea is display: none or not in DOM
+      try {
+        this.textarea.focus()
+      } catch (e) {
+      } // IE8 will throw if the textarea is display: none or not in DOM
     }
   }
 
-  blur() { this.textarea.blur() }
+  blur() {
+    this.textarea.blur()
+  }
 
   resetPosition() {
     this.wrapper.style.top = this.wrapper.style.left = 0
   }
 
-  receivedFocus() { this.slowPoll() }
+  receivedFocus() {
+    this.slowPoll()
+  }
 
   // Poll for input changes, using the normal rate of polling. This
   // runs as long as the editor is focused.
@@ -185,11 +196,18 @@ export default class TextareaInput {
   fastPoll() {
     let missed = false, input = this
     input.pollingFast = true
+
     function p() {
       let changed = input.poll()
-      if (!changed && !missed) {missed = true; input.polling.set(60, p)}
-      else {input.pollingFast = false; input.slowPoll()}
+      if (!changed && !missed) {
+        missed = true;
+        input.polling.set(60, p)
+      } else {
+        input.pollingFast = false;
+        input.slowPoll()
+      }
     }
+
     input.polling.set(20, p)
   }
 
@@ -206,8 +224,8 @@ export default class TextareaInput {
     // will be the case when there is a lot of text in the textarea,
     // in which case reading its value would be expensive.
     if (this.contextMenuPending || !cm.state.focused ||
-        (hasSelection(input) && !prevInput && !this.composing) ||
-        cm.isReadOnly() || cm.options.disableInput || cm.state.keySeq)
+      (hasSelection(input) && !prevInput && !this.composing) ||
+      cm.isReadOnly() || cm.options.disableInput || cm.state.keySeq)
       return false
 
     let text = input.value
@@ -217,7 +235,7 @@ export default class TextareaInput {
     // inexplicable appearance of private area unicode characters on
     // some key combos in Mac (#2689).
     if (ie && ie_version >= 9 && this.hasSelection === text ||
-        mac && /[\uf700-\uf7ff]/.test(text)) {
+      mac && /[\uf700-\uf7ff]/.test(text)) {
       cm.display.input.reset()
       return false
     }
@@ -225,7 +243,10 @@ export default class TextareaInput {
     if (cm.doc.sel == cm.display.selForContextMenu) {
       let first = text.charCodeAt(0)
       if (first == 0x200b && !prevInput) prevInput = "\u200b"
-      if (first == 0x21da) { this.reset(); return this.cm.execCommand("undo") }
+      if (first == 0x21da) {
+        this.reset();
+        return this.cm.execCommand("undo")
+      }
     }
     // Find the part of the input that is actually new
     let same = 0, l = Math.min(prevInput.length, text.length)
@@ -233,7 +254,7 @@ export default class TextareaInput {
 
     runInOp(cm, () => {
       applyTextInput(cm, text.slice(same), prevInput.length - same,
-                     null, this.composing ? "*compose" : null)
+        null, this.composing ? "*compose" : null)
 
       // Don't leave long text in the textarea, since it makes further polling slow
       if (text.length > 1000 || text.indexOf("\n") > -1) input.value = this.prevInput = ""
@@ -242,7 +263,7 @@ export default class TextareaInput {
       if (this.composing) {
         this.composing.range.clear()
         this.composing.range = cm.markText(this.composing.start, cm.getCursor("to"),
-                                           {className: "CodeMirror-composing"})
+          {className: "CodeMirror-composing"})
       }
     })
     return true
@@ -296,12 +317,14 @@ export default class TextareaInput {
         te.value = "\u21da" // Used to catch context-menu undo
         te.value = extval
         input.prevInput = selected ? "" : "\u200b"
-        te.selectionStart = 1; te.selectionEnd = extval.length
+        te.selectionStart = 1;
+        te.selectionEnd = extval.length
         // Re-set this, in case some other handler touched the
         // selection in the meantime.
         display.selForContextMenu = cm.doc.sel
       }
     }
+
     function rehide() {
       input.contextMenuPending = false
       input.wrapper.style.cssText = oldWrapperCSS
@@ -313,7 +336,7 @@ export default class TextareaInput {
         if (!ie || (ie && ie_version < 9)) prepareSelectAllHack()
         let i = 0, poll = () => {
           if (display.selForContextMenu == cm.doc.sel && te.selectionStart == 0 &&
-              te.selectionEnd > 0 && input.prevInput == "\u200b") {
+            te.selectionEnd > 0 && input.prevInput == "\u200b") {
             operation(cm, selectAll)(cm)
           } else if (i++ < 10) {
             display.detectingSelectAll = setTimeout(poll, 500)
@@ -344,7 +367,8 @@ export default class TextareaInput {
     this.textarea.disabled = val == "nocursor"
   }
 
-  setUneditable() {}
+  setUneditable() {
+  }
 }
 
 TextareaInput.prototype.needsContentAttribute = false

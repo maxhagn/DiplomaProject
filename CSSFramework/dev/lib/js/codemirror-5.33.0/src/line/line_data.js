@@ -1,13 +1,19 @@
-import { getOrder } from "../util/bidi.js"
-import { ie, ie_version, webkit } from "../util/browser.js"
-import { elt, eltP, joinClasses } from "../util/dom.js"
-import { eventMixin, signal } from "../util/event.js"
-import { hasBadBidiRects, zeroWidthElement } from "../util/feature_detection.js"
-import { lst, spaceStr } from "../util/misc.js"
+import {getOrder} from "../util/bidi.js"
+import {ie, ie_version, webkit} from "../util/browser.js"
+import {elt, eltP, joinClasses} from "../util/dom.js"
+import {eventMixin, signal} from "../util/event.js"
+import {hasBadBidiRects, zeroWidthElement} from "../util/feature_detection.js"
+import {lst, spaceStr} from "../util/misc.js"
 
-import { getLineStyles } from "./highlight.js"
-import { attachMarkedSpans, compareCollapsedMarkers, detachMarkedSpans, lineIsHidden, visualLineContinued } from "./spans.js"
-import { getLine, lineNo, updateLineHeight } from "./utils_line.js"
+import {getLineStyles} from "./highlight.js"
+import {
+  attachMarkedSpans,
+  compareCollapsedMarkers,
+  detachMarkedSpans,
+  lineIsHidden,
+  visualLineContinued
+} from "./spans.js"
+import {getLine, lineNo, updateLineHeight} from "./utils_line.js"
 
 // LINE DATA STRUCTURE
 
@@ -20,8 +26,11 @@ export class Line {
     this.height = estimateHeight ? estimateHeight(this) : 1
   }
 
-  lineNo() { return lineNo(this) }
+  lineNo() {
+    return lineNo(this)
+  }
 }
+
 eventMixin(Line)
 
 // Change the content (text, markers) of a line. Automatically
@@ -48,6 +57,7 @@ export function cleanUpLine(line) {
 // containing one or more styles) to a CSS style. This is cached,
 // and also looks for line-wide styles.
 let styleToClassCache = {}, styleToClassCacheWithMode = {}
+
 function interpretTokenStyle(style, options) {
   if (!style || /^\s*$/.test(style)) return null
   let cache = options.addModeClass ? styleToClassCacheWithMode : styleToClassCache
@@ -65,10 +75,12 @@ export function buildLineContent(cm, lineView) {
   // is needed on Webkit to be able to get line-level bounding
   // rectangles for it (in measureChar).
   let content = eltP("span", null, null, webkit ? "padding-right: .1px" : null)
-  let builder = {pre: eltP("pre", [content], "CodeMirror-line"), content: content,
-                 col: 0, pos: 0, cm: cm,
-                 trailingSpace: false,
-                 splitSpaces: (ie || webkit) && cm.getOption("lineWrapping")}
+  let builder = {
+    pre: eltP("pre", [content], "CodeMirror-line"), content: content,
+    col: 0, pos: 0, cm: cm,
+    trailingSpace: false,
+    splitSpaces: (ie || webkit) && cm.getOption("lineWrapping")
+  }
   lineView.measure = {}
 
   // Iterate over the logical lines that make up this visual line.
@@ -208,7 +220,7 @@ function buildTokenBadBidi(inner, order) {
   return (builder, text, style, startStyle, endStyle, title, css) => {
     style = style ? style + " cm-force-border" : "cm-force-border"
     let start = builder.pos, end = start + text.length
-    for (;;) {
+    for (; ;) {
       // Find the part that overlaps with the start of this text
       let part
       for (let i = 0; i < order.length; i++) {
@@ -245,17 +257,18 @@ function buildCollapsedSpan(builder, size, marker, ignoreWidget) {
 function insertLineContent(line, builder, styles) {
   let spans = line.markedSpans, allText = line.text, at = 0
   if (!spans) {
-    for (let i = 1; i < styles.length; i+=2)
-      builder.addToken(builder, allText.slice(at, at = styles[i]), interpretTokenStyle(styles[i+1], builder.cm.options))
+    for (let i = 1; i < styles.length; i += 2)
+      builder.addToken(builder, allText.slice(at, at = styles[i]), interpretTokenStyle(styles[i + 1], builder.cm.options))
     return
   }
 
   let len = allText.length, pos = 0, i = 1, text = "", style, css
   let nextChange = 0, spanStyle, spanEndStyle, spanStartStyle, title, collapsed
-  for (;;) {
+  for (; ;) {
     if (nextChange == pos) { // Update current marker set
       spanStyle = spanEndStyle = spanStartStyle = title = css = ""
-      collapsed = null; nextChange = Infinity
+      collapsed = null;
+      nextChange = Infinity
       let foundBookmarks = [], endStyles
       for (let j = 0; j < spans.length; ++j) {
         let sp = spans[j], m = sp.marker
@@ -284,7 +297,7 @@ function insertLineContent(line, builder, styles) {
         buildCollapsedSpan(builder, 0, foundBookmarks[j])
       if (collapsed && (collapsed.from || 0) == pos) {
         buildCollapsedSpan(builder, (collapsed.to == null ? len + 1 : collapsed.to) - pos,
-                           collapsed.marker, collapsed.from == null)
+          collapsed.marker, collapsed.from == null)
         if (collapsed.to == null) return
         if (collapsed.to == pos) collapsed = false
       }
@@ -298,9 +311,13 @@ function insertLineContent(line, builder, styles) {
         if (!collapsed) {
           let tokenText = end > upto ? text.slice(0, upto - pos) : text
           builder.addToken(builder, tokenText, style ? style + spanStyle : spanStyle,
-                           spanStartStyle, pos + tokenText.length == nextChange ? spanEndStyle : "", title, css)
+            spanStartStyle, pos + tokenText.length == nextChange ? spanEndStyle : "", title, css)
         }
-        if (end >= upto) {text = text.slice(upto - pos); pos = upto; break}
+        if (end >= upto) {
+          text = text.slice(upto - pos);
+          pos = upto;
+          break
+        }
         pos = end
         spanStartStyle = ""
       }

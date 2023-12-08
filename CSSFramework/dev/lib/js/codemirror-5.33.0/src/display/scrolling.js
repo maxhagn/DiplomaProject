@@ -1,12 +1,21 @@
-import { Pos } from "../line/pos.js"
-import { cursorCoords, displayHeight, displayWidth, estimateCoords, paddingTop, paddingVert, scrollGap, textHeight } from "../measurement/position_measurement.js"
-import { gecko, phantom } from "../util/browser.js"
-import { elt } from "../util/dom.js"
-import { signalDOMEvent } from "../util/event.js"
+import {Pos} from "../line/pos.js"
+import {
+  cursorCoords,
+  displayHeight,
+  displayWidth,
+  estimateCoords,
+  paddingTop,
+  paddingVert,
+  scrollGap,
+  textHeight
+} from "../measurement/position_measurement.js"
+import {gecko, phantom} from "../util/browser.js"
+import {elt} from "../util/dom.js"
+import {signalDOMEvent} from "../util/event.js"
 
-import { startWorker } from "./highlight_worker.js"
-import { alignHorizontally } from "./line_numbers.js"
-import { updateDisplaySimple } from "./update_display.js"
+import {startWorker} from "./highlight_worker.js"
+import {alignHorizontally} from "./line_numbers.js"
+import {updateDisplaySimple} from "./update_display.js"
 
 // SCROLLING THINGS INTO VIEW
 
@@ -46,10 +55,12 @@ export function scrollPosIntoView(cm, pos, end, margin) {
     let changed = false
     let coords = cursorCoords(cm, pos)
     let endCoords = !end || end == pos ? coords : cursorCoords(cm, end)
-    rect = {left: Math.min(coords.left, endCoords.left),
-            top: Math.min(coords.top, endCoords.top) - margin,
-            right: Math.max(coords.left, endCoords.left),
-            bottom: Math.max(coords.bottom, endCoords.bottom) + margin}
+    rect = {
+      left: Math.min(coords.left, endCoords.left),
+      top: Math.min(coords.top, endCoords.top) - margin,
+      right: Math.max(coords.left, endCoords.left),
+      bottom: Math.max(coords.bottom, endCoords.bottom) + margin
+    }
     let scrollPos = calculateScrollPos(cm, rect)
     let startTop = cm.doc.scrollTop, startLeft = cm.doc.scrollLeft
     if (scrollPos.scrollTop != null) {

@@ -1,23 +1,32 @@
-import { delayBlurEvent, ensureFocus } from "../display/focus.js"
-import { operation } from "../display/operations.js"
-import { visibleLines } from "../display/update_lines.js"
-import { clipPos, cmp, maxPos, minPos, Pos } from "../line/pos.js"
-import { getLine, lineAtHeight } from "../line/utils_line.js"
-import { posFromMouse } from "../measurement/position_measurement.js"
-import { eventInWidget } from "../measurement/widgets.js"
-import { normalizeSelection, Range, Selection } from "../model/selection.js"
-import { extendRange, extendSelection, replaceOneSelection, setSelection } from "../model/selection_updates.js"
-import { captureRightClick, chromeOS, ie, ie_version, mac, webkit } from "../util/browser.js"
-import { getOrder, getBidiPartAt } from "../util/bidi.js"
-import { activeElt } from "../util/dom.js"
-import { e_button, e_defaultPrevented, e_preventDefault, e_target, hasHandler, off, on, signal, signalDOMEvent } from "../util/event.js"
-import { dragAndDrop } from "../util/feature_detection.js"
-import { bind, countColumn, findColumn, sel_mouse } from "../util/misc.js"
-import { addModifierNames } from "../input/keymap.js"
-import { Pass } from "../util/misc.js"
+import {delayBlurEvent, ensureFocus} from "../display/focus.js"
+import {operation} from "../display/operations.js"
+import {visibleLines} from "../display/update_lines.js"
+import {clipPos, cmp, maxPos, minPos, Pos} from "../line/pos.js"
+import {getLine, lineAtHeight} from "../line/utils_line.js"
+import {posFromMouse} from "../measurement/position_measurement.js"
+import {eventInWidget} from "../measurement/widgets.js"
+import {normalizeSelection, Range, Selection} from "../model/selection.js"
+import {extendRange, extendSelection, replaceOneSelection, setSelection} from "../model/selection_updates.js"
+import {captureRightClick, chromeOS, ie, ie_version, mac, webkit} from "../util/browser.js"
+import {getBidiPartAt, getOrder} from "../util/bidi.js"
+import {activeElt} from "../util/dom.js"
+import {
+  e_button,
+  e_defaultPrevented,
+  e_preventDefault,
+  e_target,
+  hasHandler,
+  off,
+  on,
+  signal,
+  signalDOMEvent
+} from "../util/event.js"
+import {dragAndDrop} from "../util/feature_detection.js"
+import {bind, countColumn, findColumn, Pass, sel_mouse} from "../util/misc.js"
+import {addModifierNames} from "../input/keymap.js"
 
-import { dispatchKey } from "./key_events.js"
-import { commands } from "./commands.js"
+import {dispatchKey} from "./key_events.js"
+import {commands} from "./commands.js"
 
 const DOUBLECLICK_DELAY = 400
 
@@ -35,6 +44,7 @@ class PastClick {
 }
 
 let lastClick, lastDoubleClick
+
 function clickRepeat(pos, button) {
   let now = +new Date
   if (lastDoubleClick && lastDoubleClick.compare(now, pos, button)) {
@@ -99,7 +109,7 @@ function handleMappedButton(cm, button, pos, repeat, event) {
   else if (repeat == "triple") name = "Triple" + name
   name = (button == 1 ? "Left" : button == 2 ? "Middle" : "Right") + name
 
-  return dispatchKey(cm,  addModifierNames(name, event), event, bound => {
+  return dispatchKey(cm, addModifierNames(name, event), event, bound => {
     if (typeof bound == "string") bound = commands[bound]
     if (!bound) return false
     let done = false
@@ -134,9 +144,9 @@ function leftButtonDown(cm, pos, repeat, event) {
 
   let sel = cm.doc.sel, contained
   if (cm.options.dragDrop && dragAndDrop && !cm.isReadOnly() &&
-      repeat == "single" && (contained = sel.contains(pos)) > -1 &&
-      (cmp((contained = sel.ranges[contained]).from(), pos) < 0 || pos.xRel > 0) &&
-      (cmp(contained.to(), pos) > 0 || pos.xRel < 0))
+    repeat == "single" && (contained = sel.contains(pos)) > -1 &&
+    (cmp((contained = sel.ranges[contained]).from(), pos) < 0 || pos.xRel > 0) &&
+    (cmp(contained.to(), pos) > 0 || pos.xRel < 0))
     leftButtonStartDrag(cm, event, pos, behavior)
   else
     leftButtonSelect(cm, event, pos, behavior)
@@ -159,12 +169,15 @@ function leftButtonStartDrag(cm, event, pos, behavior) {
         extendSelection(cm.doc, pos, null, null, behavior.extend)
       // Work around unexplainable focus problem in IE9 (#2127) and Chrome (#3081)
       if (webkit || ie && ie_version == 9)
-        setTimeout(() => {document.body.focus(); display.input.focus()}, 20)
+        setTimeout(() => {
+          document.body.focus();
+          display.input.focus()
+        }, 20)
       else
         display.input.focus()
     }
   })
-  let mouseMove = function(e2) {
+  let mouseMove = function (e2) {
     moved = moved || Math.abs(event.clientX - e2.clientX) + Math.abs(event.clientY - e2.clientY) >= 10
   }
   let dragStart = () => moved = true
@@ -227,16 +240,17 @@ function leftButtonSelect(cm, event, start, behavior) {
   } else if (ourIndex == -1) {
     ourIndex = ranges.length
     setSelection(doc, normalizeSelection(ranges.concat([ourRange]), ourIndex),
-                 {scroll: false, origin: "*mouse"})
+      {scroll: false, origin: "*mouse"})
   } else if (ranges.length > 1 && ranges[ourIndex].empty() && behavior.unit == "char" && !behavior.extend) {
     setSelection(doc, normalizeSelection(ranges.slice(0, ourIndex).concat(ranges.slice(ourIndex + 1)), 0),
-                 {scroll: false, origin: "*mouse"})
+      {scroll: false, origin: "*mouse"})
     startSel = doc.sel
   } else {
     replaceOneSelection(doc, ourIndex, ourRange, sel_mouse)
   }
 
   let lastPos = start
+
   function extendTo(pos) {
     if (cmp(lastPos, pos) == 0) return
     lastPos = pos
@@ -256,7 +270,7 @@ function leftButtonSelect(cm, event, start, behavior) {
       }
       if (!ranges.length) ranges.push(new Range(start, start))
       setSelection(doc, normalizeSelection(startSel.ranges.slice(0, ourIndex).concat(ranges), ourIndex),
-                   {origin: "*mouse", scroll: false})
+        {origin: "*mouse", scroll: false})
       cm.scrollIntoView(pos)
     } else {
       let oldRange = ourRange
@@ -291,7 +305,9 @@ function leftButtonSelect(cm, event, start, behavior) {
       extendTo(cur)
       let visible = visibleLines(display, doc)
       if (cur.line >= visible.to || cur.line < visible.from)
-        setTimeout(operation(cm, () => {if (counter == curCount) extend(e)}), 150)
+        setTimeout(operation(cm, () => {
+          if (counter == curCount) extend(e)
+        }), 150)
     } else {
       let outside = e.clientY < editorSize.top ? -20 : e.clientY > editorSize.bottom ? 20 : 0
       if (outside) setTimeout(operation(cm, () => {
@@ -363,8 +379,12 @@ function gutterEvent(cm, e, type, prevent) {
     mX = e.touches[0].clientX
     mY = e.touches[0].clientY
   } else {
-    try { mX = e.clientX; mY = e.clientY }
-    catch(e) { return false }
+    try {
+      mX = e.clientX;
+      mY = e.clientY
+    } catch (e) {
+      return false
+    }
   }
   if (mX >= Math.floor(cm.display.gutters.getBoundingClientRect().right)) return false
   if (prevent) e_preventDefault(e)

@@ -1,11 +1,11 @@
-import { addClass, elt, rmClass } from "../util/dom.js"
-import { on } from "../util/event.js"
-import { scrollGap, paddingVert } from "../measurement/position_measurement.js"
-import { ie, ie_version, mac, mac_geMountainLion } from "../util/browser.js"
-import { updateHeightsInViewport } from "./update_lines.js"
-import { Delayed } from "../util/misc.js"
+import {addClass, elt, rmClass} from "../util/dom.js"
+import {on} from "../util/event.js"
+import {paddingVert, scrollGap} from "../measurement/position_measurement.js"
+import {ie, ie_version, mac, mac_geMountainLion} from "../util/browser.js"
+import {updateHeightsInViewport} from "./update_lines.js"
+import {Delayed} from "../util/misc.js"
 
-import { setScrollLeft, updateScrollTop } from "./scrolling.js"
+import {setScrollLeft, updateScrollTop} from "./scrolling.js"
 
 // SCROLLBARS
 
@@ -32,7 +32,8 @@ class NativeScrollbars {
     this.cm = cm
     let vert = this.vert = elt("div", [elt("div", null, null, "min-width: 1px")], "CodeMirror-vscrollbar")
     let horiz = this.horiz = elt("div", [elt("div", null, null, "height: 100%; min-height: 1px")], "CodeMirror-hscrollbar")
-    place(vert); place(horiz)
+    place(vert);
+    place(horiz)
 
     on(vert, "scroll", () => {
       if (vert.clientHeight) scroll(vert.scrollTop, "vertical")
@@ -103,6 +104,7 @@ class NativeScrollbars {
 
   enableZeroWidthBar(bar, delay, type) {
     bar.style.pointerEvents = "auto"
+
     function maybeDisable() {
       // To find out whether the scrollbar is still visible, we
       // check whether the element under the pixel in the bottom
@@ -112,10 +114,11 @@ class NativeScrollbars {
       // it enabled, if it's hidden, we disable pointer events.
       let box = bar.getBoundingClientRect()
       let elt = type == "vert" ? document.elementFromPoint(box.right - 1, (box.top + box.bottom) / 2)
-          : document.elementFromPoint((box.right + box.left) / 2, box.bottom - 1)
+        : document.elementFromPoint((box.right + box.left) / 2, box.bottom - 1)
       if (elt != bar) bar.style.pointerEvents = "none"
       else delay.set(1000, maybeDisable)
     }
+
     delay.set(1000, maybeDisable)
   }
 
@@ -127,10 +130,18 @@ class NativeScrollbars {
 }
 
 class NullScrollbars {
-  update() { return {bottom: 0, right: 0} }
-  setScrollLeft() {}
-  setScrollTop() {}
-  clear() {}
+  update() {
+    return {bottom: 0, right: 0}
+  }
+
+  setScrollLeft() {
+  }
+
+  setScrollTop() {
+  }
+
+  clear() {
+  }
 }
 
 export function updateScrollbars(cm, measure) {
@@ -141,7 +152,8 @@ export function updateScrollbars(cm, measure) {
     if (startWidth != cm.display.barWidth && cm.options.lineWrapping)
       updateHeightsInViewport(cm)
     updateScrollbarsInner(cm, measureForScrollbars(cm))
-    startWidth = cm.display.barWidth; startHeight = cm.display.barHeight
+    startWidth = cm.display.barWidth;
+    startHeight = cm.display.barHeight
   }
 }
 

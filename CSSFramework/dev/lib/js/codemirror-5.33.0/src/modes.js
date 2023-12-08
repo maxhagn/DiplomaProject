@@ -1,4 +1,4 @@
-import { copyObj, createObj } from "./util/misc.js"
+import {copyObj, createObj} from "./util/misc.js"
 
 // Known modes, by name and by MIME
 export let modes = {}, mimeModes = {}
@@ -61,6 +61,7 @@ export function getMode(options, spec) {
 // This can be used to attach properties to mode objects from
 // outside the actual mode definition.
 export let modeExtensions = {}
+
 export function extendMode(mode, properties) {
   let exts = modeExtensions.hasOwnProperty(mode) ? modeExtensions[mode] : (modeExtensions[mode] = {})
   copyObj(properties, exts)
