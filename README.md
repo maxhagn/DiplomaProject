@@ -6,7 +6,6 @@
 
 A collection of projects developed as part of our diploma thesis at the Rennweg Higher Technical School, including an information page, a CSS framework, and an e-learning platform.
 
-
 ---
 An der HTL Rennweg entwickelten wir für unsere Diplomarbeit vielseitige Projekte: eine Informationswebseite, ein maßgeschneidertes CSS-Framework und eine innovative E-Learning-Plattform.
 
